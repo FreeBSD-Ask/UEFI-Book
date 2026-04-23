@@ -1,1 +1,1 @@
-# UEFI-Book
+# UEFI/BIOS 注解（AMI BIOS）
