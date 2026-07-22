@@ -190,7 +190,7 @@ Enable（启用）
 
 说明：
 
-Intel 高级矢量扩展（Advanced Vector Extensions，AVX）是一组指令集。可以加速工作负载和用例的性能，如科学模拟、金融分析、人工智能 (AI)/深度学习、3D 建模和分析、图像和音频/视频处理、密码学和数据压缩等。
+Intel 高级矢量扩展（Advanced Vector Extensions，AVX）是一组指令集。可以加速工作负载和用例的性能，如科学模拟、金融分析、人工智能（AI）/深度学习、3D 建模和分析、图像和音频/视频处理、密码学和数据压缩等。
 
 ## Active Performance-cores（激活的性能核心）
 
