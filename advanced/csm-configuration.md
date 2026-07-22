@@ -44,11 +44,11 @@ Postponed：推迟响应
 
 说明：
 
-中断、捕捉信号响应设置。BIOS 通过可选 ROM 对 INT19 trapping 作出的响应。
+中断、捕捉信号响应设置。BIOS 通过 Option ROM 对 INT 19h trapping 作出的响应。
 
-当选项 ROM 捕获 INT 19h 中断时，BIOS 会立即执行该中断请求。这意味着设备的启动代码会在 BIOS 处理其他启动选项之前被执行。
+当 Option ROM 捕获 INT 19h 中断时，BIOS 会立即执行该中断请求。这意味着设备的启动代码会在 BIOS 处理其他启动选项之前被执行。
 
-当选项 ROM 捕获 INT 19h 中断时，BIOS 会将该请求延迟到传统启动阶段（Legacy Boot）期间再执行。这通常用于 RAID 控制器、网络适配器等设备，以便在操作系统加载之前初始化硬件。
+当 Option ROM 捕获 INT 19h 中断时，BIOS 会将该请求延迟到传统启动阶段（Legacy Boot）期间再执行。这通常用于 RAID 控制器、网络适配器等设备，以便在操作系统加载之前初始化硬件。
 
 如果在启动过程中遇到设备初始化问题，尝试将此选项设置为 Postponed，以延迟设备初始化。
 
@@ -68,7 +68,7 @@ Keep（保持）
 
 某些操作系统需要调整硬盘驱动器的句柄，例如操作系统安装在 80h 号驱动器上。
 
-### Boot option filter（启动选项限制）
+### Boot option filter（启动选项过滤）
 
 选项：
 
@@ -82,7 +82,7 @@ UEFI and Legacy：UEFI 和传统模式并存
 
 启动模式设置，用于控制设备采用 Legacy 或 UEFI 模式进行启动。
 
-### Option ROM execution（可选 ROM 执行）
+### Option ROM execution（Option ROM 执行）
 
 选项：
 
