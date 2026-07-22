@@ -1933,7 +1933,7 @@ GTT：Graphics Translation Table，图形转换表，又称 GART（Graphics Addr
 
 用于指定分配给集成显卡的 PCIe 基址寄存器 (BAR) 或访问窗口的大小。
 
-应用程序通过访问 BAR，与专用于集成显卡的系统内存或用于 de‑swizzle 的常规系统内存交互。较大的 IGD Aperture Size 并不总是最佳选择，因为它会增加系统地址空间中 BAR 的占用。
+应用程序通过访问 BAR，与专用于集成显卡的系统内存或用于 de-swizzle 的常规系统内存交互。较大的 IGD Aperture Size 并不总是最佳选择，因为它会增加系统地址空间中 BAR 的占用。
 
 核显显存孔径（默认）\=256 MB（适用于第 10 代及更早 Intel® 处理器）。
 
