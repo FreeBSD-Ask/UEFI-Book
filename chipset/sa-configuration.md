@@ -142,7 +142,7 @@ Disabled（禁用）
 
 当设置为 Enabled 时，集成内存控制器在空闲一段时间后可能进入自刷新模式。
 
-参见：戴尔科技. PowerEdge: DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/>。DRAM 刷新与机会性自刷新的最佳实践。
+参见：戴尔科技. PowerEdge:DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/>。DRAM 刷新与机会性自刷新的最佳实践。
 
 允许在不退出低功耗状态（power down）的情况下进行机会性刷新（opportunistic refreshes）
 
@@ -433,7 +433,7 @@ Disabled（禁用）
 
 其具体作用尚不明确。
 
-#### Write Drive Strength/Equalization 2D*（写入驱动强度/均衡 2D*）
+#### Write Drive Strength/Equalization 2D *（写入驱动强度/均衡 2D*）
 
 选项：
 
@@ -445,7 +445,7 @@ Disabled（禁用）
 
 其具体作用尚不明确。
 
-#### Write Slew Rate Training*（写入上升/下降斜率训练*）
+#### Write Slew Rate Training *（写入上升/下降斜率训练*）
 
 选项：
 
@@ -457,7 +457,7 @@ Disabled（禁用）
 
 优化写入信号的上沿与下沿。
 
-#### Read ODT Training*（读取终端电阻训练*）
+#### Read ODT Training *（读取终端电阻训练*）
 
 选项：
 
@@ -469,7 +469,7 @@ Disabled（禁用）
 
 其具体作用尚不明确。
 
-#### Read Equalization Training*（读取均衡训练*）
+#### Read Equalization Training *（读取均衡训练*）
 
 选项：
 
@@ -625,7 +625,7 @@ Disabled（禁用）
 
 减少时序误差并提升读取可靠性。
 
-#### TxDqTCO Comp Training*（TxDqTCO Comp 训练*）
+#### TxDqTCO Comp Training *（TxDqTCO Comp 训练*）
 
 选项：
 
@@ -637,7 +637,7 @@ Disabled（禁用）
 
 优化命令信号到数据总线传播延迟。
 
-#### ClkTCO Comp Training*（ClkTCO Comp 训练*）
+#### ClkTCO Comp Training *（ClkTCO Comp 训练*）
 
 选项：
 
@@ -649,7 +649,7 @@ Disabled（禁用）
 
 优化时钟到数据总线传播延迟。
 
-#### TxDqsTCO Comp Training*（TxDqsTCO Comp 训练*）
+#### TxDqsTCO Comp Training *（TxDqsTCO Comp 训练*）
 
 选项：
 
@@ -661,7 +661,7 @@ Disabled（禁用）
 
 内存控制器到数据总线信号的传输延迟。
 
-#### VccDLL Bypass Training*（VccDLL 旁路训练*）
+#### VccDLL Bypass Training *（VccDLL 旁路训练*）
 
 选项：
 
@@ -697,7 +697,7 @@ Disabled（禁用）
 
 优化命令/地址总线的 ODT 特性。
 
-#### PanicVttDnLp Training*（PanicVttDnLp 训练*）
+#### PanicVttDnLp Training *（PanicVttDnLp 训练*）
 
 选项：
 
@@ -991,7 +991,7 @@ Auto（自动）
 
 说明：
 
-最大内存频率，单位 MHz。
+最大内存频率，单位 MHz。其中 10000、12800 属超频（XMP）或未来 MRDIMM 标准范畴，非 JEDEC 标准消费级速度。
 
 ### LP5 Bank Mode（LPDDR5 Bank 模式）
 
@@ -2300,7 +2300,7 @@ LFP，Low-Voltage Differential Signaling Panel，内置显示器
 
 ### Intel® UltraBook Event Support（Intel 超极本事件支持）
 
-超极本（UltraBook）是英特尔在 2011 年推出的电脑品牌。参见：Intel Corporation. Ultrabook™ Fact Sheet 2013[EB/OL]. 2013-06[2026-04-19]. <https://download.intel.com/newsroom/kits/ultrabook/pdfs/Ultrabook_FactSheet_2013.pdf>. 指出“Intel Corporation in May 2011 unveiled its vision to re-invent the mobile computing experience as we know it with the introduction of a new category of mobile device”。
+超极本（UltraBook）是英特尔在 2011 年推出的电脑品牌。参见：Intel Corporation. Ultrabook™ Fact Sheet 2013[EB/OL]. 2013-06 [2026-04-19]. <https://download.intel.com/newsroom/kits/ultrabook/pdfs/Ultrabook_FactSheet_2013.pdf>. 指出“Intel Corporation in May 2011 unveiled its vision to re-invent the mobile computing experience as we know it with the introduction of a new category of mobile device”。
 
 #### TUER Slate Enable（启用平板模式）
 
@@ -2806,7 +2806,7 @@ Disabled（禁用）
 
 启用/禁用通过本地 I/O 或 USB I/O 扩展方式的 CVF 功能。
 
-CVF，Intel Clover Falls，是英特尔推出的一种 AI 协处理器。是一种英特尔集成传感器解决方案。参见：Dell Laptop Camera Not Working in Teams, Zoom, and Windows Camera Application[EB/OL]. [2026-03-26]. <https://www.dell.com/support/kbdoc/en-hk/000248760/laptop-mipi-camera-may-not-work-under-windows?lwp=rt>.
+CVF（BIOS 选项缩写），对应 Intel Visual Sensing Controller（研发代号 Clover Falls），是英特尔推出的一种低功耗 AI 协处理器，属英特尔集成传感器解决方案。参见：Dell Laptop Camera Not Working in Teams, Zoom, and Windows Camera Application[EB/OL]. [2026-03-26]. <https://www.dell.com/support/kbdoc/en-hk/000248760/laptop-mipi-camera-may-not-work-under-windows?lwp=rt>.
 
 ### Control Logic 1（控制逻辑 1）
 
@@ -2986,17 +2986,17 @@ x4
 
 0：Sensor Default（传感器默认）
 
-1 : <416Mbps
+1 : < 416Mbps
 
-2 : <1.5Gbps
+2 : < 1.5Gbps
 
-3 : <2Gbps
+3 : < 2Gbps
 
-4 : <2.5Gbps
+4 : < 2.5Gbps
 
-5 : <4Gbps
+5 : < 4Gbps
 
-6 : >4Gbps
+6 : > 4Gbps
 
 说明：
 

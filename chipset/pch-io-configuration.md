@@ -74,7 +74,7 @@ Disabled（禁用）
 
 打开或关闭 PCIe 8xh 端口解码。
 
-PCIe`*` 根端口在设置了 MPC.P8XDE 后，会专门解码并响应地址范围为 80h 到 8Fh 的 I/O 周期。这些 I/O 周期的响应不受标准 PCI 的 I/O 基址/限制寄存器以及 I/O 空间使能字段的限制。这使得 POST 卡可以直接作为 PCI Express 设备连接到根端口，或者通过 PCI Express`*` 到 PCI 桥接器以 PCI 卡的形式连接。
+PCIe `*` 根端口在设置了 MPC.P8XDE 后，会专门解码并响应地址范围为 80h 到 8Fh 的 I/O 周期。这些 I/O 周期的响应不受标准 PCI 的 I/O 基址/限制寄存器以及 I/O 空间使能字段的限制。这使得 POST 卡可以直接作为 PCI Express 设备连接到根端口，或者通过 PCI Express `*` 到 PCI 桥接器以 PCI 卡的形式连接。
 
 所有对该地址范围的 I/O 读写操作都会被原封不动地转发到链路上。连接的设备必须能在 I/O 读操作时返回之前写入的值。BIOS 需要确保同一时刻最多只有一个根端口被启用以响应端口 8xh 范围内的 I/O 周期。
 
@@ -142,7 +142,7 @@ Use coefficients during EQ
 
 选择在均衡第 1 阶段中将使用的预设值。
 
-#### EQ PH1 upstream port transmitter present（在均衡第 1 阶段中上游端口发射器预设。）
+#### EQ PH1 upstream port transmitter present（在均衡第 1 阶段中上游端口发射器预设值）
 
 选择在均衡第 1 阶段中将使用的预设值。
 
@@ -216,7 +216,7 @@ Disabled（禁用）
 
 说明：
 
-通过触发一个或多个 GPIO 引脚来发出信号通知或中断
+通过触发一个或多个 GPIO 引脚来发出信号通知或中断。
 
 ### PCI Express Slot Selection（PCIe 插槽选择）
 
@@ -302,7 +302,7 @@ Disabled（禁用）
 
 说明：
 
-ACS，Access Control Services Extended Capability，访问控制服务扩展能力
+ACS，Access Control Services Extended Capability，访问控制服务扩展能力。
 
 PCIe 和服务器规范中定义的访问控制服务（ACS）功能，是用于维护 IOMMU 组内隔离的硬件标准。
 
@@ -325,9 +325,9 @@ Disabled（禁用）
 
 说明：
 
-PTM，Precision Time Measurement，精确时间测量
+PTM，Precision Time Measurement，精确时间测量。
 
-参见：F-Tile Avalon® Streaming Intel® FPGA IP for PCI Express`*` User Guide[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683140/25-1/precision-time-measurement-ptm-58323.html>.
+参见：F-Tile Avalon® Streaming Intel® FPGA IP for PCI Express `*` User Guide[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683140/25-1/precision-time-measurement-ptm-58323.html>.
 
 精确时间测量（PTM）使得多个具有独立本地时钟的组件之间能够实现精确的事件协调。通常，由于各自时钟对时间的值和变化速率的认知不同，实现这种精确协调是非常困难的。为了解决这一限制，PTM 允许组件计算其本地时间与共享的 PTM 主时间之间的关系：PTM 主时间是与 PTM 根节点相关联的独立时间域。每个 PTM 根节点为一个 PTM 层级提供 PTM 主时间。
 
@@ -345,7 +345,7 @@ Disabled（禁用）
 
 说明：
 
-DPC，Downstream Port Containment，下行端口控制
+DPC，Downstream Port Containment，下行端口控制。
 
 DPC 是 PCIe 标准的建议扩展，设计用于自动禁止发生非致命（或致命）错误后的链路以便防止可能扩散的数据损坏以及在软件支持时启动错误恢复。
 
@@ -405,7 +405,7 @@ Disabled（禁用）
 
 说明：
 
-NFER，PCI Express Device Non-Fatal Error Reporting，设备非致命错误报告
+NFER，PCI Express Device Non-Fatal Error Reporting，设备非致命错误报告。
 
 - CER（PCIe 设备可纠正错误报告）
 
@@ -425,9 +425,9 @@ CER，Correctable Error Reporting（可纠正错误报告）。
 
 - CTO（PCIe 完成超时）
 
-TO，timeout
+TO，Timeout。
 
-CT，Completion Timer，完成计时
+CT，Completion Timer，完成计时。
 
 选项：
 
@@ -469,7 +469,7 @@ Disabled（禁用）
 
 SENFE，System Error on Non-Fatal Error，非致命错误时触发系统错误。
 
-在发生非致命错误时触发根 PCIe 系统错误
+在发生非致命错误时触发根 PCIe 系统错误。
 
 - SECE（在发生可纠正错误时触发根 PCIe 系统错误）
 
@@ -479,9 +479,9 @@ Enabled（启用）
 
 Disabled（禁用）
 
-说明：SECE，System Error on Correctable Error，发生可纠正错误时触发系统错误
+说明：SECE，System Error on Correctable Error，发生可纠正错误时触发系统错误。
 
-在发生可纠正错误时触发根 PCIe 系统错误
+在发生可纠正错误时触发根 PCIe 系统错误。
 
 - PME SCI（PCIe 的电源管理中断和系统控制中断）
 
@@ -511,7 +511,7 @@ Advanced Error Reporting 即 AER，
 
 每个符合 PCI Express 标准的设备都必须实现基本级别的错误管理，并且可以选择性地实现高级错误管理。PCI Express 高级错误报告功能（Advanced Error Reporting Capability，AER）是一种可选的扩展能力，可由支持高级错误控制与报告的 PCI Express 设备功能实现。
 
-参见：P-Tile Avalon® Memory-mapped Intel® FPGA IP for PCI Express`*` User Guide[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683268/21-1-4-0-0/advanced-error-reporting-aer.html>.
+参见：P-Tile Avalon® Memory-mapped Intel® FPGA IP for PCI Express `*` User Guide[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683268/21-1-4-0-0/advanced-error-reporting-aer.html>.
 
 #### PCIe Speed（PCIe 速率）
 
@@ -603,7 +603,7 @@ PCIE CLKREQ 覆盖，用于默认平台映射。设备通过 CLKREQ#管脚通知
 
 #### PCH PCIe LTR Configuration（PCH PCIe 延迟容忍报告配置）
 
-LTR，Latency Tolerance Reporting，延迟容忍报告
+LTR，Latency Tolerance Reporting，延迟容忍报告。
 
 LTR 是一种新机制，使 Endpoint 能够传递其对内存读写和中断的延迟需求信息，可用于提高系统的电源管理效率。
 
@@ -665,7 +665,7 @@ Disabled（禁用）
 
 说明：
 
-Peer Memory Write，PCIe Peer-to-Peer (PCIe P2P) DMA，PCIe 点对点 DMA。
+Peer Memory Write，PCIe Peer-to-Peer（PCIe P2P）DMA，PCIe 点对点 DMA。
 
 参见：Peer Memory Write Enable[EB/OL]. [2026-03-26]. <https://jasonyychiu.blogspot.com/2021/03/peer-memory-write-enable.html>.
 
@@ -779,7 +779,7 @@ Disabled（禁用）
 
 说明：
 
-Aggressive LPM Support (ALPM)。
+Aggressive LPM Support（ALPM）。
 
 使 PCH 主动让 SATA 总线进入链路低功耗状态。此功能仅在 AHCI 模式下受支持。
 
@@ -867,7 +867,7 @@ Flex-灵活模式
 
 Direct connect：直连
 
-M2: M.2
+M2：M.2
 
 说明：
 
@@ -941,7 +941,7 @@ xDCI，Extensible Device Controller Interface，可扩展设备控制器接口�
 
 xDCI 控制器支持的最大链路速率为 USB 3.2 Gen 1x1（5 Gbps）。
 
-注意：这些控制器作为独立的 PCI 功能集成在处理器芯片内部，用于支持具备 USB-C`*` 功能的端口。
+注意：这些控制器作为独立的 PCI 功能集成在处理器芯片内部，用于支持具备 USB-C `*` 功能的端口。
 
 参见：12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/extensible-device-controller-interface-xdci/>.
 
@@ -1011,9 +1011,9 @@ Disabled（禁用）
 
 在默认情况下，过流功能应保持启用，仅在 OBS 调试使用时禁用。
 
-启用：将在相应的 xHCI 控制器寄存器中编程 USB 过流引脚映射
+启用：将在相应的 xHCI 控制器寄存器中编程 USB 过流引脚映射。
 
-禁用：清除过流引脚映射，允许 OBS 使用过流引脚
+禁用：清除过流引脚映射，允许 OBS 使用过流引脚。
 
 ### USB Audio Offload（USB 音频卸载）
 
@@ -1039,7 +1039,7 @@ Disabled（禁用）
 
 说明：
 
-HSII, HS Interrupt IN Alarm
+HSII，HS Interrupt IN Alarm。
 
 启用/禁用 HSII 功能。启用该功能可能会导致功耗增加。
 
@@ -1061,9 +1061,9 @@ xHCI（eXtensible Host Controller Interface）是 USB 3.0 及更高版本的主�
 
 ### USB3 Link Speed Selection（USB3 链路速率选择）
 
-GEN1: 5 Gbps
+GEN1:5 Gbps
 
-GEN2: 10 Gbps
+GEN2:10 Gbps
 
 说明：
 
@@ -1127,7 +1127,7 @@ Disabled（禁用）
 
 说明：
 
-实时时钟内存锁定
+实时时钟内存锁定。
 
 用于保护存储在 RTC RAM 中的特定内存区域。启用后将锁定 RTC RAM 的低/高 128 字节区块中的 38h 到 3Fh 字节。防止未经授权的访问和修改。
 
@@ -1199,9 +1199,9 @@ DSP，Digital Signal Processors，数字信号处理器。
 
 HD Audio Link：HDA 链路
 
-SSP (I2S)：I²S，串行音频接口
+SSP（I2S）：I²S，串行音频接口
 
-SoundWire：MIPI 协会推出的关于音频的规范
+SoundWire：MIPI 协会推出的关于音频的规范。
 
 Advanced Link Config：高级链路配置
 
@@ -1209,9 +1209,9 @@ Advanced Link Config：高级链路配置
 
 选择链接模式：
 
-1）HDA-Link（SDIO-1），DMIC[0-1]
+1）HDA-Link（SDIO-1），DMIC [0-1]
 
-2）SSP[0-5]，DMIC[0-1]
+2）SSP [0-5]，DMIC [0-1]
 
 3）SNDW [1-4]
 
@@ -1225,7 +1225,7 @@ SNDW，SoundWire。
 
 同上。
 
-SSP #0 (串行音频接口 0 号)
+SSP #0（串行音频接口 0 号）
 
 同上。
 
@@ -1345,7 +1345,7 @@ PME，Power Management Event，电源管理事件
 
 CNL：Cannon Lake 架构，部分第八代 Intel 酷睿处理器代号。
 
-ICL：Ice Lake 架构，第十代 Intel 酷睿处理器代号
+ICL：Ice Lake 架构，第十代 Intel 酷睿处理器代号。
 
 必须选择正确的选项，否则会没声音。
 
@@ -1507,7 +1507,7 @@ Enabled（启用）
 
 Disabled（禁用）
 
-Comm. Port (COM)
+Comm. Port（COM）
 
 说明：
 
@@ -1813,7 +1813,7 @@ Disabled（禁用）
 
 说明：
 
-引脚配置说明
+引脚配置说明。
 
 Enabled（启用）：表示该引脚被配置为 ISH 的原生功能。
 
@@ -2277,7 +2277,7 @@ Disabled（禁用）
 
 说明：
 
-控制异步内存刷新开关。ADR，Asynchronous DRAM Refresh，异步内存刷新。参见“计算机组成原理”相关书籍。
+控制异步内存刷新开关。ADR，Asynchronous DRAM Refresh，异步内存刷新。参见《计算机组成原理》相关书籍。
 
 #### Host Partition Reset ADR Enable（发生 Host 分区复位时触发 ADR）
 
@@ -2618,7 +2618,7 @@ Disabled（禁用）
 
 锁定 PCH 侧带访问，包括特定端点（例如 PSFx）的侧带接口锁定和侧带 PortID 掩码。如果已设置 POSTBOOT SAI，则该选项无效。
 
-## Flash Protection Range Registers (FPRR)（Flash 保护范围寄存器）
+## Flash Protection Range Registers（FPRR）（Flash 保护范围寄存器）
 
 选项：
 
@@ -2646,7 +2646,7 @@ BIOS 提示：出于安全考虑，必须设置 SPD 写保护位。
 
 SPD 代表串行存在检测（Serial Presence Detect），是一种标准化的方法，用于访问计算机内存模块的信息。SPD 数据存储在内存上的 EEPROM 芯片中，允许系统 BIOS 读取内存的详细信息，如速度、容量和时序，从而确保内存的最佳性能和兼容性。
 
-禁用该选项可能会影响 XMP（英特尔®至尊内存配置文件）设置，即内存超频功能。
+禁用该选项可能会影响 XMP（英特尔® 至尊内存配置文件）设置，即内存超频功能。
 
 ## LGMR（LPC 内存范围解码）
 
@@ -2674,7 +2674,7 @@ Disabled（禁用）
 
 此选项用于启用通过 eSPI 虚拟线向目标设备报告 HOST_C10 状态。eSPI 是 Intel 推出的新一代总线接口，用于替代 LPC。
 
-eSPI，Enhanced Serial Peripheral Interface，增强型串行外设接口
+eSPI，Enhanced Serial Peripheral Interface，增强型串行外设接口。
 
 参见：增强型串行外设接口（eSPI）接口基本规格（适用于客户端和服务器平台）[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/841685/enhanced-serial-peripheral-interface-espi-interface-base-specification-for-client-and-server-platforms.html>.
 
@@ -3022,9 +3022,9 @@ All GPIO（所有 GPIO）
 
 TGPIO：Time-Aware GPIO，时间感知 GPIO。
 
-Lower: TGPIO(0-19),GPIO(20-29)
+Lower: TGPIO(0-19), GPIO(20-29)
 
-Mid: TGPIO(0-9,20-29),GPIO(10-19)
+Mid: TGPIO(0-9,20-29), GPIO(10-19)
 
 Top: TGPIO(10-29) GPIO(0-9)
 
@@ -3072,9 +3072,9 @@ Disabled（禁用）
 
 为可以产生中断的 PSE 外设设置中断模式。
 
-启用＝中断设置为 SB 模式；SB 模式（Sideband Mode）也称为传统的 INTx 中断，该方式存在中断线数量有限、共享资源等限制。
+启用 = 中断设置为 SB 模式；SB 模式（Sideband Mode）也称为传统的 INTx 中断，该方式存在中断线数量有限、共享资源等限制。
 
-禁用＝使用 MSI 模式；MSI 模式（Message Signaled Interrupts，消息信号中断）引入于 PCI 2.2 规范，支持更高效的中断处理。
+禁用 = 使用 MSI 模式；MSI 模式（Message Signaled Interrupts，消息信号中断）引入于 PCI 2.2 规范，支持更高效的中断处理。
 
 #### DMA Test（DMA 测试）
 

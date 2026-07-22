@@ -348,7 +348,7 @@ PSYS 平台电源变化率以 1/100 为单位定义，范围为 0 到 200。
 
 例如，要设置变化率为 1.25，输入 125。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mailbox 命令 0x9 进行控制。
 
-参见：英特尔公司. 第 10 代英特尔®酷睿™处理器系列[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/dam/www/public/cn/zh/documents/datasheets/10th-gen-core-families-datasheet-vol-1-datasheet.pdf>.
+参见：英特尔公司. 第 10 代英特尔® 酷睿 ™ 处理器系列[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/dam/www/public/cn/zh/documents/datasheets/10th-gen-core-families-datasheet-vol-1-datasheet.pdf>.
 
 #### PSYS Offset（PSYS 平台电源偏移量）
 
@@ -476,23 +476,23 @@ Vsys 的输入单位为毫伏（mV），Psys 的输入单位为毫瓦（mW），
 
 主要用于控制信号“断言”（assertion）过程中的消隐（deglitch）行为。用以设置断言信号消隐时间，作用是平衡电路中的噪声抑制与信号响应速度。
 
-断言消隐尾数 0x4F[7-3]（存储在 MSR/寄存器地址 0x4F 的第 7 至第 3 位）。断言消隐 = 2µs × 尾数 × 2^(指数)。
+断言消隐尾数 0x4F [7-3]（存储在 MSR/寄存器地址 0x4F 的第 7 至第 3 位）。断言消隐 = 2µs × 尾数 × 2^(指数)。
 
 #### Assertion Deglitch Exponent（断言消隐指数）
 
 此选项需搭配选项 Assertion Deglitch Mantissa（断言消隐尾数）使用。
 
-断言消隐指数 0x4F[3-0]（存储在 MSR/寄存器地址 0x4F 的第 3 至第 0 位）。断言消隐 = 2µs × 尾数 × 2^(指数)。
+断言消隐指数 0x4F [3-0]（存储在 MSR/寄存器地址 0x4F 的第 3 至第 0 位）。断言消隐 = 2µs × 尾数 × 2^(指数)。
 
 #### De-assertion Deglitch Mantissa（解除消隐尾数）
 
 信号解除激活时的消隐时间计算参数。类似上方的断言消隐。
 
-解除消隐尾数 0x49[7-3]（存储在 MSR/寄存器地址 0x49 的第 7 至第 3 位）。解除消隐 = 2µs × 尾数 × 2^(指数)。
+解除消隐尾数 0x49 [7-3]（存储在 MSR/寄存器地址 0x49 的第 7 至第 3 位）。解除消隐 = 2µs × 尾数 × 2^(指数)。
 
 #### De-assertion Deglitch Exponent（解除消隐指数）
 
-解除消隐指数 0x49[3-0]（存储在 MSR/寄存器地址 0x49 的第 3 至第 0 位）。解除消隐 = 2µs × 尾数 × 2^(指数)。
+解除消隐指数 0x49 [3-0]（存储在 MSR/寄存器地址 0x49 的第 3 至第 0 位）。解除消隐 = 2µs × 尾数 × 2^(指数)。
 
 #### VR Power Delivery Design（电源调节器供电架构设计）
 

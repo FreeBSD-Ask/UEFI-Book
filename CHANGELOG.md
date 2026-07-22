@@ -104,3 +104,97 @@
 - THC Configuration（触控主机控制器配置）：补充 THC-SPI 不适用于 Intel Core Ultra 200S 系列桌面处理器平台
 - SerialIo Configuration（串行 IO 配置）：补充 Intel 800 系列芯片组在 Serial I/O 子系统中新增 I3C 控制器（符合 MIPI I3C HCI 规范），ISH 升级至 5.6 版本且 ISH 接口新增 I3C 支持
 - ISH Configuration（整合传感器中枢配置）：补充 Intel 800 系列芯片组搭载 ISH 5.6 版本，ISH 接口新增 I3C 支持
+
+## 存疑条目记录（2026-07 国外搜索引擎重新检索）
+
+本节记录校对过程中无法从 Intel 一手文档完全确认的存疑项。所有条目均使用国外搜索引擎（Google/Bing/DuckDuckGo 等）以全拼关键字词重新检索，不使用中国搜索引擎，不信任中文互联网来源。仅记录，不在正文注释。
+
+### SA Configuration（sa-configuration.md）
+
+#### 存疑 1：PSMI 全称展开
+- 原文：PSMI，Power Supply Management Interface，电源供应管理接口
+- 检索关键词："Power Supply Management Interface" Intel、PSMI Intel datasheet、Intel server BIOS PSMI support option
+- 检索结果：中文来源（中国专利 xjishu.com、CSDN 文库）对两种全称说法矛盾，未找到 Intel 一手英文文档确认
+- 核查结论：未能确认
+- 当前处理：保留原文
+
+#### 存疑 2：IBECC 性能损失 "五分之一"（20%）
+- 原文：根据实际测试最高可降低五分之一的内存性能
+- 检索关键词：IBECC Intel performance overhead、"In-Band ECC" Intel performance、Intel IBECC memory performance impact
+- 检索结果：Intel ARK 确认 "In Band ECC" 术语存在，但未披露性能损失数据；中文非权威来源提到的性能损失数据（3-5ns 延迟、5-8% 帧率波动）远低于 20%；未找到任何可靠来源支持 20% 数据
+- 核查结论：未能确认
+- 当前处理：保留原文
+
+#### 存疑 3：IBECC 非对称内存触发启用
+- 原文：如果内存配置为非对称（asymmetric，内存混用），则该功能将被启用
+- 检索关键词：IBECC asymmetric memory Intel、"In-Band ECC" asymmetric memory、Intel IBECC mixed memory
+- 检索结果：未找到 Intel 官方文档说明非对称内存配置会触发 IBECC 自动启用
+- 核查结论：未能确认
+- 当前处理：保留原文
+
+#### 存疑 4：CVF = Intel Clover Falls
+- 原文：CVF，Intel Clover Falls，是英特尔推出的一种 AI 协处理器
+- 检索关键词："Intel Clover Falls"、"CVF" Intel AI coprocessor、Intel Visual Sensing Controller
+- 检索结果：CCF Chip 论坛与 Dell 官方页面确认 Clover Falls = Intel Visual Sensing Controller（研发代号），是 Intel EVO 平台低功耗 AI 协处理器；但 "CVF" 缩写本身未在 Intel 公开文档中明确定义
+- 核查结论：部分确认（Clover Falls = Intel Visual Sensing Controller 确认；CVF 缩写来源未确认）
+- 当前处理：正文已修改为 "CVF（BIOS 选项缩写），对应 Intel Visual Sensing Controller（研发代号 Clover Falls）"
+
+#### 存疑 5：DDR5 频率 10000、12800
+- 原文：Maximum Memory Frequency 选项列表包含 10000、12800
+- 检索关键词：DDR5 10000 MT/s、DDR5 12800 MT/s、DDR5 maximum frequency overclock
+- 检索结果：10000 MT/s 属消费级超频（XMP/EXPO）范畴；12800 MT/s 属极限超频世界纪录范畴，同时也是 JEDEC MRDIMM Gen2 服务器标准的未来目标速率；两者均非 JEDEC 标准消费级速度（4800/5600/6400 MT/s）
+- 核查结论：确认属超频/未来标准范畴
+- 当前处理：正文保留参数值，已补充说明 "10000、12800 属超频（XMP）或未来 MRDIMM 标准范畴，非 JEDEC 标准消费级速度"
+
+### PCH-IO Configuration（pch-io-configuration.md）
+
+#### 存疑 6：FIA 全称 "Flexible I/O Adapter"
+- 原文：FIA（Flexible I/O Adapter）
+- 检索关键词："Flexible I/O Adapter" Intel PCH、FIA Intel chipset datasheet、Intel 600/700/800 series PCH FIA flexible IO
+- 检索结果：Intel 官方文档中确有 "Flexible I/O" 特性描述（指 PCH 可将高速 I/O 端口灵活配置为 PCIe/USB3.0/SATA），但未找到 FIA 缩写的官方定义
+- 核查结论：未能确认
+- 当前处理：保留原文
+
+#### 存疑 7：IEH 全称 "Isolated Execution Hardening"
+- 原文：IEH，Isolated Execution Hardening，隔离执行加固
+- 检索关键词："Isolated Execution Hardening" Intel、IEH Intel BIOS、"Isolated Execution Hardware" Intel SGX
+- 检索结果：未在 Intel 官方文档（数据手册、SGX/TXT 白皮书、BIOS 写作指南）中找到 IEH 缩写的官方定义
+- 核查结论：未能确认
+- 当前处理：保留原文
+
+#### 存疑 8：PCIe ASPM 引入版本
+- 原文：PCI Express 2.0 规范规定了两种低功耗模式：L0s 和 L1 模式
+- 检索关键词：PCIe ASPM L0s L1 specification version、"Active State Power Management" PCIe 1.1、PCI Express ASPM introduced version
+- 检索结果：未在 PCI-SIG 官方文档中找到 ASPM 首次引入的具体规范版本；多个非官方来源暗示 ASPM 属于 "早期 PCIe" 特性（疑似 1.0/1.1 时代即存在）；无权威来源明确指出 ASPM 在 PCIe 2.0 才首次规定
+- 核查结论：未能确认（版本号 "2.0" 既无法确认也无法否定）
+- 当前处理：保留原文
+
+#### 存疑 9：HDA Link 频率选项 6/12/24 MHz
+- 原文：HDA Link 频率选项 6 MHz / 12 MHz / 24 MHz
+- 检索关键词："HDA Link" frequency Intel、Intel HD Audio Link BCLK 24MHz、"High Definition Audio" specification 24.576 MHz
+- 检索结果：Intel HD Audio 规范定义的标准 BCLK 为 24.576 MHz（可二分频为 12.288 MHz）；未在 Intel 官方一手文档中找到 "6/12/24 MHz" 三个离散 BIOS 选项值的直接依据
+- 核查结论：未能确认
+- 当前处理：保留原文
+
+#### 存疑 10：iDisplay Audio Link 频率 48/96 MHz
+- 原文：iDisplay Audio Link 频率 48 MHz / 96 MHz
+- 检索关键词："iDisplay Audio Link" frequency、Intel iDisplay Audio 48 MHz 96 MHz、Intel display audio link BCLK
+- 检索结果：Intel 官方 Meteor Lake 数据手册中存在 "Intel Display Audio Interface" 章节，但具体的 "48/96 MHz" 频率选项值未在 Intel 官方一手文档中找到直接依据
+- 核查结论：未能确认
+- 当前处理：保留原文
+
+#### 存疑 11：PSE 使用 ARM Cortex-M7
+- 原文：采用了 ARM Cortex-M7 微控制器
+- 检索关键词：Intel "Programmable Services Engine" ARM Cortex-M7、Intel PSE Cortex-M7、Intel Elkhart Lake PSE architecture
+- 检索结果：确认 Intel Elkhart Lake（Atom x6000E 系列）确实存在 PSE（Programmable Services Engine）模块，且为可选特性；但 "PSE 使用 ARM Cortex-M7" 这一具体架构描述未能通过 WebSearch 在 Intel 官方一手文档中直接证实（需直接查阅 EHL Datasheet PDF 原文）
+- 核查结论：部分确认（PSE 模块存在确认；ARM Cortex-M7 架构未通过 WebSearch 直接证实）
+- 当前处理：保留原文
+
+### Connectivity Configuration（connectivity-configuration.md）
+
+#### 存疑 12：BT Audio Offload 支持的无线网卡型号
+- 原文：此功能仅支持特定 Intel® AX 系列无线网卡
+- 检索关键词："Bluetooth Audio Offload" Intel AX210 AX211 AX200、Intel wireless "Audio Offload" supported models、Intel EVO "BT Audio Offload" AX201 AX210
+- 检索结果：确认 "Bluetooth Audio Offload" 是 Intel EVO 平台认证规范的一部分（"Bluetooth 5 with Audio Offload"）；Intel ARK 官方页面未直接列出 "Audio Offload" 作为 AX201/AX210/AX211 等网卡的可检索字段；未找到明确列出支持型号的对照表
+- 核查结论：部分确认（EVO 认证要求确认；具体支持的 AX 型号清单未能完全确认）
+- 当前处理：保留原文 "此功能仅支持特定 Intel® AX 系列无线网卡"，未列出具体型号清单
