@@ -30,9 +30,9 @@ Enable（启用）
 
 选项：
 
-Suspend Disabled 关闭挂起
+Suspend Disabled（关闭挂起）
 
-S3 (Suspend to RAM) S3 挂起到内存
+S3（Suspend to RAM，S3 挂起到内存）
 
 说明：
 
