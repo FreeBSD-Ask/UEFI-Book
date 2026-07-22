@@ -1216,7 +1216,7 @@ SAGV 第 1 点的 Gear 速率。
 
 1-50
 
-用于触发上下切换的 IA（智能加速器）负载百分比的 SAGV 切换因子，根据系统负载（如内存带宽、延迟需求、IA Stall 等）动态调整 System Agent 电压与频率。
+用于触发上下切换的 IA（Intel Architecture，即 CPU 核心）负载百分比的 SAGV 切换因子，根据系统负载（如内存带宽、延迟需求、IA Stall 等）动态调整 System Agent 电压与频率。
 
 ### SAGV Switch Factor GT（SAGV 切换因子 GT）
 
