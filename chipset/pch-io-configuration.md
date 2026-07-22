@@ -887,21 +887,21 @@ Disabled（禁用）
 
 说明：
 
-DITO，Drive Idle Timeout（驱动空闲超时配置）。
+DITO，Device Sleep Idle Timeout（设备睡眠空闲超时）。
 
 DITO 是指某个端口在硬件可以自动进入 DevSleep 状态之前必须保持空闲的时间。
 
 参见：AHCI 1.3.1 Device Sleep Technical Proposal[EB/OL]. [2026-03-26]. <https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf>.
 
-### DTIO Value（驱动空闲超时时间）
+### DITO Value（设备睡眠空闲超时值）
 
-设置 DTIO 值。这是一个最低的时间要求，但不意味着达到此时间就睡眠。
+设置 DITO 值。这是一个最低的时间要求，但不意味着达到此时间就睡眠。
 
-### DM Value（设备睡眠模式时间）
+### DM Value（设备睡眠最小检测时间）
 
-DM，Device Sleep Mode Value，设备睡眠模式时间
+DM，Device Sleep Minimum Detection Time（DMDT），设备睡眠最小检测时间
 
-空闲的时间达到此值就会进入睡眠状态。
+在判定链路进入 DevSleep 前需要维持 DEVSLP 信号的最小检测时间。空闲的时间达到此值就会进入睡眠状态。
 
 ## USB Configuration（USB 配置）
 
@@ -955,9 +955,7 @@ Disabled（禁用）
 
 说明：
 
-PDO，Power Data Objects，供电数据对象
-
-USB PD 2.0 通过 USB PDO 提供标准功能（如电源协议功率）。
+PDO，Port Disable Override，端口禁用覆盖
 
 此策略选项设置后，BIOS 会在 PEI 阶段配置端口禁用覆盖（Port Disable Override，PDO）寄存器。
 
