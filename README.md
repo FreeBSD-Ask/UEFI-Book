@@ -6,4 +6,4 @@
 
 如认为本作品存在侵权情形，请通过电子邮件联系 ykla <yklaxds@gmail.com>。
 
-本项目遵循 [BSD 2-Clause 许可证](LICENSE)。
+FreeBSD 中文社区（CFC）文档团队版权所有。本项目遵循 [BSD 2-Clause 许可证](LICENSE)。
