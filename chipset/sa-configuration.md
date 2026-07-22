@@ -929,13 +929,13 @@ Disabled（禁用）
 
 说明：
 
-ULT：Ultra‑Low TDP，低功耗移动平台
+ULT：Ultra-Low TDP，低功耗移动平台
 
 MRC：Memory Reference Code，BIOS 内存参考代码。用于初始化内存控制器并优化读/写时序和电压以获得最佳表现。
 
 在功耗和热设计受限的条件下保障启动可靠性。安全配置即保守配置。
 
-### LPDDR DqDqs Re-Training（LPDDR DQ‑DQS 再训练）
+### LPDDR DqDqs Re-Training（LPDDR DQ-DQS 再训练）
 
 选项：
 
