@@ -62,7 +62,7 @@ Keep（保持）
 
 说明：
 
-此选项依赖 Boot option filter（启动选项过滤）
+此选项依赖 Boot option filter（启动选项过滤）。
 
 “80h”是传统 BIOS 中代表第一块硬盘（通常是主启动盘）的编号。
 

@@ -347,7 +347,7 @@ Disabled（禁用）
 
 DPC，Downstream Port Containment，下行端口控制
 
-DPC 是 PCIe 标准的建议扩展，设计用于自动禁止发生非致命 (或致命) 错误后的链路以便防止可能扩散的数据损坏以及在软件支持时启动错误恢复。
+DPC 是 PCIe 标准的建议扩展，设计用于自动禁止发生非致命（或致命）错误后的链路以便防止可能扩散的数据损坏以及在软件支持时启动错误恢复。
 
 Intel 800 系列芯片组 PCH-S 控制器不支持 DPC。
 
@@ -485,7 +485,7 @@ Disabled（禁用）
 
 - PME SCI（PCIe 的电源管理中断和系统控制中断）
 
-参见 [维修资料] 关于电路图中的 SMI、SCI、PME#三个信号的功能解释[EB/OL]. [2026-03-26]. <https://www.chinafix.com/thread-1205171-1-1.html>.
+参见：[维修资料] 关于电路图中的 SMI、SCI、PME#三个信号的功能解释[EB/OL]. [2026-03-26]. <https://www.chinafix.com/thread-1205171-1-1.html>.
 
 选项：
 
@@ -629,7 +629,7 @@ Auto（自动）
 
 在多核 CPU 和缓存一致性系统中，“Snoop”指的是一个核心的缓存监视其他核心或外部代理（如 PCIe 设备通过 DMA）对共享内存的访问，以维护所有缓存数据的一致性。Snoop 操作需要时间，会引入延迟。这个延迟就是 Snoop Latency。
 
-这个 BIOS 设置项不是 PCIe 设备报告的 LTR 值本身。它是系统 (具体是 SA 内的 PCIe 控制器/电源管理逻辑) 在评估 PCIe 设备 LTR 要求时，需要额外考虑的一个内部延迟补偿值。
+这个 BIOS 设置项不是 PCIe 设备报告的 LTR 值本身。它是系统（具体是 SA 内的 PCIe 控制器/电源管理逻辑）在评估 PCIe 设备 LTR 要求时，需要额外考虑的一个内部延迟补偿值。
 
 参见：博客园. BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>.
 
@@ -1701,7 +1701,7 @@ Disabled（禁用）
 
 控制 eMMC 5.1 HS400 模式（总线速度）开关。
 
-HS400，是一种 eMMC 的 HS400 数据传输模式，为 eMMC 数据总线工作于双边采样 (DDR) 模式下的数据传输模式，带宽可达 400 MB/s。
+HS400，是一种 eMMC 的 HS400 数据传输模式，为 eMMC 数据总线工作于双边采样（DDR）模式下的数据传输模式，带宽可达 400 MB/s。
 
 ### Enable HS400 software tuning（启用 HS400 软件调优）
 

@@ -16,7 +16,7 @@ Enable（启用）
 
 ME：Intel Management Engine，Intel 管理引擎状态。英特尔® 管理引擎是嵌入式微控制器（集成在某些英特尔芯片组上），运行轻量级微内核操作系统，为基于英特尔® 处理器的计算机系统提供各种功能和服务。
 
-参见：英特尔公司. 什么是英特尔®管理引擎？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000008927/software/chipset-software.html>.
+参见：英特尔公司. 什么是英特尔® 管理引擎？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000008927/software/chipset-software.html>.
 
 ## ME Unconfig on RTC Clear（重置 RTC 时是否重置 ME）
 
@@ -110,7 +110,7 @@ PTT：Platform Trust Technology，Intel 可信平台技术。如果要安装 Win
 
 英特尔® PTT 是符合 2.0 规范并提供与独立 TPM 相同的功能的集成 TPM，只是它驻留在系统的固件中，因此无需专用处理或内存资源。
 
-参见：英特尔公司. 什么是可信平台模块（TPM）及其与英特尔®Platform Trust Technology（英特尔®PTT）的关系？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000094205/processors/intel-core-processors.html>.
+参见：英特尔公司. 什么是可信平台模块（TPM）及其与英特尔® Platform Trust Technology（英特尔® PTT）的关系？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000094205/processors/intel-core-processors.html>.
 
 ### TPM Device Selection（TPM 设备选择）
 

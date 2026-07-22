@@ -947,7 +947,7 @@ Disabled（禁用）
 
 LPDDR4/4X 内部没有 DLL 来稳定 DQS 与 CK 之间的相位关系，因温度、电压和工艺变化，tDQS-CK（读路径）和 tDQS2DQ（写路径）会产生漂移，影响数据锁存位置，从而导致读写错误。因此需要动态重新训练，以保证稳定性和可靠性。
 
-参见 LPDDR4---retraining[EB/OL]. [2026-03-26]. <https://blog.csdn.net/qq_33473931/article/details/138251131>.
+参见：LPDDR4---retraining[EB/OL]. [2026-03-26]. <https://blog.csdn.net/qq_33473931/article/details/138251131>.
 
 ### Safe Mode Support（安全模式支持）
 
@@ -1007,7 +1007,7 @@ LP5 BG Mode
 
 根据内存频率进行选择。
 
-内存 Bank 是电脑系统与内存之间数据总线的基本工作单位。参见什么是内存 BANK[EB/OL]. [2026-03-26]. <https://iknow.lenovo.com.cn/spider/detail/kd/030022>.
+内存 Bank 是电脑系统与内存之间数据总线的基本工作单位。参见：什么是内存 BANK[EB/OL]. [2026-03-26]. <https://iknow.lenovo.com.cn/spider/detail/kd/030022>.
 
 ### Frequency Limit for Mixed 2DPC DDR4（混合 2DPC DDR4 内存条的频率限制）
 
@@ -1115,29 +1115,31 @@ Dynamic（动态），1 GB, 1.25 GB, 1.5 GB, 1.75 GB, 2 GB, 2.25 GB, 2.5 GB, 2.7
 
 设置 TOLUD 的最大值。动态分配会根据已安装图形控制器所需的最大 MMIO 长度，自动调整 TOLUD。
 
-参见为何系统识别不全？4 GB 内存终极解迷[EB/OL]. [2026-03-26]. <https://memory.zol.com.cn/130/1302306_all.html#p1302306>.
+参见：为何系统识别不全？4 GB 内存终极解谜[EB/OL]. [2026-03-26]. <https://memory.zol.com.cn/130/1302306_all.html#p1302306>.
 
 Top of Low Usable DRAM (TOLUD)，低地址段内存顶端，表示 4 GB 以下的可用 DRAM 最大地址边界。其描述的是可设定地址的物理内存总量。TOLUD 寄存器会始终在 4 GB 内存地址以下工作。
 
 ### SA GV (SAGV)
 
-Disabled —— 禁用
+选项：
 
-Enabled —— 启用
+Disabled（禁用）
 
-Fixed to 1st Point —— 固定到第 1 点
+Enabled（启用）
 
-Fixed to 2nd Point —— 固定到第 2 点
+Fixed to 1st Point（固定到第 1 点）
 
-Fixed to 3rd Point —— 固定到第 3 点
+Fixed to 2nd Point（固定到第 2 点）
 
-Fixed to 4th Point —— 固定到第 4 点
+Fixed to 3rd Point（固定到第 3 点）
+
+Fixed to 4th Point（固定到第 4 点）
 
 说明：
 
 是否启动 System Agent Geyserville（SAGV），系统会根据负载动态调整电压及频率，或固定在特定的控制点。
 
-参见英特尔公司. 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/011/sagv-points/>；SAGV 降低 System Agent 功耗的方式[EB/OL]. [2026-03-26]. <https://blog.xzr.moe/archives/348/>.
+参见：英特尔公司. 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/011/sagv-points/>；SAGV 降低 System Agent 功耗的方式[EB/OL]. [2026-03-26]. <https://blog.xzr.moe/archives/348/>.
 
 SAGV（System Agent Geyserville）是一种使 SoC 能根据内存带宽利用率和/或各类工作负载的延迟需求，动态调整系统代理（System Agent）工作点（电压/频率）的技术，采用动态电压频率调节（DVFS）来提高能效。Pcode 启发式算法通过周期性评估内存利用率和 IA 停顿情况，负责请求合适的 Qclock 工作点。
 
@@ -1300,7 +1302,7 @@ pTRR（pseudo Target Row Refresh，伪目标行刷新）
 
 行敲击：一种针对 DRAM 内存的攻击或故障现象，通过反复快速访问某一行内存，可能导致相邻内存行的数据发生位翻转（数据破坏）。
 
-参见 RowHammer 攻击：内存的隐形威胁[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/zhanggaoxing/p/18099550>.
+参见：RowHammer 攻击：内存的隐形威胁[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/zhanggaoxing/p/18099550>.
 
 ### RH LFSR0 Mask（行敲击 pTRR 的 LFSR0 掩码）
 
@@ -1472,7 +1474,7 @@ Disabled（禁用）
 
 使用每 bank 刷新（Per Bank Refresh）可以减少，甚至消除刷新操作带来的性能损失。
 
-参见 DDRMC5 Memory Controller[EB/OL]. [2026-03-26]. <https://docs.amd.com/r/en-US/pg456-integrated-mc/Transaction-Size>.
+参见：DDRMC5 Memory Controller[EB/OL]. [2026-03-26]. <https://docs.amd.com/r/en-US/pg456-integrated-mc/Transaction-Size>.
 
 ### VC1 Read Metering（VC1 读取计量功能）
 
@@ -1556,7 +1558,7 @@ Disabled（禁用）
 
 内存扰频可提高内存测试的覆盖率和有效性。需要提供地址映射信息来确保测试的准确性和完整性。
 
-参见佚名. study and implementation of bist for 65nm high speed memory[EB/OL]. [2026-03-26]. <https://repository.nirmauni.ac.in/jspui/bitstream/123456789/150/1/04MEC005.pdf>.
+参见：佚名. study and implementation of bist for 65nm high speed memory[EB/OL]. [2026-03-26]. <https://repository.nirmauni.ac.in/jspui/bitstream/123456789/150/1/04MEC005.pdf>.
 
 ### Force ColdReset（强制冷重置）
 
@@ -1806,7 +1808,7 @@ Hard PPR（hPPR，硬 PPR）
 
 PPR，Post Package Repair，封装后修复。PPR 分为两种模式：hPPR（Hard PPR，硬修复，使用熔丝永久映射，永久性修复）和 sPPR（Soft PPR，软修复，使用 SRAM 缓存动态映射，临时性修复，断电失效）。本选项中 Enabled 对应 sPPR，Hard PPR 对应 hPPR。
 
-参见 FQXSFMA0026I：DIMM [arg1] 自我修复，尝试进行封装后修复（PPR）成功。[arg2][EB/OL]. [2026-03-26]. <https://pubs.lenovo.com/sr635-v3/zh-CN/FQXSFMA0026I>.
+参见：FQXSFMA0026I：DIMM [arg1] 自我修复，尝试进行封装后修复（PPR）成功。[arg2][EB/OL]. [2026-03-26]. <https://pubs.lenovo.com/sr635-v3/zh-CN/FQXSFMA0026I>.
 
 PPR 会在可能的情况下修复出错的行。PPR 是一种内存自我修复过程，在该过程中，系统会将对故障存储单元或地址行的访问替换为对 DRAM 设备中备用行的访问。
 
@@ -1928,9 +1930,9 @@ GTT：Graphics Translation Table，图形转换表，又称 GART（Graphics Addr
 
 选择显示内存占用大小。在系统内存中为 GPU 分配的地址空间。使用此选项设置必须留给图形引擎（GFX Engine）的内存总大小。主内存区域中为图形保留的最大大小，操作系统可将其用作显存。
 
-参见英特尔公司. What is IGD Aperture Size?[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/support/articles/000028294/graphics.html>.
+参见：英特尔公司. What is IGD Aperture Size?[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/support/articles/000028294/graphics.html>.
 
-用于指定分配给集成显卡的 PCIe 基址寄存器 (BAR) 或访问窗口的大小。
+用于指定分配给集成显卡的 PCIe 基址寄存器（BAR）或访问窗口的大小。
 
 应用程序通过访问 BAR，与专用于集成显卡的系统内存或用于 de-swizzle 的常规系统内存交互。较大的 IGD Aperture Size 并不总是最佳选择，因为它会增加系统地址空间中 BAR 的占用。
 
@@ -2324,7 +2326,7 @@ Disabled（禁用）
 
 ## DMI/OPI Configuration（DMI/OPI 配置）
 
-Direct Media Interface (DMI)/On Package Interface (OPI，封装版的 DMI) 相关配置。
+Direct Media Interface (DMI)/On Package Interface（OPI，封装版的 DMI）相关配置。
 
 ### CDR Relock for CPU DMI（CPU DMI 的时钟数据恢复重新锁定）
 
@@ -2358,7 +2360,7 @@ EQ，Equalization：均衡
 
 这是 DMI Gen3 链路上的动态均衡第 2 阶段。
 
-Phase 2 是链路均衡中的一个过程，参见 Gen3 的链路均衡[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/docs/programmable/683621/current/link-equalization-for-gen3.html>.
+Phase 2 是链路均衡中的一个过程，参见：Gen3 的链路均衡[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/docs/programmable/683621/current/link-equalization-for-gen3.html>.
 
 Equalization 是高速串行总线（如 PCIe Gen3/4、DMI Gen3）中确保信号完整性的重要过程。它被分为四个阶段（Phases），每个阶段在链路训练（Link Training）过程中扮演着不同角色：Phase 0、Phase 1、Phase 2、Phase 3。
 
@@ -2406,7 +2408,7 @@ Disabled（禁用）
 
 FOM，Figure of Merit，品质因数，表示接收到的信号质量。可根据均衡反馈设置更优 FOM，以获得更佳的信号质量。
 
-参见 PCIe 学习笔记（4）链路均衡介绍[EB/OL]. [2026-03-26]. <https://blog.csdn.net/yumimicky/article/details/148234345>.
+参见：PCIe 学习笔记（4）链路均衡介绍[EB/OL]. [2026-03-26]. <https://blog.csdn.net/yumimicky/article/details/148234345>.
 
 ### DMI Advanced Menu（DMI 高级菜单）
 
@@ -2598,7 +2600,7 @@ VT-d，Intel® Virtualization Technology for Directed I/O，英特尔® 定向 I
 
 VT-d 是一项位于 CPU、内存和 I/O 设备之间的硬件机制，其主要功能是将 I/O 设备的 DMA 访问请求和中断请求重定向到 VMM 设定的虚拟机中。
 
-参见 Intel VT-d（1）- 简介[EB/OL]. [2026-03-26]. <https://zhuanlan.zhihu.com/p/50640466>；定向 I/O 架构规范英特尔® 虚拟化技术[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/774206/intel-virtualization-technology-for-directed-i-o-architecture-specification.html>.
+参见：Intel VT-d（1）- 简介[EB/OL]. [2026-03-26]. <https://zhuanlan.zhihu.com/p/50640466>；定向 I/O 架构规范英特尔® 虚拟化技术[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/774206/intel-virtualization-technology-for-directed-i-o-architecture-specification.html>.
 
 虚拟机监控器（VMM）系统可以使用 VT-d 来管理多个虚拟机对同一物理 I/O 设备的访问（即硬件直通）。
 
@@ -2648,7 +2650,7 @@ Disabled（禁用）
 
 在操作系统运行时，防范连接到可轻松访问且支持 DMA 功能的内部/外部端口（例如，M.2 PCIe 插槽和 Thunderbolt™3）的设备进行的恶意 DMA。
 
-参见适用于 OEM 的内核 DMA 保护（内存访问保护）[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/oem-kernel-dma-protection>.
+参见：适用于 OEM 的内核 DMA 保护（内存访问保护）[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/oem-kernel-dma-protection>.
 
 ## Thermal Device B0:D4:F0（热管理设备 B0:D4:F0）
 
@@ -2688,9 +2690,9 @@ Crash Data Detector 会将错误状况通知 Crash Data Requester（故障数据
 
 在系统重启后，Crash Data Collector（故障数据收集器）会从 Crash Data Storage 中读取故障数据，并将其提供给软件或上传至中央服务器，用于追踪错误频率和趋势。
 
-参见 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-crashlog/>.
+参见：12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-crashlog/>.
 
-## GNA Device（B0:D8:F0）(高斯与神经网络加速器设备)
+## GNA Device（B0:D8:F0）（高斯与神经网络加速器设备）
 
 选项：
 
@@ -2720,7 +2722,7 @@ Disabled（禁用）
 
 启用/禁用 SA CRID 和 TCSS CRID 控制，以支持 Intel SIPP。
 
-Intel SIPP，The Intel Stable IT Platform Program，英特尔® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见借助英特尔® 稳定 IT 平台计划实现可靠的稳定性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html>；什么是英特尔® vPro®？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html>.
+Intel SIPP，The Intel Stable IT Platform Program，英特尔® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见：借助英特尔® 稳定 IT 平台计划实现可靠的稳定性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html>；什么是英特尔® vPro®？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html>.
 
 英特尔® 稳定 IT 平台计划（英特尔® SIPP）能让 IT 部门至少在 15 个月内或在下一代产品发布之前，几乎不用修改平台组件和驱动程序。
 
@@ -2758,11 +2760,11 @@ Disabled（禁用）
 
 在 BIOS 中启用此选项，可以让 64 位 PCIe 设备使用大于 4 GB 的地址空间，但操作系统也必须是 64 位系统才能完全支持。
 
-目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding[EB/OL]. [2026-03-26]. <https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/>.
+目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见：BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding[EB/OL]. [2026-03-26]. <https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/>.
 
-在禁用状态下，双 CPU 显卡及雷电接口设备的使用将受到限制。参见为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1043356/>.
+在禁用状态下，双 CPU 显卡及雷电接口设备的使用将受到限制。参见：为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1043356/>.
 
-## IPU Device (B0:D5:F0) (IPU 设备)
+## IPU Device (B0:D5:F0)（IPU 设备）
 
 选项：
 
@@ -3089,7 +3091,7 @@ I²C0, I²C1, I²C2, I²C3, I²C4, I²C5
 
 选项：
 
-Disabled (禁用)
+Disabled（禁用）
 
 External（外置）
 

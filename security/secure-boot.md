@@ -24,7 +24,7 @@ Disabled（禁用）
 
 当注册了 PK 后，且 BIOS 在 User Mode 模式下运行时，User Mode 模式要求所有可执行文件在运行之前都要经过认证。此时 BIOS 可工作在 User Mode 和 Deployed Mode 模式下，且从 User Mode 模式可以直接修改为 Deployed Mode。
 
-Audit Mode 是 Setup Mode 的一种延伸，Deployed Mode 是 User Mode 的一种延伸。Audit Mode 和 User Mode 都可以直接转换到 Deployed Mode，但 Deployed Mode 转换到其他安全模式需要删除 PK 或者是特定安全转换方法。
+Audit Mode 是 Setup Mode 的一种延伸，Deployed Mode 是 User Mode 的一种延伸。Audit Mode 和 User Mode 都可以直接转换到 Deployed Mode，但 Deployed Mode 转换到其他安全模式需要删除 PK 或通过特定安全转换方法。
 
 注意：如果安全启动默认处于启用状态且无法关闭，可能需要先设置 Administrator Password（管理员密码）或 User Password（用户密码）才能进行关闭；在关闭安全启动后，可以再取消密码设置。同样地，如果无法开启安全启动，也可能需要先设置 Administrator Password（管理员密码）或 User Password（用户密码）。
 
@@ -42,7 +42,7 @@ Custom（自定义）
 
 用于选择安全启动模式。
 
-在自定义模式下，物理存在的用户可以在无需完全认证的情况下配置安全启动策略变量。在自定义模式下，可以灵活使用多种指令。在自定义模式下更新 PK、KEK 变量不需要原始 PK 签署，且更新 Image signature database (db/dbx) 或 Authorized Timestamp Database (dbt) 也不需要 PK 或 KEK 的签署。
+在自定义模式下，物理存在的用户可以在无需完全认证的情况下配置安全启动策略变量。在自定义模式下，可以灵活使用多种指令。在自定义模式下更新 PK、KEK 变量不需要原始 PK 签署，且更新 Image signature database（db/dbx）或 Authorized Timestamp Database（dbt）也不需要 PK 或 KEK 的签署。
 
 标准模式：UEFI 规范中定义的默认模式。
 
@@ -58,7 +58,7 @@ No（否）
 
 说明：
 
-强制系统进入用户模式。安装出厂默认的安全启动的密钥数据库。
+强制系统进入用户模式。安装出厂默认的安全启动密钥数据库。
 
 ## Reset To Setup Mode（重置为设置模式）
 
@@ -72,7 +72,7 @@ No（否）
 
 说明：
 
-从 NVRAM（非易失性随机存取存储器，BIOS/UEFI 固件设置通常存储在里面）删除所有安全启动密钥数据库。
+从 NVRAM（非易失性随机存取存储器，BIOS/UEFI 固件设置通常存储在里面）中删除所有安全启动密钥数据库。
 
 ## Key management（密钥管理）
 
@@ -120,7 +120,7 @@ No（否）
 
 说明：
 
-从 NVRAM 中删除所有安全启动的密钥数据库。
+从 NVRAM 中删除所有安全启动密钥数据库。
 
 ### Enroll Efi Image（注册 EFI 映像）
 
@@ -130,7 +130,7 @@ No（否）
 
 允许该映像在安全启动模式下运行。将 PE 映像的 SHA256 哈希值注册到授权签名数据库（db）中。
 
-### Remove 'UEFI CA' from DB（从数据库中删除 UEFI CA）
+### Remove ‘UEFI CA’ from DB（从数据库中删除 UEFI CA）
 
 本选项用于从授权数据库中删除 UEFI CA 证书。
 
@@ -161,7 +161,7 @@ Append Key：追加密钥
 
 2. 经过认证的 UEFI 变量
 
-3. EFI PE/COFF 镜像（SHA256），密钥来源：出厂、外部、混合
+3. EFI PE/COFF 映像（SHA256），密钥来源：出厂、外部、混合
 
 ### Key Exchange Keys（密钥交换密钥）
 

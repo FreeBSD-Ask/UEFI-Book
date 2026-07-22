@@ -7,13 +7,13 @@
 | CPU - Power Management Control | CPU 电源管理控制 |
 | GT - Power Management Control | 核显电源管理控制（GT 电源管理控制） |
 
-## CPU - Power Management Control（CPU 电源控制管理）
+## CPU - Power Management Control（CPU 电源管理控制）
 
-![CPU 电源控制管理](../.gitbook/assets/ZLAE@KGYCBDU4L3WO1Y5B-20250719152447-z0waxrt.png)
+![CPU 电源管理控制](../.gitbook/assets/ZLAE@KGYCBDU4L3WO1Y5B-20250719152447-z0waxrt.png)
 
-![Control CPU 电源控制管理](../.gitbook/assets/9D70JO9NHBZEW6P6WP0-20250719152453-z1xy37r.png)
+![Control CPU 电源管理控制](../.gitbook/assets/9D70JO9NHBZEW6P6WP0-20250719152453-z1xy37r.png)
 
-![Control CPU 电源控制管理](../.gitbook/assets/image-20250719153016-h8rmfe7.png)
+![Control CPU 电源管理控制](../.gitbook/assets/image-20250719153016-h8rmfe7.png)
 
 ### Boot performance mode（引导性能模式）
 
@@ -56,7 +56,7 @@ Enable（启用）
 
 说明：
 
-启用或禁用 Race to Halt（RTH）功能。RTH 会动态提高 CPU 频率，以更快进入封装级 C 状态，从而降低整体功耗。（RTH 通过 MSR 寄存器 1FC 的第 20 位控制）
+启用或禁用 Race to Halt（RTH）功能。RTH 会动态提高 CPU 频率，以更快进入封装级 C 状态，从而降低整体功耗。（RTH 通过 MSR 寄存器 0x1FC 的第 20 位控制）
 
 是否启动 CPU 省电功能。当 CPU 有任务时全速运行，完成后进入极低功耗状态。
 
@@ -476,7 +476,7 @@ Vsys 的输入单位为毫伏（mV），Psys 的输入单位为毫瓦（mW），
 
 主要用于控制信号“断言”（assertion）过程中的消隐（deglitch）行为。用以设置断言信号消隐时间，作用是平衡电路中的噪声抑制与信号响应速度。
 
-断言消隐尾数 0x4F[7-3]（存储在 MSR/寄存器地址 0x4F 的第 7 至第 3 位）。断言消隐 = 2µs × 尾数 × 2^(指数)
+断言消隐尾数 0x4F[7-3]（存储在 MSR/寄存器地址 0x4F 的第 7 至第 3 位）。断言消隐 = 2µs × 尾数 × 2^(指数)。
 
 #### Assertion Deglitch Exponent（断言消隐指数）
 
@@ -488,7 +488,7 @@ Vsys 的输入单位为毫伏（mV），Psys 的输入单位为毫瓦（mW），
 
 信号解除激活时的消隐时间计算参数。类似上方的断言消隐。
 
-解除消隐尾数 0x49[7-3]（存储在 MSR/寄存器地址 0x49 的第 7 至第 3 位）。解除消隐 = 2µs × 尾数 × 2^(指数)
+解除消隐尾数 0x49[7-3]（存储在 MSR/寄存器地址 0x49 的第 7 至第 3 位）。解除消隐 = 2µs × 尾数 × 2^(指数)。
 
 #### De-assertion Deglitch Exponent（解除消隐指数）
 
@@ -529,12 +529,12 @@ Acoustic Noise Mitigation（噪声抑制功能）：启用此选项可减轻部�
 - Ramp Down Time（下沿时间）：指 CPU 或电源性能从高到低的过渡时间。设置最大下降沿随机化时间（微刻度单位）。有效范围 0-255。该参数用于声学噪声抑制的动态周期调校（DPA）优化。
 - IA VR Domain（Intel Architecture Voltage Regulator，处理器计算核心电压调节域）
 
-- Disable Fast PKG C State Ramp for VccIn Domain（禁用快速 PKG C 状态切换），选项为 FALSE/TRUE。FALSE: 在深度 C 状态下启用快速切换；TRUE: 在深度 C 状态下禁用快速切换
+- Disable Fast PKG C State Ramp for VccIn Domain（禁用快速 PKG C 状态切换），选项为 FALSE/TRUE。FALSE: 在深度 C 状态下启用快速切换；TRUE: 在深度 C 状态下禁用快速切换。
 - Slow Slew Rate for IA Domain（处理器核心电压调节域慢速压摆率），选项为 Fast/2、Fast/4、Fast/8、Fast/16。设置深度封装 C 状态切换的 VR VccIn（CPU 主供电输入电压）慢速压摆率。慢速压摆率 = 快速模式压摆率 / 等分系数（可选 2/4/8/16），通过降低压摆率减轻声学噪声。
 
 - GT VR Domain（Graphics Technology Voltage Regulator，核显电压调节域）
 
-- Disable Fast PKG C State Ramp for VccIn Domain（禁用快速 PKG C 状态切换）：选项：FALSE/TRUE。FALSE: 在深度 C 状态下启用快速切换；TRUE: 在深度 C 状态下禁用快速切换
+- Disable Fast PKG C State Ramp for VccIn Domain（禁用快速 PKG C 状态切换）：选项：FALSE/TRUE。FALSE: 在深度 C 状态下启用快速切换；TRUE: 在深度 C 状态下禁用快速切换。
 - Slow Slew Rate for GT Domain（核显电压调节域慢速压摆率设置）：选项：Fast/2、Fast/4、Fast/8、Fast/16。设置深度封装 C 状态切换的 VR GT（核显电压调节域）慢速压摆率。慢速压摆率 = 快速模式压摆率 / 等分系数（可选 2/4/8/16），通过降低压摆率减轻声学噪声。
 
 #### Core/IA VR Settings（核心/英特尔架构电压调节设置）
@@ -594,7 +594,7 @@ Intel 建议 AC Loadline 与 DC Loadline 取值一致（AC = DC）。警告：�
 - IMON Slope（电流检测变化率）：此值以 1/100 为增量单位定义，取值范围为 0 到 200。例如，要设置变化率为 1.25，则输入 125。设置为 0 表示自动模式（AUTO）。此参数通过 BIOS VR mailbox 命令 0x4 进行配置。用于高精度电源校准。
 - IMON Offset（电流检测偏移量）：此值以 1/1000 为单位定义，取值范围为 0 到 63999。例如，如果要设置偏移量为 25.348，则应输入数值 25348。此参数通过 BIOS VR mailbox 命令 0x4 进行配置。用于微调 VR（电压调节器）的电流感应值，以提高功耗报告的准确性或满足电源调校需求。
 
-- IMON Prefix（电流检测前缀）：`+`/`-`。用设置加/减电流检测偏移量。
+- IMON Prefix（电流检测前缀）：`+`/`-`。用于设置加/减电流检测偏移量。
 
 - VR Current Limit（电压调节器当前限制）：电压调节器电流限制（IccMax）代表允许 CPU 在任意时刻瞬间拉取的最大电流。该值以 1/4 安培（A）为单位定义，例如输入 `400` 表示 100 A（400 × 0.25 A）。取值范围为 0–512，对应实际电流 0–128 A；输入 `0` 表示启用自动模式。该设置通过 BIOS VR mailbox 命令 `0x6` 进行控制。
 - VR Voltage Limit（电压调节器电压限制）：Voltage Limit（VMAX）：用于设置电压调节器（VR）允许的最大瞬时输出电压。单位为毫伏（mV）。其取值范围为 0–7999 mV。此设置通过 BIOS VR mailbox 命令 0x8 进行控制。
@@ -602,7 +602,7 @@ Intel 建议 AC Loadline 与 DC Loadline 取值一致（AC = DC）。警告：�
 
 - TDC Current Limit（热设计电流当前限制）：以 1/8 安培（A）为递增单位定义，取值范围为 0–32767。例如，如果要设置最大瞬时电流为 125 A，应输入 1000（1000 × 0.125 A = 125 A）。输入 `0` 表示设置为自动模式（0 A）。该参数通过 BIOS 的 VR mailbox 命令 `0x1A` 进行配置。
 - TDC Time Window（热设计电流时间窗口）：值：1-448。电压调节器热设计电流时间窗口限制。是指在特定时间内，CPU 可承受的最大电流（TDC Current Limit）所允许的持续时间。其单位为毫秒（ms），用于控制 CPU 在高负载下的电流限制响应时间。
-- TDC Lock（锁定热设计电流）:启用/禁用。可锁定持续电流上限，防止损坏芯片。
+- TDC Lock（锁定热设计电流）：启用/禁用。可锁定持续电流上限，防止损坏芯片。
 
 - IRMS：启用/禁用。IRMS = 电流（电流的符号是 I）有效值（Current Root Mean Square），实时电流有效值监测。
 
@@ -736,8 +736,8 @@ Enable（启用）
 - C1 - 自动停止：内核时钟已关闭。处理器没有执行指令，但几乎可以立即返回到执行状态。某些处理器还支持增强型 C1 状态（C1E），以降低功耗。
 - C2 - 停止时钟：内核时钟和总线时钟已关闭。该处理器保持所有软件可见状态，但可能需要更长的时间才能唤醒。
 - C3 - 深度睡眠：时钟生成器已关闭。处理器无需保持其高速缓存一致性，但能保持其他状态。某些处理器具有 C3 状态（深度睡眠）的不同变体与唤醒处理器所需的时间不同。
-- C4 - 更深度的睡眠：降低 VCC
-- DC4 - 更深度的 C4 睡眠：进一步减少 VCC
+- C4 - 更深度的睡眠：降低 VCC。
+- DC4 - 更深度的 C4 睡眠：进一步减少 VCC。
 
 参见：英特尔公司. 处理器深度和深度睡眠状态之间的差异[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000006619/processors/intel-core-processors.html>.
 

@@ -180,7 +180,7 @@ Not Happened（未发生）：嵌入式控制器未执行过软重置
 
 参见：什么值得买值友 9415279329. PWM 信号占空比，如何影响散热风扇速度？[EB/OL]. [2026-03-26]. <https://post.smzdm.com/p/a5p056o3/>。
 
-### FAN_PWMOUT device type(FAN_PWMOUT 设备类型)
+### FAN_PWMOUT device type（FAN_PWMOUT 设备类型）
 
 选项：
 

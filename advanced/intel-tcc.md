@@ -2,7 +2,7 @@
 
 Intel® 时间协调计算（Intel® TCC）可为实时应用提供优化的计算和时间性能。支持基于无线和有线融合网络的 IEEE* 802.1 时间敏感网络（TSN）。
 
-参见：英特尔公司. 英特尔®时序协调计算（TCC）用户指南[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html>.
+参见：英特尔公司. 英特尔® 时序协调计算（TCC）用户指南[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html>.
 
 ## Intel® TCC Mode（Intel TCC 模式）
 
