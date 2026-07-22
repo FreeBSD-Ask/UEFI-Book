@@ -66,7 +66,7 @@ Enable（启用）
 
 BT（Bluetooth，蓝牙）。此选项用于启用或禁用 CNVi 中的蓝牙功能。
 
-### BT Audio Offload（蓝牙音频分发/A2DP）
+### BT Audio Offload（蓝牙音频卸载/A2DP）
 
 选项：
 
@@ -76,7 +76,7 @@ Enable（启用）
 
 说明：
 
-BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见英特尔公司. 示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP）（MP4）[EB/OL]. (2022-10-27)[2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html>. 展示蓝牙音频卸除技术的省电效果。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务，即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见微软公司. Hardware-Offloaded 音频处理[EB/OL]. (2025-07-18)[2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing>. 介绍硬件卸载音频处理的技术原理与实现。
+BT Audio Offload（A2DP），英特尔蓝牙音频卸载技术，参见英特尔公司. 示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP）（MP4）[EB/OL]. (2022-10-27)[2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html>. 展示蓝牙音频卸载技术的省电效果。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务，即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见微软公司. Hardware-Offloaded 音频处理[EB/OL]. (2025-07-18)[2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing>. 介绍硬件卸载音频处理的技术原理与实现。
 
 该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，并通过 A2DP 格式以高能效方式将音频输出至蓝牙设备。
 
