@@ -196,7 +196,7 @@ Disabled（禁用）
 
 启用或禁用将板载温度传感器（TS-on-Board）的 ALERT# 和 THERM# 信号路由到 PCH 上的 EXTTS# 引脚。
 
-板载温度传感器（TS‑on‑Board）用于检测 PCB 或模块温度。若要让系统统一协调管理风扇或功耗策略，就需要将这些信号注入至 PCH。
+板载温度传感器（TS-on-Board）用于检测 PCB 或模块温度。若要让系统统一协调管理风扇或功耗策略，就需要将这些信号注入至 PCH。
 
 #### EXTT# via TS-on-DIMM（通过内存上的温度传感器连接 EXTT#）
 
