@@ -945,7 +945,7 @@ Disabled（禁用）
 
 说明：
 
-LPDDR4/4X 内部没有 DLL 来稳定 DQS 与 CK 之间的相位关系，因温度、电压和工艺变化，tDQS‑CK（读路径）和 tDQS2DQ（写路径）会产生漂移，影响数据锁存位置，从而导致读写错误。因此需要动态重新训练，以保证稳定性和可靠性。
+LPDDR4/4X 内部没有 DLL 来稳定 DQS 与 CK 之间的相位关系，因温度、电压和工艺变化，tDQS-CK（读路径）和 tDQS2DQ（写路径）会产生漂移，影响数据锁存位置，从而导致读写错误。因此需要动态重新训练，以保证稳定性和可靠性。
 
 参见 LPDDR4---retraining[EB/OL]. [2026-03-26]. <https://blog.csdn.net/qq_33473931/article/details/138251131>.
 
@@ -1775,7 +1775,7 @@ Disabled（禁用）
 
 说明：
 
-定期运行占空比校正器（Duty‑Cycle Corrector）。
+定期运行占空比校正器（Duty-Cycle Corrector）。
 
 Periodic DCC 能在运行一段时间后自动重新校准，确保输出时钟占空比保持正确，从而提升稳定性和信号完整性。
 
