@@ -2,7 +2,7 @@
 
 本节介绍 BIOS 中与系统安全相关的设置选项，包括管理员密码、用户密码、安全启动、TPM（可信平台模块）等重要安全功能。
 
-参见：华硕. 如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1046347/> 提供 BIOS/UEFI 密码设置与重置的详细指导。
+参见：华硕. 如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1046347/>。提供 BIOS/UEFI 密码设置与重置的详细指导。
 
 参见：UEFI Forum. UEFI Specification[EB/OL]. [2026-04-17]. <https://uefi.org/specifications>. UEFI 规范是安全启动、密钥管理和平台安全机制的权威技术标准。
 
