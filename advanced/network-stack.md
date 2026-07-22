@@ -18,7 +18,7 @@ Enable（启用）
 
 此选项决定了以下选项：
 
-### Ipv4 PXE Support（Ipv4 PXE 启动支持）
+### IPv4 PXE Support（IPv4 PXE 启动支持）
 
 选项：
 
