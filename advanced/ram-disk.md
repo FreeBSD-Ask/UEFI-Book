@@ -24,4 +24,4 @@ Reserved（保留）
 
 ## Remove selected RAM disk(s)（移除所选的内存盘）
 
-移除所选的内存盘
+移除所选的内存盘。

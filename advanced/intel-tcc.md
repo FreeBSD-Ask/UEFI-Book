@@ -90,8 +90,8 @@ Graphics Technology (GT) Class of Service，图形技术服务类别。
 
 #### RAPL PL1 Enable（启用运行平均功率限制 1）
 
-长期功率限制，平均功耗
+长期功率限制，平均功耗。
 
 #### RAPL PL2 Enable（启用运行平均功率限制 2）
 
-短期功率限制，峰值功耗
+短期功率限制，峰值功耗。

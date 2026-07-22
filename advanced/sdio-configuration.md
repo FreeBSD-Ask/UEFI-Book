@@ -18,11 +18,11 @@ PIO
 
 说明：
 
-Auto（自动）：如果控制器支持 DMA，就以 DMA 模式访问 SD 设备；否则使用 PIO 模式
+Auto（自动）：如果控制器支持 DMA，就以 DMA 模式访问 SD 设备；否则使用 PIO 模式。
 
-SDMA：是 SD/eMMC 控制器中的一种基础的 DMA 模式
+SDMA：是 SD/eMMC 控制器中的一种基础的 DMA 模式。
 
-ADMA：采用 ADMA（Advanced DMA）或 ADMA2 协议，支持描述符表、散列表调度等特性，适合大块数据或复杂控制，性能更优
+ADMA：采用 ADMA（Advanced DMA）或 ADMA2 协议，支持描述符表、散列表调度等特性，适合大块数据或复杂控制，性能更优。
 
 PIO：通过 CPU 按指令逐字节处理 SD/eMMC 设备数据，CPU 参与度高，速度较慢，但兼容性强。
 

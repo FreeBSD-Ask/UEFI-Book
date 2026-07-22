@@ -8,9 +8,9 @@ LVDS，Low-Voltage Differential Signal（低压差分信号）。
 
 选项：
 
-Enabled 启用
+Enabled（启用）
 
-Disabled 禁用
+Disabled（禁用）
 
 此选项决定了以下选项：
 
