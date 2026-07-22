@@ -176,7 +176,7 @@ Enable（启用）
 
 启用或禁用集成的 Thunderbolt™ 控制器。仅当主板集成 Intel® Thunderbolt™ 控制器或安装了 GIGABYTE Thunderbolt™ 扩展卡时该子菜单才会出现。
 
-### USB4 Host Router Class Code（USB4 主机路由器类代码）
+## USB4 Host Router Class Code（USB4 主机路由器类代码）
 
 选项：
 
