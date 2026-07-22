@@ -649,7 +649,7 @@ Disabled（禁用）
 
 优化时钟到数据总线传播延迟。
 
-#### TxDqsTCO Comp Training *（TxDqsTCO Comp 训练*）
+#### TxDqsTCO Comp Training*（TxDqsTCO Comp 训练*）
 
 选项：
 
@@ -675,6 +675,8 @@ Disabled（禁用）
 
 #### CMD/CTL Drive Strength Up/Dn 2D（CMD/CTL 驱动强度上升/下降 2D）
 
+选项：
+
 Enabled（启用）
 
 Disabled（禁用）
@@ -695,7 +697,7 @@ Disabled（禁用）
 
 优化命令/地址总线的 ODT 特性。
 
-#### PanicVttDnLp Training *（PanicVttDnLp 训练*）
+#### PanicVttDnLp Training*（PanicVttDnLp 训练*）
 
 选项：
 
@@ -1192,7 +1194,7 @@ SAGV 第 1 点的 Gear 速率。
 
 ### Second Point Gear（第 2 点 Gear）
 
-同 First Point Gear（第 1 点 Gear）
+同 First Point Gear（第 1 点 Gear）。
 
 ### Third Point Frequency（第 3 点频率）
 
@@ -1200,7 +1202,7 @@ SAGV 第 1 点的 Gear 速率。
 
 ### Third Point Gear（第 3 点 Gear）
 
-同 First Point Gear（第 1 点 Gear）
+同 First Point Gear（第 1 点 Gear）。
 
 ### Fourth Point Frequency（第 4 点频率）
 
@@ -1208,7 +1210,7 @@ SAGV 第 1 点的 Gear 速率。
 
 ### Fourth Point Gear（第 4 点 Gear）
 
-同 First Point Gear（第 1 点 Gear）
+同 First Point Gear（第 1 点 Gear）。
 
 ### SAGV Switch Factor IA（SAGV 切换因子 IA）
 
@@ -1392,7 +1394,7 @@ Disabled（禁用）
 
 ### New Features 2 - MRC（MRC 新功能 2）
 
-同 New Features 1 - MRC（MRC 新功能 1）
+同 New Features 1 - MRC（MRC 新功能 1）。
 
 ### Ch Hash Override（覆盖通道哈希）
 
@@ -2934,7 +2936,7 @@ ILEDB 4 mA：设置 ILEDB 引脚的电流为 4 毫安。
 
 ILEDB 8 mA：设置 ILEDB 引脚的电流为 8 毫安。
 
-ILEDB 16 mA：设置 ILEDB 引脚的电流为 16 毫安
+ILEDB 16 mA：设置 ILEDB 引脚的电流为 16 毫安。
 
 说明：
 
