@@ -132,7 +132,7 @@ Enable（启用）
 
 说明：
 
-启用对 ANSI/VT100（一种早期终端协议标准）终端的 VT‑UTF8 组合键（比如 Ctrl + Alt + 某键）支持。
+启用对 ANSI/VT100（一种早期终端协议标准）终端的 VT-UTF8 组合键（比如 Ctrl + Alt + 某键）支持。
 
 #### Recorder Mode（记录器模式）
 
