@@ -1270,7 +1270,7 @@ Disabled（禁用）
 
 如果软件内存测试（SW MemTest）在快速流程（Fast flow）期间失败，则以冷启动模式重新启动 MRC。
 
-### DDR4_1DPC(DDR4 1DPC 性能特性)
+### DDR4_1DPC（DDR4 1DPC 性能特性）
 
 选项：
 

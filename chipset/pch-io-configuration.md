@@ -653,7 +653,7 @@ Disabled（禁用）
 
 说明：
 
-Peer Memory Write，PCIe Peer-to-Peer(PCIe P2P) DMA，PCIe 点对点 DMA。
+Peer Memory Write，PCIe Peer-to-Peer（PCIe P2P） DMA，PCIe 点对点 DMA。
 
 参见：Peer Memory Write Enable[EB/OL]. [2026-03-26]. <https://jasonyychiu.blogspot.com/2021/03/peer-memory-write-enable.html>.
 
@@ -741,7 +741,7 @@ IDE（Integrated Drive Electronics，集成驱动电子接口）
 
 参见：Install Arch Linux with Fake RAID[EB/OL]. [2026-03-26]. <https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID>.
 
-### SATA Test Mode(SATA 测试模式)
+### SATA Test Mode（SATA 测试模式）
 
 选项：
 
@@ -1195,7 +1195,7 @@ Advanced Link Config：高级链路配置
 
 选择链接模式：
 
-1）HDA-Link(SDIO-1)，DMIC[0-1]
+1）HDA-Link（SDIO-1），DMIC[0-1]
 
 2）SSP[0-5]，DMIC[0-1]
 
