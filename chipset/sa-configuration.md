@@ -2263,7 +2263,7 @@ SDV0 LVDS: VBIOS 通过 SDV0 编码器启用 LVDS 驱动
 
 No eDP: VBIOS 不启用 eDP
 
-eDP Port‑A: LFP 由来自 Port‑A 的 Int‑DisplayPort 编码器驱动
+eDP Port-A: LFP 由来自 Port-A 的 Int-DisplayPort 编码器驱动
 
 说明：
 
