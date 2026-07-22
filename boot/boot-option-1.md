@@ -8,7 +8,7 @@ Hard Disk0（硬盘 0）
 
 Hard Disk1（硬盘 1）
 
-eMMC（嵌入式 eMMC）
+eMMC（嵌入式多媒体卡）
 
 CD/DVD（光学介质/光盘）
 
