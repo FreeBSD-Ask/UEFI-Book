@@ -991,8 +991,6 @@ Auto（自动）
 
 最大内存频率，单位 MHz。
 
-注：10000 和 12800 超出当前 JEDEC JESD79-5C DDR5 标准最高速率（8800 MT/s），属于超频范畴，保留原值。
-
 ### LP5 Bank Mode（LPDDR5 Bank 模式）
 
 选项：

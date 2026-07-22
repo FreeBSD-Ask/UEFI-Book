@@ -58,6 +58,8 @@ PCI Express 2.0 规范规定了两种低功耗模式：L0s 和 L1 模式。
 
 对于英特尔® Arc™ 显卡，所有高于 G2 的电源状态都需要启用 ASPM L1。这意味着必须启用 ASPM L1 和全局操作系统设置才能支持英特尔 Arc 显卡低功耗模式。
 
+Intel 800 系列芯片组 PCH-S PCIe 控制器不支持 L0s 链路状态，仅支持 L1 子状态（L1.0/L1.1/L1.2）。
+
 参考文献：英特尔公司. 英特尔® 处理器的直接媒体接口（DMI）是什么？[EB/OL]. (2023-05-31)[2024-01-15]. <https://www.intel.cn/content/www/cn/zh/support/articles/000094185/processors.html>.
 
 ### Port8xh Decode（PCIE 8xh 端口解码）
@@ -347,9 +349,13 @@ DPC，Downstream Port Containment，下行端口控制
 
 DPC 是 PCIe 标准的建议扩展，设计用于自动禁止发生非致命 (或致命) 错误后的链路以便防止可能扩散的数据损坏以及在软件支持时启动错误恢复。
 
+Intel 800 系列芯片组 PCH-S 控制器不支持 DPC。
+
 #### EDPC（增强型下行端口控制）
 
 EDPC，Enhanced Downstream Port Containment（增强型下行端口控制）。
+
+Intel 800 系列芯片组 PCH-S 控制器不支持 eDPC。
 
 - Hot Plug（热插拔）
 
@@ -519,9 +525,13 @@ Gen2: PCIe 2.0 (5.0 GT/s)
 
 Gen3: PCIe 3.0 (8.0 GT/s)
 
+Gen4: PCIe 4.0 (16.0 GT/s)
+
 说明：
 
 控制 PCIe 速率。
+
+Intel 800 系列芯片组 PCH-S 控制器最大传输速率为 16 GT/s（Gen4），支持 14 个根端口、24 条通道。
 
 #### Transmitter Half Swing（发送器半摆幅模式）
 
@@ -534,6 +544,8 @@ Disabled（禁用）
 说明：
 
 PCIe 物理层的发送器。如何选取输出摆幅模式的方法是特定于具体实现的。
+
+Intel 800 系列芯片组 PCH-S 控制器不支持半摆幅模式。
 
 #### Detect Timeout（检测超时）
 
