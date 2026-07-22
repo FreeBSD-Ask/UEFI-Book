@@ -276,7 +276,7 @@ Enable（启用）
 
 该选项依赖于 Power Limit 1 Override（功耗限制 1 覆盖）。
 
-请注意单位：1 W \= 1000 mW。如 5 W 应设置此选项为 5000。如果设置为 `0`，表示不启用自定义功耗限制，BIOS 将保留默认值。Platform Power Limit 1（平台功耗限制 1），单位为毫瓦（mW）。BIOS 在设置时会四舍五入到最接近的 1/8 瓦（0.125 W）。
+请注意单位：1 W = 1000 mW。如 5 W 应设置此选项为 5000。如果设置为 `0`，表示不启用自定义功耗限制，BIOS 将保留默认值。Platform Power Limit 1（平台功耗限制 1），单位为毫瓦（mW）。BIOS 在设置时会四舍五入到最接近的 1/8 瓦（0.125 W）。
 
 当超出限制时，CPU 的倍频会在经过一段时间后降低。下限可保护 CPU 并节省功耗，而上限则有助于提升性能。
 
@@ -316,7 +316,7 @@ Enable（启用）
 
 选项：
 
-请注意单位：1 W \= 1000 mW。如 5 W 应设置此选项为 5000。如果设置为 `0`，表示不启用自定义功耗限制，BIOS 将保留默认值。PL2 单位为毫瓦（mW）。BIOS 在设置时会四舍五入到最接近的 1/8 瓦（0.125 W）。
+请注意单位：1 W = 1000 mW。如 5 W 应设置此选项为 5000。如果设置为 `0`，表示不启用自定义功耗限制，BIOS 将保留默认值。PL2 单位为毫瓦（mW）。BIOS 在设置时会四舍五入到最接近的 1/8 瓦（0.125 W）。
 
 说明：
 
@@ -370,7 +370,7 @@ PSYS 平台电源偏移量以 1/1000 为单位定义，范围为 0 到 63999。�
 
 PSYS 平台电源最大功率（Pmax）以 1/8 瓦为单位定义，范围为 0 到 8192。
 
-例如，要设置最大功率为 125 瓦，输入 1000（即 1000 × 1/8 \= 125 瓦）。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mailbox 命令 0xB 进行控制。
+例如，要设置最大功率为 125 瓦，输入 1000（即 1000 × 1/8 = 125 瓦）。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mailbox 命令 0xB 进行控制。
 
 其具体作用在公开文档中未有明确说明。
 
@@ -458,7 +458,7 @@ Vsys Critical（系统电压临界）
 
 需要 Vsys/Psys 的满量程数值。
 
-Vsys/Psys 临界值 \= 临界阈值 ÷ 满量程值。
+Vsys/Psys 临界值 = 临界阈值 ÷ 满量程值。
 
 Vsys 的输入单位为毫伏（mV），Psys 的输入单位为毫瓦（mW），或在 ATX12VO 电源架构下为百分比（%）。
 
@@ -530,12 +530,12 @@ Acoustic Noise Mitigation（噪声抑制功能）：启用此选项可减轻部�
 - IA VR Domain（Intel Architecture Voltage Regulator，处理器计算核心电压调节域）
 
 - Disable Fast PKG C State Ramp for VccIn Domain（禁用快速 PKG C 状态切换），选项为 FALSE/TRUE。FALSE: 在深度 C 状态下启用快速切换；TRUE: 在深度 C 状态下禁用快速切换
-- Slow Slew Rate for IA Domain（处理器核心电压调节域慢速压摆率），选项为 Fast/2、Fast/4、Fast/8、Fast/16。设置深度封装 C 状态切换的 VR VccIn（CPU 主供电输入电压）慢速压摆率。慢速压摆率 \= 快速模式压摆率 / 等分系数（可选 2/4/8/16），通过降低压摆率减轻声学噪声。
+- Slow Slew Rate for IA Domain（处理器核心电压调节域慢速压摆率），选项为 Fast/2、Fast/4、Fast/8、Fast/16。设置深度封装 C 状态切换的 VR VccIn（CPU 主供电输入电压）慢速压摆率。慢速压摆率 = 快速模式压摆率 / 等分系数（可选 2/4/8/16），通过降低压摆率减轻声学噪声。
 
 - GT VR Domain（Graphics Technology Voltage Regulator，核显电压调节域）
 
 - Disable Fast PKG C State Ramp for VccIn Domain（禁用快速 PKG C 状态切换）：选项：FALSE/TRUE。FALSE: 在深度 C 状态下启用快速切换；TRUE: 在深度 C 状态下禁用快速切换
-- Slow Slew Rate for GT Domain（核显电压调节域慢速压摆率设置）：选项：Fast/2、Fast/4、Fast/8、Fast/16。设置深度封装 C 状态切换的 VR GT（核显电压调节域）慢速压摆率。慢速压摆率 \= 快速模式压摆率 / 等分系数（可选 2/4/8/16），通过降低压摆率减轻声学噪声。
+- Slow Slew Rate for GT Domain（核显电压调节域慢速压摆率设置）：选项：Fast/2、Fast/4、Fast/8、Fast/16。设置深度封装 C 状态切换的 VR GT（核显电压调节域）慢速压摆率。慢速压摆率 = 快速模式压摆率 / 等分系数（可选 2/4/8/16），通过降低压摆率减轻声学噪声。
 
 #### Core/IA VR Settings（核心/英特尔架构电压调节设置）
 
@@ -569,8 +569,8 @@ Enable（启用）
 
 - AC Loadline（AC 负载线）：AC 负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
 
-- `100` \= 1.00 毫欧（mOhm）
-- `1255` \= 12.55 毫欧（mOhm）
+- `100` = 1.00 毫欧（mOhm）
+- `1255` = 12.55 毫欧（mOhm）
 -`0` 表示自动/硬件默认值（AUTO/HW default）
 
 因为直流电压降（电路长度愈增加，其电压会愈下降，导致其两端电压不同）问题，英特尔将主板到 CPU 之间的物理电阻抽象为虚拟电阻（即 AC/DC Loadline），即不考虑实际物理电阻的实现究竟是多少（每块主板都不同），来拟合 CPU 倍频所需的电压功率，这样不同的主板的主板供电模块的掉压行为就是一致的。AC Loadline 是升压负载线，DC 是降压负载线。
@@ -581,8 +581,8 @@ Intel 建议 AC Loadline 与 DC Loadline 取值一致（AC = DC）。警告：�
 
 - DC Loadline（DC 负载线）：DC 负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
 
-- `100` \= 1.00 毫欧（mOhm）
-- `1255` \= 12.55 毫欧（mOhm）
+- `100` = 1.00 毫欧（mOhm）
+- `1255` = 12.55 毫欧（mOhm）
 - `0` 表示自动/硬件默认值（AUTO/HW default）
 
 - PS Current Threshold1（即 Power Stage Current Threshold1，电源阶段电流阈值 1）：此值以每 1/4 安培为单位递增，例如设置为 400 表示电流阈值为 100 安培（400 × 0.25 A）。其取值范围为 0 到 512，对应实际电流为 0 到 128 安培。设置为 0 表示启用自动模式（AUTO）。该参数通过 BIOS VR mailbox 命令 0x3 进行设置。
@@ -600,11 +600,11 @@ Intel 建议 AC Loadline 与 DC Loadline 取值一致（AC = DC）。警告：�
 - VR Voltage Limit（电压调节器电压限制）：Voltage Limit（VMAX）：用于设置电压调节器（VR）允许的最大瞬时输出电压。单位为毫伏（mV）。其取值范围为 0–7999 mV。此设置通过 BIOS VR mailbox 命令 0x8 进行控制。
 - TDC Enable（Thermal Design Current，热设计电流）：CPU 平均 *电流* 不能超过此值。选项：Disable（禁用）/Enable（启用）。此选项决定了：
 
-- TDC Current Limit（热设计电流当前限制）：以 1/8 安培（A）为递增单位定义，取值范围为 0–32767。例如，如果要设置最大瞬时电流为 125 A，应输入 1000（1000 × 0.125 A \= 125 A）。输入 `0` 表示设置为自动模式（0 A）。该参数通过 BIOS 的 VR mailbox 命令 `0x1A` 进行配置。
+- TDC Current Limit（热设计电流当前限制）：以 1/8 安培（A）为递增单位定义，取值范围为 0–32767。例如，如果要设置最大瞬时电流为 125 A，应输入 1000（1000 × 0.125 A = 125 A）。输入 `0` 表示设置为自动模式（0 A）。该参数通过 BIOS 的 VR mailbox 命令 `0x1A` 进行配置。
 - TDC Time Window（热设计电流时间窗口）：值：1-448。电压调节器热设计电流时间窗口限制。是指在特定时间内，CPU 可承受的最大电流（TDC Current Limit）所允许的持续时间。其单位为毫秒（ms），用于控制 CPU 在高负载下的电流限制响应时间。
 - TDC Lock（锁定热设计电流）:启用/禁用。可锁定持续电流上限，防止损坏芯片。
 
-- IRMS：启用/禁用。IRMS \= 电流（电流的符号是 I）有效值（Current Root Mean Square），实时电流有效值监测。
+- IRMS：启用/禁用。IRMS = 电流（电流的符号是 I）有效值（Current Root Mean Square），实时电流有效值监测。
 
 #### GT VR Settings（核显电压调节设置）
 
@@ -983,7 +983,7 @@ Enable（启用）
 
 查询（轮询）EC 状态或数据的时间间隔
 
-数值从 1 到 255，对应时间范围为 10 毫秒到 2.55 秒（1 个计数单位 \= 10 毫秒）。
+数值从 1 到 255，对应时间范围为 10 毫秒到 2.55 秒（1 个计数单位 = 10 毫秒）。
 
 #### EC Guard Band Value（嵌入式控制器 EC 保护带值）
 

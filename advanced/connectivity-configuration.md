@@ -208,7 +208,7 @@ Enable（启用）
 
 说明：
 
-启用此变通方案将使 BIOS 在执行 WWAN 设备加电序列之前，拉高 FULL\_CARD\_POWER\_OFF#、PERST# 和 RESET# WWAN 信号，禁用此选项则不会对其施加任何影响。
+启用此变通方案将使 BIOS 在执行 WWAN 设备加电序列之前，拉高 `FULL_CARD_POWER_OFF#`、`PERST#` 和 `RESET#` WWAN 信号，禁用此选项则不会对其施加任何影响。
 
 其具体作用尚不明确。
 
