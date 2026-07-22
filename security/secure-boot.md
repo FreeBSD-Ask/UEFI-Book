@@ -190,3 +190,21 @@ Append Key：追加密钥
 ### OS Recovery Signatures（操作系统恢复签名）
 
 本选项用于管理操作系统恢复签名。
+
+### Export Secure Boot variables（导出安全引导变量）
+
+本选项用于将 NVRAM 中的安全引导相关变量（PK、KEK、db、dbx、dbt 等）导出到外部存储（如 FAT32 U 盘）。便于在多平台之间复制安全引导策略，或在重装系统前备份当前安全引导配置。
+
+## Intel(R) Platform Trust Technology（Intel 平台信任技术）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+Intel® PTT（Platform Trust Technology，平台信任技术）是 Intel 在 CSME（Converged Security and Management Engine，整合安全与管理引擎）中实现的集成 TPM 2.0 解决方案，等同于 AMD fTPM。启用后，系统使用 ME 内置的 TPM 2.0 实例，无需安装独立 TPM 模块即可满足 Windows 11 等系统对 TPM 2.0 的要求；禁用后，系统转而使用主板上的独立 TPM 模块（若安装）。该选项与上述 Trusted Computing 子菜单中的 Security Device Support 互补：前者控制 TPM 2.0 的物理来源（ME 集成或独立模块），后者控制 TPM 设备是否对操作系统可见。
+
+参见：英特尔公司. Intel® Platform Trust Technology[EB/OL]. [2026-07-22]. <https://www.intel.com/content/www/us/en/business/enterprise-computers/enterprise-pc-security-vpro-platform.html>.

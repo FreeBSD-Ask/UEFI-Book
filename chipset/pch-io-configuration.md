@@ -533,6 +533,8 @@ Gen4: PCIe 4.0 (16.0 GT/s)
 
 Intel 800 系列芯片组 PCH-S 控制器最大传输速率为 16 GT/s（Gen4），支持 14 个根端口、24 条通道。
 
+CPU 侧 PEG（PCI Express Graphics）插槽（终端 BIOS 中通常标记为 PCIE1、PCIE2）由处理器直接引出，支持 PCIe 5.0（Gen5，32.0 GT/s）。部分终端用户版 BIOS 为这些 CPU 直连插槽单独提供 PCIE1 Link Speed、PCIE2 Link Speed 选项，可选 Auto 及 Gen1 至 Gen5；PCH 侧插槽（PCIE3、PCIE4 等）仍限于 Gen4。
+
 #### Transmitter Half Swing（发送器半摆幅模式）
 
 选项：
@@ -2357,6 +2359,18 @@ Disabled（禁用）
 说明：
 
 此项目可以控制低直流电力状态下的 SLP_LAN# 功能。SLP_LAN# 信号为低（低电平拉低）时，将关闭网卡的物理电源轨，减少功耗。
+
+## Onboard WAN Device（板载 WAN 设备）
+
+选项：
+
+Enabled（启用）
+
+Disabled（禁用）
+
+说明：
+
+控制主板上板载 WAN（Wide Area Network，广域网）设备的可见性。WAN 设备通常指用于连接外部广域网的板载网络接口（如指定为 WAN 口的以太网控制器或 WWAN 蜂窝模块）。启用后该设备对操作系统可见并加载对应驱动；禁用后系统不枚举该设备。该选项的具体所指硬件因主板型号而异。
 
 ## Sensor Hub Type（传感器中枢类型）
 

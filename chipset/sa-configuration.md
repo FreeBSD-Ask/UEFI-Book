@@ -275,7 +275,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+训练 DRAM 接收端感应放大器（Sense Amplifier）的偏移电压，补偿电路本身的偏移量，确保读取数据时能准确采样。
 
 #### Early ReadMPR Timing Centering 2D（内存初始化的早期阶段时序中心化 2D）
 
@@ -289,7 +289,7 @@ Disabled（禁用）
 
 2D（Two-Dimensional）：表示训练同时作用于两个维度，例如驱动强度和终端电阻。
 
-其具体作用尚不明确。
+在内存初始化早期阶段，利用多用途寄存器（MPR）进行二维时序中心化训练，将数据采样时序调整至眼图中心。
 
 #### Read MPR Training（读多用途寄存器训练）
 
@@ -303,7 +303,7 @@ Disabled（禁用）
 
 Multi Purpose Register，多用途寄存器
 
-其具体作用尚不明确。
+利用多用途寄存器（MPR）中存储的已知数据模式进行读取训练，校准读取时序与电压，确保数据线能够正确采样。
 
 #### Receive Enable Training（接收使能训练）
 
@@ -315,7 +315,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+训练接收使能信号的时序，确定读取数据选通信号（DQS）的正确使能窗口，使控制器能在有效数据区间内捕获读数据。
 
 #### Jedec Write Levelling（JEDEC 写入校准）
 
@@ -329,7 +329,7 @@ Disabled（禁用）
 
 JEDEC，Joint Electron Device Engineering Council，联合电子设备工程委员会，发布了一系列 JEDEC 标准。
 
-其具体作用尚不明确。
+JEDEC 标准定义的写入均衡训练，通过调节写入数据选通信号（DQS）与 DRAM 时钟（CK）的相位关系，补偿 fly-by 拓扑结构下时钟到达各 DRAM 颗粒的时间偏差。
 
 #### Early Write Time Centering 2D（早期写入时序中心化 2D）
 
@@ -341,7 +341,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+在内存初始化早期阶段进行二维写入时序中心化训练，将写入数据采样时序调整至数据眼图中心。
 
 #### Early Read Time Centering 2D（早期读取时序中心化 2D）
 
@@ -353,7 +353,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+在内存初始化早期阶段进行二维读取时序中心化训练，将读取数据采样时序调整至数据眼图中心。
 
 #### Write Timing Centering 1D（写入时序中心化 1D）
 
@@ -365,7 +365,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+一维写入时序中心化训练，沿时序单一维度调整写入数据采样点至数据眼图中心，提升写入可靠性。
 
 #### Write Voltage Centering 1D（写入电压中心化 1D）
 
@@ -377,7 +377,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+一维写入电压中心化训练，沿电压单一维度调整写入参考电压至数据眼图中心，优化写入信号裕量。
 
 #### Read Timing Centering 1D（读取时序中心化 1D）
 
@@ -389,7 +389,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+一维读取时序中心化训练，沿时序单一维度调整读取数据采样点至数据眼图中心，减少时序误差。
 
 #### Dimm ODT Training*（内存模块终端电阻训练）
 
@@ -431,7 +431,7 @@ Disabled（禁用）
 
 控制内存模块（DIMM）上的 RON 终端电阻训练开关。
 
-其具体作用尚不明确。
+训练内存模块（DIMM）输出驱动器的导通电阻（RON），使输出阻抗与传输线匹配，减少信号反射，改善信号完整性。
 
 #### Write Drive Strength/Equalization 2D *（写入驱动强度/均衡 2D*）
 
@@ -443,7 +443,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+二维训练写入驱动强度与均衡参数，同时优化输出驱动能力和信号均衡，改善写入信号质量。
 
 #### Write Slew Rate Training *（写入上升/下降斜率训练*）
 
@@ -467,7 +467,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+训练读取侧的片内终端电阻（ODT）阻值，优化终端匹配以减少信号反射，改善读取信号完整性。
 
 #### Read Equalization Training *（读取均衡训练*）
 
@@ -479,7 +479,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+训练读取路径的信号均衡器参数，补偿通道损耗引起的信号失真，提升高速读取时的信号质量。
 
 #### Read Amplifier Training*（读取放大器训练）
 
@@ -503,7 +503,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+二维写入时序中心化训练，同时沿时序和电压两个维度调整写入采样点至数据眼图中心。
 
 #### Read Timing Centering 2D（读取时序中心化 2D）
 
@@ -515,7 +515,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+二维读取时序中心化训练，同时沿时序和电压两个维度调整读取采样点至数据眼图中心。
 
 #### Command Voltage Centering（命令信号电压中心化）
 
@@ -587,7 +587,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+训练读写操作切换之间的时序，优化读转写、写转读的间隔时间，在保证信号完整性的前提下降低切换延迟。
 
 #### CMD CTL CLK Slew Rate Training（命令控制时钟上升/下降速率训练）
 
@@ -599,7 +599,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+训练命令、控制和时钟信号的压摆率（Slew Rate，即信号边沿变化速率），优化信号边沿以兼顾信号完整性与功耗。
 
 #### CMD/CTL DS & E 2D（命令/控制信号驱动强度与均衡 2D）
 
@@ -707,7 +707,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+训练终端电压（VTT）下行调节的低功耗特性，优化 VTT 在低功耗模式下的电压调节表现。
 
 #### Read Vref Decap Training（读取 Vref Decap 训练）
 
@@ -909,7 +909,7 @@ Both
 
 说明：
 
-其具体作用尚不明确。
+设定内存训练裕量检查的阈值等级。L1 与 L2 分别对应不同严格程度的裕量检查限值，用于在训练后验证内存时序与电压裕量是否满足稳定性要求。
 
 #### Margin Check Limit L2（边际检查限制 L2）
 
@@ -2430,7 +2430,7 @@ HW EQ（硬件动态均衡）
 
 说明：
 
-其具体作用尚不明确。
+设置 DMI Gen4 链路的均衡模式。`Fixed EQ`（固定均衡）使用预设的固定均衡系数，`HW EQ`（硬件动态均衡）由硬件在链路训练过程中自适应调整均衡参数。
 
 #### DMI Gen4 TRC0 Cpre Lan0（DMI Gen4 通道 0 发射器前/后游标系数值）
 
@@ -2500,7 +2500,7 @@ DMI Gen4 通道发射器前游标和后游标系数值。
 
 DMI Gen3 通道发射器前游标和后游标系数值。
 
-其具体作用尚不明确。
+设置 DMI Gen3 通道 0 发射端均衡的前游标（Pre-cursor）系数，用于前加重补偿通道高频损耗，改善信号完整性。
 
 #### DMI Gen3 TRC0 Cpost Lan0（DMI Gen3 通道 0 发射器前/后游标系数值）
 
@@ -2710,6 +2710,20 @@ GNA，Gaussian and Neural Accelerator，英特尔高斯与神经网络加速器�
 
 这是一个集成在处理器芯片内的人工智能（AI）协处理器，用于神经网络相关处理。主要用于加速语音识别、噪声抑制、语音唤醒等 AI 工作负载。
 
+## NPU Device（神经处理单元设备）
+
+选项：
+
+Enabled（启用）
+
+Disabled（禁用）
+
+说明：
+
+NPU（Neural Processing Unit，神经处理单元）是 SoC 模组中集成的专用 AI 推理加速器，独立于 CPU 核心与核显，用于在低功耗下执行神经网络推理工作负载（如背景虚化、语音降噪、视频会议增强等）。该项控制 NPU 设备对操作系统的可见性：启用后 NPU 作为独立 PCIe 设备枚举并加载对应驱动；禁用后系统不枚举 NPU，可减少功耗但失去 AI 加速能力。与上述 GNA Device（高斯与神经网络加速器设备）不同，NPU 提供更高的算力。
+
+参见：英特尔公司. 专为游戏与性能打造的英特尔® 酷睿™ Ultra 200S 系列台式机处理器[EB/OL]. [2026-07-22]. <https://www.intel.com/content/www/us/en/products/docs/processors/core/core-ultra-200s-series-desktop-processors.html>.
+
 ## CRID Support（兼容版本标识支持）
 
 选项：
@@ -2765,6 +2779,34 @@ Disabled（禁用）
 目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见：BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding[EB/OL]. [2026-03-26]. <https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/>.
 
 在禁用状态下，双 CPU 显卡及雷电接口设备的使用将受到限制。参见：为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1043356/>.
+
+## Re-Size BAR Support（支持调整 BAR 大小）
+
+选项：
+
+Enabled（启用）
+
+Disabled（禁用）
+
+说明：
+
+Re-Size BAR（Resizable BAR，可调整 BAR 大小）是 PCI Express 规范定义的可选能力，允许系统将 PCIe 设备的 BAR（Base Address Register，基地址寄存器）映射空间从默认的 256 MB 上限扩展至设备实际显存（或内存映射空间）的完整大小，使 CPU 可一次性访问设备的全部内存，而不必分块轮询。该功能对独立显卡（尤其是显存大于 256 MB 的现代 GPU）的帧缓冲访问性能有明显改善。启用 Re-Size BAR Support 需先启用上述 Above 4 GB MMIO BIOS assignment（BIOS 4 GB 以上 MMIO 分配），因为扩展后的 BAR 空间必然超过 4 GB 地址边界。在 AMD 平台上该功能的等价市场名称为 Smart Access Memory。
+
+参见：AMD 公司. Smart Access Memory[EB/OL]. [2026-07-22]. <https://www.amd.com/en/technologies/smart-access-memory>. PCI-SIG. PCI Express Base Specification[EB/OL]. [2026-07-22]. <https://pcisig.com/specifications>.
+
+## SR-IOV Support（SR-IOV 支持）
+
+选项：
+
+Enabled（启用）
+
+Disabled（禁用）
+
+说明：
+
+SR-IOV（Single Root I/O Virtualization，单根 I/O 虚拟化）是 PCI-SIG 定义的一项硬件级 I/O 虚拟化规范，允许单个 PCIe 物理设备（Physical Function，PF）向操作系统呈现多个独立的虚拟功能（Virtual Function，VF），每个 VF 可直接分配给一台虚拟机，从而在虚拟化环境中绕过软件交换层、降低 I/O 延迟并提升吞吐。启用后，平台上的 SR-IOV 兼容设备（如支持 SR-IOV 的网卡、存储控制器）可向虚拟机监视器暴露 VF；禁用后所有设备仅以传统方式呈现单一功能。该选项需配合支持 SR-IOV 的设备及虚拟化软件使用。
+
+参见：PCI-SIG. Single Root I/O Virtualization and Sharing Specification[EB/OL]. [2026-07-22]. <https://pcisig.com/single-root-io-virtualization-and-sharing-specification>.
 
 ## IPU Device (B0:D5:F0)（IPU 设备）
 
@@ -2920,7 +2962,7 @@ Enabled（启用）
 
 说明：
 
-其具体作用尚不明确。
+设置摄像头模组闪光灯/补光灯的支持开关。启用后可控制摄像头模组的闪光 LED 输出。
 
 #### Privacy LED（隐私指示灯）
 

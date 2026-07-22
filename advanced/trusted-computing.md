@@ -28,11 +28,29 @@ TPM 所需的一种算法。随意修改可能影响 BitLocker 恢复密钥的�
 
 ### SHA384 PCR Bank（SHA384 PCR 存储单元）
 
-同上。
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+SHA-2 家族的 384 位哈希算法对应的 PCR（Platform Configuration Register，平台配置寄存器）存储单元。PCR 是 TPM 内部用于累积度量值的寄存器，每种哈希算法对应一组独立的 PCR 存储单元。启用后 TPM 可使用 SHA384 算法度量启动链；禁用后 TPM 不提供 SHA384 PCR 存储单元。随意修改可能影响 BitLocker 恢复密钥的有效性（与特定算法存在绑定关系）。
 
 ### SM3_256 PCR Bank（SM3_256 PCR 存储单元）
 
-同上。
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+SM3 为中国国密密码杂凑算法，对应 GM/T 0004-2012 与 GB/T 32905-2016 标准，输出 256 位摘要。SM3_256 PCR Bank 是 TPM 2.0 规范允许的扩展算法之一，启用后 TPM 可使用 SM3 算法度量启动链；禁用后 TPM 不提供 SM3_256 PCR 存储单元。该选项主要用于需符合国密合规要求的场景。随意修改可能影响 BitLocker 恢复密钥的有效性（与特定算法存在绑定关系）。
+
+参见：国家密码管理局. GM/T 0004-2012 SM3 密码杂凑算法[EB/OL]. [2026-07-22]. <http://www.gmbz.org.cn/main/viewFile/20180110021549180648.pdf>. 国家市场监督管理总局. GB/T 32905-2016 信息安全技术 SM3 密码杂凑算法[EB/OL]. [2026-07-22]. <https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=892DLT9HKPCN0957ZKPVCG1EJ3C7YK4P>.
 
 ### Pending Operation（待执行操作）
 

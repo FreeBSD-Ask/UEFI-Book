@@ -103,6 +103,8 @@ RTC 是 BIOS 的实时时钟，用于存储时间数据。定时开机。
 
 如设置 Everyday、13、14、15，那么设备则会在每日 13 时 14 分 15 秒开机。
 
+部分平台在 RTC Alarm Power On 项额外提供 `By OS` 选项。选择 `By OS` 后，RTC 定时唤醒的具体时刻改由操作系统内的高级电源管理界面控制，BIOS 不直接接管 RTC Alarm 的日期与时间字段。
+
 ### Platform Power Management（平台电源管理）
 
 选项：
@@ -156,3 +158,27 @@ Enable（启用）
 说明：
 
 决定是否让集成图形进入待机模式以降低功耗。RC6 即 Intel 集成图形的渲染待机状态。
+
+## USB Keyboard/Remote Power On（USB 键盘/遥控器开机）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+允许通过 USB 键盘或 USB 遥控器触发系统开机。启用后，BIOS 向 USB 控制器配置对应的唤醒事件，使系统在 S5（关机）或 S3（挂起到内存）状态下响应 USB 键盘按键或遥控器信号。
+
+## USB Mouse Power On（USB 鼠标开机）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+允许通过 USB 鼠标点击或移动触发系统开机。启用后，BIOS 向 USB 控制器配置对应的唤醒事件，使系统在 S5（关机）或 S3（挂起到内存）状态下响应 USB 鼠标事件。

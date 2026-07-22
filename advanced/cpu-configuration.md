@@ -619,3 +619,41 @@ Enable（启用）
 说明：
 
 启用或禁用 Intel® IPF（Innovation Platform Framework，创新平台框架）。该框架是 Intel 平台的统一管理架构，用于协调处理器、芯片组与固件之间的资源调度。
+
+## DC6 Latency WA（DC6 延迟规避）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+DC6（Deep C6）是 CPU 深度节能状态。WA（Workaround，规避措施）指针对特定微架构缺陷的固件级规避。启用该项后 BIOS 在进入 DC6 状态前施加额外延迟，规避某些工作负载下因 DC6 进入/退出时序导致的稳定性问题；禁用后 CPU 按 DC6 标准时序进出，不施加额外延迟。
+
+## Legacy Game Compatibility Mode（传统游戏兼容模式）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+该模式用于改善部分老版本游戏在混合架构（P 核 + E 核）平台上的兼容性。部分老游戏未针对多核异构调度优化，可能将关键线程调度到 E 核导致帧率不稳定或卡顿。启用后，当检测到此类游戏运行时（通过 Scroll Lock 键切换），BIOS 协助操作系统将游戏线程固定在 P 核上，同时挂起 E 核，使游戏以近似同构多核环境运行。禁用后 CPU 按正常调度策略工作。
+
+## Intel Dynamic Tuning Technology（英特尔动态调优技术）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+Intel® DTT（Dynamic Tuning Technology，动态调优技术）是 Intel 的动态电源与热管理框架，前身称 DPTF（Dynamic Platform and Thermal Framework）。启用后，系统通过机器学习算法预测工作负载，动态调节 CPU 功率限制（PL1/PL2）与温度策略，在散热裕度允许时短时间提升性能，在温度接近阈值时提前降频，从而在性能与散热之间取得比传统静态策略更优的平衡。该技术需操作系统侧 Intel DTT 驱动配合。禁用后 CPU 按静态 PL1/PL2 功率限制工作。
+
+参见：英特尔公司. Intel® Dynamic Tuning Technology[EB/OL]. [2026-07-22]. <https://www.intel.com/content/www/us/en/architecture-and-technology/dynamic-tuning/dynamic-tuning-technology-overview.html>.

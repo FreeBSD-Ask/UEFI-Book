@@ -176,6 +176,20 @@ Enable（启用）
 
 启用或禁用集成的 Thunderbolt™ 控制器。仅当主板集成 Intel® Thunderbolt™ 控制器或安装了 GIGABYTE Thunderbolt™ 扩展卡时该子菜单才会出现。
 
+## Discrete Thunderbolt™ Enable（独立 Thunderbolt™ 控制器启用）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+控制主板上搭载的独立 Thunderbolt™ 控制器芯片的开关。与上述 Integrated Thunderbolt™ Enable（集成 Thunderbolt™ 控制器启用）不同，此处指主板厂商额外部署的独立 Thunderbolt™ 控制器，如 Maple Ridge（JHL8540，Thunderbolt 4）或 Barlow Ridge（JHL9480，Thunderbolt 5）。启用后独立控制器对操作系统可见，可提供额外的 Thunderbolt™ 端口或更高带宽；禁用后独立控制器不工作。该选项仅在主板实际搭载独立 Thunderbolt™ 控制器时有效。
+
+参见：英特尔公司. Intel® 8000 Series Thunderbolt™ 4 Controllers[EB/OL]. [2026-07-22]. <https://www.intel.com/content/www/us/en/products/details/io/thunderbolt/thunderbolt-4-controllers.html>.
+
 ## USB4 Host Router Class Code（USB4 主机路由器类代码）
 
 选项：
@@ -195,3 +209,23 @@ Auto：由 OSPM（操作系统电源管理）USB 支持决定加载的驱动。
 Intel USB4 Ver2：加载 Intel® USB4 Ver2 驱动。
 
 PCIe 3 Slot：加载操作系统内置驱动。
+
+## Barlow Ridge to MFDP on Win10 support（Win10 下 Barlow Ridge 以 MFDP 模式运行支持）
+
+选项：
+
+Enabled + RTD3（启用 + 运行时 D3）
+
+Disabled（禁用）
+
+说明：
+
+该选项专用于搭载 Barlow Ridge（JHL9480，Thunderbolt 5 独立控制器）的主板，控制在 Windows 10 环境下 Barlow Ridge 独立控制器是否以 MFDP（Multi-Function Device Policy，多功能设备策略）模式运行。
+
+Windows 10 对 Thunderbolt 5 / USB4 的原生支持有限，Barlow Ridge 控制器在标准模式下可能无法在 Windows 10 下正常枚举或工作。MFDP 模式将控制器以多功能设备方式呈现，以兼容 Windows 10 的驱动栈。
+
+Enabled + RTD3：启用 MFDP 模式，并同时启用 RTD3（Runtime D3，运行时设备电源状态 D3hot），使控制器在空闲时进入低功耗状态。
+
+Disabled：不启用 MFDP 模式，控制器以标准方式呈现。在 Windows 11 下通常无需启用此选项。
+
+该选项仅在 Discrete Thunderbolt™ Enable（独立 Thunderbolt™ 控制器启用）设置为 Enabled 且主板搭载 Barlow Ridge 控制器时有意义。RTD3（Runtime D3）是 PCIe 设备电源管理的一种运行时低功耗状态，允许设备在系统不进入睡眠状态时自行进入 D3hot 子状态以降低功耗。
