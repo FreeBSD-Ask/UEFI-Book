@@ -40,7 +40,7 @@ Enable（启用）
 
 说明：
 
-如果禁用，将不会创建 IPv4 HTTP 启动选项。这个是 HTTP 协议，是新的网络启动方法。
+如果禁用，将不会创建 IPv4 HTTP 启动选项。这是 HTTP 协议，是新的网络启动方法。
 
 ### IPv6 PXE Support（IPv6 PXE 启动支持）
 

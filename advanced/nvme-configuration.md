@@ -40,10 +40,10 @@ Controller and NameSpace test（控制器和命名空间测试）
 
 执行用户选择的“选项”和“操作”对应的设备自检程序。按下 Esc 键可中止测试。下面显示的结果为设备中最近一次自检的记录。
 
-### Short Device Selftest Result 简单自我测试
+### Short Device Selftest Result（简单自我测试）
 
 Not Available：不可用，即未测试过。
 
-### Extended Device Selftest Result 扩展自我测试
+### Extended Device Selftest Result（扩展自我测试）
 
 Not Available：不可用，即未测试过。

@@ -77,9 +77,6 @@ UEFI-Book/
 - 中英文之间有空格
 - 代码块中的英语注释翻译为中文
 - fstab 不翻译
-- pkgbase 不翻译
-- “package” / “packages” 翻译为“软件包”（代码块和命令输出中的 package 保留英文）
-- GSoC 翻译为“编程之夏”
 
 ### 段落与结构
 
