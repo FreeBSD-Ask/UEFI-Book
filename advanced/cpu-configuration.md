@@ -572,7 +572,7 @@ Enable（启用）
 
 允许启用或禁用“核心倍频超过 85 扩展模式”。启用时，OCMB 0x1 命令指定的最大超频倍频上限为 120；禁用时，该上限为 85。
 
-### Frequency Clipping TVB（热感知睿频频率裁剪）
+## Frequency Clipping TVB（热感知睿频频率裁剪）
 
 选项：
 
