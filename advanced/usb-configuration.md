@@ -164,7 +164,7 @@ Enable（启用）
 
 启用或禁用 USB4 CM（Connection Manager，连接管理器）模式。USB4 连接管理器负责建立和维护 USB4 域内的隧道连接。
 
-### Integrated Thunderbolt™ Enable（集成 Thunderbolt™ 控制器启用）
+## Integrated Thunderbolt™ Enable（集成 Thunderbolt™ 控制器启用）
 
 选项：
 
