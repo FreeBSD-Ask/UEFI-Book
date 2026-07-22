@@ -554,7 +554,7 @@ Enable（启用）
 
 允许设置 TCC 偏移时间窗口，用于 RALT（Running Average Temperature Limit，运行平均温度限制）功能。
 
-### CEP（Current Excursion Protection，电流漂移保护）
+## CEP（Current Excursion Protection，电流漂移保护）
 
 说明：
 
