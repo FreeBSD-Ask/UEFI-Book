@@ -100,9 +100,9 @@ DDR 自刷新。
 
 范围：
 
-[64K-1, 512]，单位为 DLCK800s（默认值为 512）
+[64K-1, 512]，单位为 DCLK800s（默认值为 512）
 
-DLCK800s：表示以 DDR 800 MHz 时钟周期（即 1 DLCK800 ≈ 1.25 ns）为单位的时间间隔。
+DCLK800s：表示以 DRAM 时钟 800 MHz（对应 DDR3-1600）的时钟周期（即 1 DCLK800 ≈ 1.25 ns）为单位的时间间隔。
 
 说明：
 
@@ -1291,13 +1291,13 @@ DDR4 1DPC 性能特性，针对双排（2R）内存条（DIMM）。该特性可�
 
 Disabled（禁用）
 
-RFM（Row Hammer Prevention Mode，行敲击防护模式）
+RFM（Refresh Management，刷新管理）
 
 pTRR（pseudo Target Row Refresh，伪目标行刷新）
 
 说明：
 
-行敲击防护模式（Row Hammer Prevention Mode）。如果该模式不可用，RFM 将回退到 pTRR。
+行敲击防护模式。RFM 是 DDR5 JEDEC 标准引入的行锤击缓解机制（通过刷新管理降低行锤击风险）；pTRR 是 DDR4 时代的伪目标行刷新机制。如果平台不支持 RFM，则回退到 pTRR。
 
 行敲击：一种针对 DRAM 内存的攻击或故障现象，通过反复快速访问某一行内存，可能导致相邻内存行的数据发生位翻转（数据破坏）。
 
@@ -1635,11 +1635,11 @@ Disabled（禁用）
 
 说明：
 
-一般是 DDR5/LPDDR 用。In-Band ECC：IBECC，带内错误纠正代码。DDR5/LPDDR 内置 IBECC 技术。如果内存配置为非对称（asymmetric，内存混用），则该功能将被启用。
+一般是 DDR5/LPDDR 用。In-Band ECC：IBECC，带内错误纠正代码。IBECC 是 Intel 内存控制器提供的带内 ECC 功能，通过在数据流中插入 ECC 位实现端到端纠错保护，可使用标准非-ECC 内存。注意：IBECC 与 DDR5 内置的 On-Die ECC（片上 ECC，仅在 DRAM 芯片内部纠正单比特错误）是不同层级的纠错技术，不应混淆。如果内存配置为非对称（asymmetric，内存混用），则该功能将被启用。
 
 使用此技术可在内存传输过程中实时检测和纠正数据错误，提高系统的稳定性和数据完整性。
 
-但 IBECC 会明显降低内存效率，根据实际测试最高可降低五分之一的内存性能。
+但 IBECC 会明显降低内存效率，根据实际测试最高可降低五分之一的内存性能（此性能损失数据待进一步权威来源确认）。
 
 ### Memory Remap（内存重映射）
 
@@ -1805,11 +1805,11 @@ Hard PPR（hPPR，硬 PPR）
 
 说明：
 
-PPR，Post Package Repair，封装后修复。
+PPR，Post Package Repair，封装后修复。PPR 分为两种模式：hPPR（Hard PPR，硬修复，使用熔丝永久映射，永久性修复）和 sPPR（Soft PPR，软修复，使用 SRAM 缓存动态映射，临时性修复，断电失效）。本选项中 Enabled 对应 sPPR，Hard PPR 对应 hPPR。
 
 参见 FQXSFMA0026I：DIMM [arg1] 自我修复，尝试进行封装后修复（PPR）成功。[arg2][EB/OL]. [2026-03-26]. <https://pubs.lenovo.com/sr635-v3/zh-CN/FQXSFMA0026I>.
 
-PPR 会在可能的情况下永久修复出错的行。PPR 是一种内存自我修复过程，在该过程中，系统会将对故障存储单元或地址行的访问替换为对 DRAM 设备中备用行的访问。
+PPR 会在可能的情况下修复出错的行。PPR 是一种内存自我修复过程，在该过程中，系统会将对故障存储单元或地址行的访问替换为对 DRAM 设备中备用行的访问。
 
 ### SAM Overloading（SAM 过载）
 
