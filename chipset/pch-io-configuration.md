@@ -751,6 +751,8 @@ IDE（Integrated Drive Electronics，集成驱动电子接口）
 
 并且该 RAID，一般称作 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
 
+Intel 800 系列芯片组 SATA 控制器不支持 IDE 传统模式，仅支持 AHCI 与 RAID 模式。
+
 参见：Install Arch Linux with Fake RAID[EB/OL]. [2026-03-26]. <https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID>.
 
 ### SATA Test Mode（SATA 测试模式）
@@ -1409,6 +1411,8 @@ THC，Touch Host Controller，触控主机控制器
 
 触控主机控制器（Touch Host Controller）是芯片组（PCH）中的一个 IP 模块，用于与触控设备（例如：触控屏、触控板等）进行通信。
 
+THC-SPI 不适用于 Intel Core Ultra 200S 系列桌面处理器平台。
+
 参见：Intel Touch Host Controller (THC)[EB/OL]. [2026-03-26]. <https://docs.kernel.org/hid/intel-thc-hid.html>.
 
 ![触控主机控制器配置](../.gitbook/assets/image-20250729183212-xea4on7.png)
@@ -1430,6 +1434,8 @@ THC0（触控主机控制器端口 0）
 ![串行 IO 配置](../.gitbook/assets/image-20250729183341-c59wfml.png)
 
 ![串行 IO 配置](../.gitbook/assets/image-20250729183356-tkrapeq.png)
+
+Intel 800 系列芯片组在 Serial I/O 子系统中新增 I3C 控制器（符合 MIPI I3C HCI 规范），支持 2 条 I3C 总线，向后兼容 I²C，支持动态地址分配、带内中断和热插拔。ISH（Integrated Sensor Hub）亦升级至 5.6 版本，ISH 接口新增 I3C 支持。
 
 ### I2C3 Controller（I²C3 控制器）
 
