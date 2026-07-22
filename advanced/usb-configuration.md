@@ -123,3 +123,79 @@ Manual（手动）
 说明：
 
 此选项依赖 Device power-up delay（设备上电延迟）。
+
+## Port 60/64 Emulation（端口 60/64 仿真）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用或禁用端口 60/64 仿真支持。端口 60/64 是传统键盘控制器的 I/O 端口，某些旧操作系统依赖该端口进行键盘输入处理。
+
+## Mass Storage Devices（大容量存储设备）
+
+显示已连接的 USB 大容量存储设备列表。仅当安装了 USB 存储设备时此项才会出现。
+
+## USB4 与 Thunderbolt™ 配置（最新平台新增，截至 2026 年 7 月）
+
+以下选项为 Intel 800 系列芯片组平台 AMI Aptio V BIOS 中新增的 USB4/Thunderbolt™ 配置项，依据技嘉 Intel 800 系列 BIOS Setup Guide 记载。参见：Gigabyte. BIOS Setup (Intel® 800 Series)[EB/OL]. (2024-10)[2026-07-22]. <https://download.gigabyte.cn/FileList/Manual/mb_manual_intel800-bios_e_v2.pdf>，存档于 `en/arrow-lake-s/gigabyte-intel800-bios-setup-guide-en-20241010.pdf`。
+
+### PCIE Tunneling over USB4（USB4 上的 PCIe 隧道）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用或禁用 USB4 上的 PCIe 隧道功能。USB4 支持 PCIe 协议隧道，允许通过 USB4/Thunderbolt™ 接口连接外部 PCIe 设备（如外置显卡、外置 NVMe 存储等）。该选项为 USB4 规范引入的新功能。
+
+### USB4 CM Mode（USB4 连接管理器模式）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用或禁用 USB4 CM（Connection Manager，连接管理器）模式。USB4 连接管理器负责建立和维护 USB4 域内的隧道连接。
+
+### Integrated Thunderbolt™ Enable（集成 Thunderbolt™ 控制器启用）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用或禁用集成的 Thunderbolt™ 控制器。仅当主板集成 Intel® Thunderbolt™ 控制器或安装了 GIGABYTE Thunderbolt™ 扩展卡时该子菜单才会出现。
+
+### USB4 Host Router Class Code（USB4 主机路由器类代码）
+
+选项：
+
+Auto（自动）
+
+Intel USB4 Ver2
+
+PCIe 3 Slot
+
+说明：
+
+提供应用于主机路由器的类代码选项，用于加载不同的驱动程序。
+
+Auto：由 OSPM（操作系统电源管理）USB 支持决定加载的驱动。
+
+Intel USB4 Ver2：加载 Intel® USB4 Ver2 驱动。
+
+PCIe 3 Slot：加载操作系统内置驱动。
