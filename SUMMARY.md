@@ -1,7 +1,7 @@
 # Table of contents
 
 * [UEFI/BIOS 注解（AMI BIOS）](README.md)
-* [贡献指南与开放任务](CONTRIBUTING.md)
+* [目录](mu-lu.md)
 
 ***
 
