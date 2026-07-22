@@ -584,7 +584,7 @@ Enable（启用）
 
 允许启用或禁用由 TVB（Thermal Velocity Boost，热感知睿频加速）发起的自动 CPU 频率降低。Auto 选项让 BIOS 自动配置此项。
 
-### Enhanced TVB（增强型热感知睿频加速）
+## Enhanced TVB（增强型热感知睿频加速）
 
 选项：
 
@@ -596,7 +596,7 @@ Enable（启用）
 
 启用或禁用增强型 TVB 功能。Auto 选项让 BIOS 自动配置此项。
 
-### Voltage Reduction Initiated TVB（热感知睿频电压降低）
+## Voltage Reduction Initiated TVB（热感知睿频电压降低）
 
 选项：
 
