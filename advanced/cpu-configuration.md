@@ -120,6 +120,60 @@ CPU 主频 = 基准时钟（Base Clock，即外频，BIOS 中通常为 100 MHz�
 
 一般 Intel 和 AMD 的最低主频均为 800 MHz（部分较新的 Intel 能效核心最低频率可达 600 MHz），可通过系统命令查询。参见：英特尔公司. 13th Generation Intel® Core™ Processors Datasheet[EB/OL]. [2026-04-17]. <https://edc.intel.com/content/www/us/en/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/>.；Geekbench. Intel N100 Benchmark[EB/OL]. [2026-04-17]. <https://browser.geekbench.com/v6/cpu/13682299>.；英特尔社区. i5-1335U P-core and E-core integer operations throughput[EB/OL]. [2026-04-17]. <https://community.intel.com/t5/Processors/i5-1335U-P-core-and-E-core-integer-operations-throughput/td-p/1622502>。
 
+## Performance CPU Clock Ratio（性能核心时钟倍频）
+
+说明：
+
+允许用户修改已安装性能核心（P 核心）的时钟倍频。可调范围取决于所安装的 CPU。CPU 主频 = 基准时钟（Base Clock，通常为 100 MHz）× 倍频。
+
+## Efficiency CPU Clock Ratio（能效核心时钟倍频）
+
+说明：
+
+允许用户修改已安装能效核心（E 核心）的时钟倍频。可调范围取决于所安装的 CPU。该选项允许 P 核心与 E 核心设置不同的倍频，是性能混合架构平台的特性。
+
+## Max Ring Ratio（最大环形总线倍频）
+
+说明：
+
+允许设置 CPU Uncore（非核心）的最大倍频。可调范围取决于所使用的 CPU。Uncore 即处理器封装内除核心之外的部分，包括环形总线、内存控制器、PCIe 控制器等，其频率独立于核心频率。
+
+## Min Ring Ratio（最小环形总线倍频）
+
+说明：
+
+允许设置 CPU Uncore（非核心）的最小倍频。可调范围取决于所使用的 CPU。
+
+## IGP Ratio（核显倍频）
+
+说明：
+
+允许设置图形倍频，即集成图形处理器（IGP）的工作倍频。
+
+## NGU Ratio（NGU 倍频）
+
+说明：
+
+允许设置 NGU 时钟工作倍频。NGU 即 NPU（神经网络处理单元）相关单元，该选项为 Panther Lake 平台（Core Ultra 300 系列，采用 Cougar Cove 性能核 + Darkmont 能效核 + Intel 18A 制程）引入的新配置项，用于控制 NPU 的工作频率。参见：英特尔公司. 英特尔 Panther Lake 处理器入门指南（2026 年版）[EB/OL]. [2026-07-22]. <https://www.intel.com/content/www/us/en/products/docs/processors/core-ultra/core-ultra-300-series-mobile-processors.html>。
+
+## CPU D2D Ratio（CPU Die-to-Die 倍频）
+
+说明：
+
+允许设置 CPU D2D（Die-to-Die，裸片间）倍频。该选项为采用多裸片封装（Multi-Die Package）架构的平台引入，用于控制处理器内部不同裸片之间互联链路的工作频率。Arrow Lake-S/Refresh（LGA 1851）和 Panther Lake 均采用此类先进封装架构。
+
+## Core Minimum Ratio（核心最小倍频）
+
+说明：
+
+允许设置核心最小倍频，即 CPU 核心允许降至的最低工作倍频。
+
+## BCLK Output Source（基准时钟输出源）
+
+说明：
+
+允许选择 BCLK（Base Clock，基准时钟）输出源。基准时钟是 CPU 主频、内存频率、PCIe 频率等的基础参考时钟，选择不同的输出源可改变整条时钟链路的参考频率。
+
 ## Hardware Prefetcher（硬件预取）
 
 选项：
@@ -222,6 +276,30 @@ ALL（全部）
 
 注意：该设置会同时考虑 P 核心和 E 核心的数量。当两者都设置为 0 时，BIOS 会启用所有核心。
 
+## CPU Cores Enabling Mode（CPU 核心启用模式）
+
+说明：
+
+允许选择 CPU 核心的启用方式。
+
+### No. of CPU P-Cores Enabled（启用的性能核心数量）
+
+说明：
+
+允许选择要启用的 CPU P 核心数量（核心数量可能因 CPU 而异）。此项仅在 CPU Cores Enabling Mode 设置为 Random Mode 时可配置。Auto 选项让 BIOS 自动配置此项。
+
+### No. of CPU E-Cores Enabled（启用的能效核心数量）
+
+说明：
+
+允许选择要启用的 CPU E 核心数量（核心数量可能因 CPU 而异）。此项仅在 CPU Cores Enabling Mode 设置为 Random Mode 时可配置。Auto 选项让 BIOS 自动配置此项。
+
+### Active P-Core/E-Core（激活的 P 核心/E 核心）
+
+说明：
+
+允许选择要启用的具体 CPU 核心。此项仅在 CPU Cores Enabling Mode 设置为 Selectable Mode 时可配置。Auto 选项让 BIOS 自动配置此项。
+
 ## Hyper-Threading（英特尔® 超线程技术/英特尔® HT 技术）
 
 选项：
@@ -235,6 +313,18 @@ Enable（启用）
 英特尔® 超线程技术是一项硬件创新，能在每个内核上都运行多个线程。可使一个物理内核表现得如同两个“逻辑内核”一样。
 
 参见英特尔公司. 什么是超线程？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html>.
+
+## Enhanced Multi-Core Performance（增强多核性能）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+决定是否将最高睿频倍频应用到所有 CPU 核心。启用后，所有核心均可达到最高睿频倍频，而非仅限于少量核心。该选项属于性能混合架构平台（Arrow Lake 及更新平台）特有的配置项。
 
 ## BIST（内置自检程序）
 
@@ -608,7 +698,7 @@ Enable（启用）
 
 允许启用或禁用由 TVB（热感知睿频加速）发起的自动 CPU 电压降低。Auto 选项让 BIOS 自动配置此项。
 
-### Intel(R) Innovation Platform Framework（英特尔创新平台框架）
+## Intel(R) Innovation Platform Framework（英特尔创新平台框架）
 
 选项：
 
