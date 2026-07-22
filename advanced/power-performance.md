@@ -110,7 +110,7 @@ Enable（启用）
 
 说明：
 
-这是 Intel 第 12 代和第 13 代处理器配备的技术。
+这是 Intel 第 6 代（Skylake）及以后处理器配备的技术。
 
 禁用每核心自主 P 状态（Autonomous PCPS）后，所有核心将始终请求相同的性能状态值。HWP（Hardware Controlled Performance States，硬件性能状态）可让操作系统通过 MSR 中的能效偏好字段（EPP）设置其对性能或节能的偏好。启用 HWP 后，处理器将自行根据工作负载的需求，独立选择最合适的性能状态。参见 Intel. Empowering Mixed-criticality Industrial Realtime Computing on Performance Hybrid Architecture with Intel's Dynamic Frequency Scaling Evolution[EB/OL]. [2026-03-26]. <https://builders.intel.com/docs/networkbuilders/empowering-mixed-criticality-industrial-real-time-computing-with-intel-s-dvfs-evolution-1712135964.pdf>.
 
@@ -1059,7 +1059,7 @@ Intel 处理器带 K 才能超频。
 
 Intel Graphics Technology 即 GT，图形技术。
 
-### Maximum GTT frequency（图形执行管理器最大频率）
+### Maximum GTT frequency（图形地址转换表最大频率）
 
 GTT：Graphics Translation Table，图形地址转换表。
 

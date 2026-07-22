@@ -61,7 +61,7 @@ Enable（启用）
 
 本项是 C-state（C 状态）选项。
 
-选择“启用”以在 CPU 进入 C6 状态时将 DRAM 内容移动到 PRM 内存中。
+选择“启用”以在 CPU 进入 C6 状态时将处理器核心架构状态保存到片上 SRAM，并将 DRAM 置于自刷新（Self-Refresh）模式以保持内容。
 
 C6 是一种深度休眠状态，此时 CPU 核心内部电压可降至极低甚至关闭，功耗可降至活跃状态（C0）的 5%～10%（即降低约 90%～95% 的功耗）。需要注意的是，C6 并非最深的休眠状态——在较早期的 45 nm 移动版 Core 2 Duo 处理器上 C6 曾是最深状态，但现代 Intel 处理器已支持 C7、C8、C9、C10 等更深的封装级休眠状态，在 C6 基础上进一步关闭缓存、移除电压甚至完全断电。据英特尔官方资料，C6 相较于 C4（Enhanced Deeper Sleep）模式可额外降低最高 75% 的功耗。参见：英特尔公司. Intel® Processor C-State Demo[EB/OL]. [2026-04-17]. <https://www.intel.com/content/www/us/en/support/articles/000056462/processors.html>.；AgileWatts 论文. An Energy-Efficient CPU Core Idle-State Architecture for Latency-Sensitive Server Applications[EB/OL]. arXiv:2203.02550, 2022. <https://arxiv.org/abs/2203.02550>.；英特尔公司. 12th Generation Intel® Core™ Processors Datasheet[EB/OL]. [2026-04-17]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/007/processor-ia-core-c-state-rules/>。
 
@@ -316,7 +316,7 @@ Enable（启用）
 
 Monitor 指令用于监控某个内存区域的写入操作，而 MWait 指令则让 CPU 停止运行，直到该监控区域开始被写入。
 
-该选项配合上述 AP threads Idle Manner（AP 线程空闲模式）一起使用。增强型 vSphere 计算（Enhanced vMotion Compatibility，EVC）也需要开启该选项。
+该选项配合上述 AP threads Idle Manner（AP 线程空闲模式）一起使用。增强型 vMotion 兼容性（Enhanced vMotion Compatibility，EVC）也需要开启该选项。
 
 ## Intel® Trusted Execution Technology（英特尔可信执行技术/TXT）
 
