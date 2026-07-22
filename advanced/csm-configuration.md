@@ -2,7 +2,7 @@
 
 CSM：Compatibility Support Module，兼容性支持模块。
 
-Intel 500 系列及更新芯片组（第 11 代及后续处理器）不支持使用 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见：华硕公司. Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题？[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1045467/>。
+Intel 500 系列及更新芯片组（第 11 代及后续处理器）不支持使用 VBIOS 的显示适配器，导致内置核显不支持 Legacy Boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见：华硕公司. Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题？[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1045467/>。
 
 ![CSM 配置](../.gitbook/assets/image-20250721170014-1xxoskv.png)
 
@@ -44,11 +44,11 @@ Postponed：推迟响应
 
 说明：
 
-中断、捕捉信号响应设置。BIOS 通过 Option ROM 对 INT 19h trapping 作出的响应。
+中断、捕获信号响应设置。该选项控制 BIOS 对 Option ROM 捕获 INT 19h 中断的响应方式。
 
-当 Option ROM 捕获 INT 19h 中断时，BIOS 会立即执行该中断请求。这意味着设备的启动代码会在 BIOS 处理其他启动选项之前被执行。
+Immediate 模式下，当 Option ROM 捕获 INT 19h 中断时，BIOS 会立即执行该中断请求。这意味着设备的启动代码会在 BIOS 处理其他启动选项之前被执行。
 
-当 Option ROM 捕获 INT 19h 中断时，BIOS 会将该请求延迟到传统启动阶段（Legacy Boot）期间再执行。这通常用于 RAID 控制器、网络适配器等设备，以便在操作系统加载之前初始化硬件。
+Postponed 模式下，当 Option ROM 捕获 INT 19h 中断时，BIOS 会将该请求延迟到传统启动阶段（Legacy Boot）期间再执行。这通常用于 RAID 控制器、网络适配器等设备，以便在操作系统加载之前初始化硬件。
 
 如果在启动过程中遇到设备初始化问题，尝试将此选项设置为 Postponed，以延迟设备初始化。
 
