@@ -413,7 +413,7 @@ ODT（On-Die Termination，片内端接技术）是在内存芯片内部集成�
 
 ODT Off（禁用 ODT）
 
-120 ohms（Ω）
+120 ohms (Ω)
 
 说明：
 
@@ -1121,7 +1121,7 @@ Dynamic（动态），1 GB, 1.25 GB, 1.5 GB, 1.75 GB, 2 GB, 2.25 GB, 2.5 GB, 2.7
 
 Top of Low Usable DRAM (TOLUD)，低地址段内存顶端，表示 4 GB 以下的可用 DRAM 最大地址边界。其描述的是可设定地址的物理内存总量。TOLUD 寄存器会始终在 4 GB 内存地址以下工作。
 
-### SA GV（SAGV）
+### SA GV (SAGV)
 
 Disabled —— 禁用
 

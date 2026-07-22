@@ -653,7 +653,7 @@ Disabled（禁用）
 
 说明：
 
-Peer Memory Write，PCIe Peer-to-Peer（PCIe P2P） DMA，PCIe 点对点 DMA。
+Peer Memory Write，PCIe Peer-to-Peer (PCIe P2P) DMA，PCIe 点对点 DMA。
 
 参见：Peer Memory Write Enable[EB/OL]. [2026-03-26]. <https://jasonyychiu.blogspot.com/2021/03/peer-memory-write-enable.html>.
 
@@ -765,7 +765,7 @@ Disabled（禁用）
 
 说明：
 
-Aggressive LPM Support（ALPM）。
+Aggressive LPM Support (ALPM)。
 
 使 PCH 主动让 SATA 总线进入链路低功耗状态。此功能仅在 AHCI 模式下受支持。
 
@@ -1047,9 +1047,9 @@ xHCI（eXtensible Host Controller Interface）是 USB 3.0 及更高版本的主�
 
 ### USB3 Link Speed Selection（USB3 链路速率选择）
 
-GEN1：5 Gbps
+GEN1: 5 Gbps
 
-GEN2：10 Gbps
+GEN2: 10 Gbps
 
 说明：
 
