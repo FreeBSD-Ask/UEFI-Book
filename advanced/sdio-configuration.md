@@ -2,7 +2,7 @@
 
 SDIO 参数配置说明。
 
-SDIO（Secure Digital Input and Output），即安全数字输入输出接口。SDIO 协议是由 SD 卡协议演进而来，向下兼容 SD 卡协议。一般嵌入式设备会使用。
+SDIO（Secure Digital Input and Output），即安全数字输入输出接口。SDIO 协议是由 SD 卡协议演进而来，向下兼容 SD 卡协议。常用于嵌入式设备。
 
 ## SDIO Access Mode（SDIO 访问模式）
 
@@ -12,9 +12,9 @@ Auto（自动）
 
 ADMA（高级 DMA 模式）
 
-SDMA
+SDMA（单 DMA 模式）
 
-PIO
+PIO（可编程 IO 模式）
 
 说明：
 

@@ -877,7 +877,7 @@ Disabled（禁用）
 
 参见：什麼是 dev 睡眠功能以及如何禁用 dev 睡眠功能[EB/OL]. [2026-03-26]. <https://www.intel.com.tw/content/www/tw/zh/support/articles/000024170/memory-and-storage.html>.
 
-### DITO Configuration（驱动空闲超时配置）
+### DITO Configuration（设备睡眠空闲超时配置）
 
 选项：
 
