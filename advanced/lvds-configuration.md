@@ -1,6 +1,6 @@
 # LVDS Configuration（LVDS 配置）
 
-LVDS，Low-Voltage Differential Signal（低压差分信号）。
+LVDS，Low Voltage Differential Signaling（低压差分信号）。
 
 一般笔记本屏幕使用 LVDS 接口和主板相连。所以这部分主要用于设置内置的显示器面板。
 
@@ -232,7 +232,7 @@ Disabled（禁用）
 
 说明：
 
-控制指定的信号线对顺序。LVDS 通道差分对的顺序交换（例如 A 与 D 互换，B 与 CLK 互换，C 与 C 互换）。
+控制指定的信号线对顺序。LVDS 通道差分对的顺序交换（例如 A 与 D 互换，B 与 CLK 互换，C 保持不变）。
 
 #### Bus Swapping（总线交换）
 

@@ -20,7 +20,7 @@ Disabled（禁用）
 
 当启用此选项、平台密钥（Platform Key，PK）已注册且系统处于用户模式时，安全启动功能将处于激活状态。更改模式需要重启。平台密钥（Platform Key，PK）用于在平台所有者与平台固件之间建立信任关系，平台所有者会将密钥的一部分注册到平台固件中。
 
-当未注册 PK 时，安全启动在 Setup Mode 模式下运行，在修改 PK、KEK、DB 和 DBX 变量时 BIOS 无需认证，此时可通过写入 PK、KEK、DB 和 DBX 变量来配置安全启动策略。BIOS 可工作在 Setup Mode 和 Audit Mode 模式，且从 Setup Mode 可以直接切换为 Audit Mode。
+当未注册 PK 时，安全启动在 Setup Mode 模式下运行，在修改 PK、KEK、db 和 dbx 变量时 BIOS 无需认证，此时可通过写入 PK、KEK、db 和 dbx 变量来配置安全启动策略。BIOS 可工作在 Setup Mode 和 Audit Mode 模式，且从 Setup Mode 可以直接切换为 Audit Mode。
 
 当注册了 PK 后，且 BIOS 在 User Mode 模式下运行时，User Mode 模式要求所有可执行文件在运行之前都要经过认证。此时 BIOS 可工作在 User Mode 和 Deployed Mode 模式下，且从 User Mode 模式可以直接修改为 Deployed Mode。
 
