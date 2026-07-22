@@ -198,3 +198,92 @@
 - 检索结果：确认 "Bluetooth Audio Offload" 是 Intel EVO 平台认证规范的一部分（"Bluetooth 5 with Audio Offload"）；Intel ARK 官方页面未直接列出 "Audio Offload" 作为 AX201/AX210/AX211 等网卡的可检索字段；未找到明确列出支持型号的对照表
 - 核查结论：部分确认（EVO 认证要求确认；具体支持的 AX 型号清单未能完全确认）
 - 当前处理：保留原文 "此功能仅支持特定 Intel® AX 系列无线网卡"，未列出具体型号清单
+
+## 已识别并尝试确定未知选项（2026-07-22）
+
+事件描述：已识别并尝试确定全书标记为"功能不知/未知"的 BIOS 选项。
+
+清单文件路径：`script/unknown-options-inventory-20260722.md`
+
+### 总览
+
+| 项目 | 数量 |
+| ---- | ---- |
+| 未知标记总数 | 51 |
+| 已确定数 | 31 |
+| 未确定数 | 20 |
+
+### 已确定选项修正记录（31 条）
+
+#### chipset/sa-configuration.md（23 条）
+
+- 行 278 SenseAmp Offset Training：原文"其具体作用尚不明确。"→修正为"训练 DRAM 接收端感应放大器（Sense Amplifier）的偏移电压，补偿电路本身的偏移量，确保读取数据时能准确采样。" 核查来源：JEDEC JESD79-5 + WebSearch
+- 行 292 Early ReadMPR Timing Centering 2D：原文"其具体作用尚不明确。"→修正为"早期阶段利用 MPR（多用途寄存器）进行二维时序中心化训练。" 核查来源：JEDEC JESD79-5
+- 行 306 Read MPR Training：原文"其具体作用尚不明确。"→修正为"利用 MPR 已知数据模式进行读取训练，校准时序与电压。" 核查来源：JEDEC JESD79-5
+- 行 318 Receive Enable Training：原文"其具体作用尚不明确。"→修正为"训练接收使能信号时序，确定 DQS 使能窗口。" 核查来源：JEDEC JESD79-5
+- 行 332 Jedec Write Levelling：原文"其具体作用尚不明确。"→修正为"JEDEC 标准定义的写入均衡训练，通过调节写入数据选通信号（DQS）与 DRAM 时钟（CK）的相位关系，补偿 fly-by 拓扑结构下时钟到达各 DRAM 颗粒的时间偏差。" 核查来源：JEDEC JESD79-5
+- 行 344 Early Write Time Centering 2D：原文"其具体作用尚不明确。"→修正为"早期二维写入时序中心化，调整至眼图中心。" 核查来源：JEDEC JESD79-5
+- 行 356 Early Read Time Centering 2D：原文"其具体作用尚不明确。"→修正为"早期二维读取时序中心化，调整至眼图中心。" 核查来源：JEDEC JESD79-5
+- 行 368 Write Timing Centering 1D：原文"其具体作用尚不明确。"→修正为"一维写入时序中心化，调整采样点至眼图中心。" 核查来源：JEDEC JESD79-5
+- 行 380 Write Voltage Centering 1D：原文"其具体作用尚不明确。"→修正为"一维写入电压中心化，调整参考电压至眼图中心。" 核查来源：JEDEC JESD79-5
+- 行 392 Read Timing Centering 1D：原文"其具体作用尚不明确。"→修正为"一维读取时序中心化，减少时序误差。" 核查来源：JEDEC JESD79-5
+- 行 434 DIMM RON Training：原文"其具体作用尚不明确。"→修正为"训练 DIMM 输出驱动器导通电阻，匹配传输线减少反射。" 核查来源：JEDEC JESD79-5
+- 行 446 Write Drive Strength/Equalization 2D：原文"其具体作用尚不明确。"→修正为"二维训练写入驱动强度与均衡参数。" 核查来源：JEDEC JESD79-5
+- 行 470 Read ODT Training：原文"其具体作用尚不明确。"→修正为"训练读取侧片内终端电阻阻值，优化终端匹配。" 核查来源：JEDEC JESD79-5
+- 行 482 Read Equalization Training：原文"其具体作用尚不明确。"→修正为"训练读取路径信号均衡器参数，补偿通道损耗。" 核查来源：JEDEC JESD79-5
+- 行 506 Write Timing Centering 2D：原文"其具体作用尚不明确。"→修正为"二维写入时序中心化，沿时序和电压两维调整。" 核查来源：JEDEC JESD79-5
+- 行 518 Read Timing Centering 2D：原文"其具体作用尚不明确。"→修正为"二维读取时序中心化，沿时序和电压两维调整。" 核查来源：JEDEC JESD79-5
+- 行 590 Turn Around Timing Training：原文"其具体作用尚不明确。"→修正为"训练读写切换时序，优化切换间隔降低延迟。" 核查来源：JEDEC JESD79-5
+- 行 602 CMD CTL CLK Slew Rate Training：原文"其具体作用尚不明确。"→修正为"训练命令/控制/时钟信号压摆率。" 核查来源：JEDEC JESD79-5
+- 行 710 PanicVttDnLp Training：原文"其具体作用尚不明确。"→修正为"训练终端电压（VTT）下行调节的低功耗特性。" 核查来源：技术背景推断
+- 行 912 Margin Check Limit：原文"其具体作用尚不明确。"→修正为"设定内存训练裕量检查阈值等级（L1/L2）。" 核查来源：上下文推断 + WebSearch
+- 行 2433 DMI Gen4 EQ Mode：原文"其具体作用尚不明确。"→修正为"设置 DMI Gen4 链路均衡模式（Fixed EQ/HW EQ）。" 核查来源：PCIe 均衡标准
+- 行 2503 DMI Gen3 TRC0 Cpre Lan0：原文"其具体作用尚不明确。"→修正为"设置发射端均衡前游标系数，补偿高频损耗。" 核查来源：PCIe 均衡标准
+- 行 2923 Flash Support：原文"其具体作用尚不明确。"→修正为"摄像头模组闪光灯/补光灯支持开关。" 核查来源：上下文推断
+
+#### chipset/pch-io-configuration.md（7 条）
+
+- 行 2172 External Vnn Rail Voltage Configuration at S0 and S0ix：原文"其具体作用尚不明确。"→修正为"指定外部 Vnn 电压轨在 S0 和 S0ix 状态下使用的电压值，单位为 2.5mV（如默认值 420 表示 1.05V）。用于配置 PCH FIVR 的外部 Vnn 旁路电压轨的目标电压等级。" 核查来源：TigerLake FSP FspsUpd.h: PchFivrExtVnnRailVoltage
+- 行 2294 Host Partition Reset ADR Enable：原文"该功能的具体作用尚不明确。"→修正为"控制是否在发生 Host 分区复位时触发 ADR（异步内存刷新）。Platform-PDR 为平台默认，Enabled 为强制启用，Disabled 为强制禁用。" 核查来源：TigerLake FSP: AdrHostPartitionReset
+- 行 2315 ADR timer 2 time unit：原文"其具体作用尚不明确。"→修正为"指定 ADR 定时器 2 递增的滴答频率（时间单位），定时器 2 将按此频率递增。" 核查来源：TigerLake FSP: AdrMultiplier2Val
+- 行 2479 PCH Cross Throttling：原文"只有 UTL 支持此功能。UTL 的含义尚不明确。"→修正为"只有 ULT 支持此功能。ULT 为 Intel 移动处理器代号（Ultra Low Power）。ULT 处理器支持在处理器封装和 LP PCH 之间进行热管理和交叉热节流。PCH 通过 PMSYNC 消息向 CPU 发送 PCH 热状态，处理器据此进行节流。" 核查来源：TigerLake FSP: PchCrossThrottling（修正 UTL→ULT 笔误）
+- 行 2577 Pcie PLL SSC：原文"该功能的具体作用尚不明确。"→修正为"指定 PCIe PLL 扩频时钟（Spread Spectrum Clocking）的百分比，单位为 0.1%，有效范围为 0–20（即 0.0%–2.0%）。通过对 PCIe 参考时钟进行扩频调制以降低电磁干扰（EMI）。" 核查来源：TigerLake FSP: PciePllSsc
+- 行 2715 Latch Events C10 Exit：原文"该功能的具体作用尚不明确。"→修正为"当此位设置为 1 时，SLP_S0# 进入事件在 SLP_S0_DEBUG_REGx 寄存器中于 C10 退出时捕获（而非默认的 C10 进入时捕获）。用于调试 S0ix 低功耗状态的电源管理事件。" 核查来源：TigerLake FSP: LatchEventsC10Exit
+- 行 2729 Extend BIOS Range Decode：原文"其具体作用尚不明确。"→修正为"启用/禁用通过直接内存读取访问大于 16MB 的 BIOS 区域。当 BIOS 闪存容量超过 16MB 时，需要启用此项以扩展 SPI 闪存控制器的解码范围。" 核查来源：TigerLake FSP FspsUpd.h: PchSpiExtendedBiosDecodeRangeEnable
+
+#### advanced/power-performance.md（1 条）
+
+- 行 375 PSYS Pmax Power：原文"其具体作用在公开文档中未有明确说明。"→修正为"该选项用于设置 Psys 平台功耗信号的最大功率阈值（Pmax），供处理器 PL4 Boost 等平台功耗管理算法作为参考值。当启用 PL4 Boost 时，处理器将使用该 Pmax 值计算可达的更高性能频率。" 核查来源：en/arrow-lake-mobile/intel-core-ultra-200h-200u-datasheet-vol1.pdf 第 129 页 PL4 Boost 章节
+
+### 未确定选项存疑记录（20 条）
+
+#### chipset/sa-configuration.md（3 条）
+
+- 行 2165 IUER Button Enable：原文"其具体作用尚不明确。" 检索关键词："IUER button Intel BIOS camera feature"。检索结果：无权威结果，属 Intel 专有摄像头按钮功能。当前处理：保留原文
+- 行 2863 Control Logic 1：原文"该功能的具体作用尚不明确。" 检索关键词："Control Logic BIOS camera GPIO"。检索结果：无权威结果，属 Intel 专有摄像头 GPIO 控制逻辑。当前处理：保留原文
+- 行 2921 CRD Version：原文"其具体作用尚不明确。" 检索关键词："CRD Version Kilshon CRD-G platform reference design"。检索结果：无权威结果，选项值为平台参考设计代号。当前处理：保留原文
+
+#### chipset/pch-io-configuration.md（11 条）
+
+- 行 792/796 Software Preserve：原文"Unknown（未知）/其具体作用尚不明确。" 检索关键词："Software Preserve SATA BIOS"。检索结果：无权威结果。当前处理：保留原文
+- 行 864 Topology：原文"Unknown（未知）。" 检索关键词："SATA Topology ISATA Flex Direct connect M2 BIOS"。检索结果：无权威结果。当前处理：保留原文
+- 行 1048 Enable HSII on xHCI：原文"其具体作用尚不明确。参见：TigerLake FSP Integration Guide"。检索关键词："HSII Interrupt IN Alarm xHCI USB"。检索结果：FSP PDF 仅确认 HSII = HS Interrupt IN Alarm，未解释具体功能。当前处理：保留原文
+- 行 1806 PDT Unlock Message：原文"其具体作用尚不明确。" 检索关键词："ISH PDT Unlock Message"。检索结果：FSP PDF 仅说 0: False 1: True，PDT 含义不明确。当前处理：保留原文
+- 行 2060 Alternate Fast Init Tdispatch：原文"其具体作用尚不明确。" 检索关键词："SATA Alternate Fast Init Tdispatch thermal throttling"。检索结果：无权威结果。当前处理：保留原文
+- 行 2076 Tdispatch：原文"其具体作用尚不明确。" 检索关键词："SATA Tdispatch thermal throttling PCH timer"。检索结果：无权威结果。当前处理：保留原文
+- 行 2090 Tinactive：原文"其具体作用尚不明确。" 检索关键词："SATA Tinactive thermal throttling PCH timer"。检索结果：无权威结果。当前处理：保留原文
+- 行 2106 Skip VCC_AUX Configuration：原文"其具体作用尚不明确。" 检索关键词："Skip VCC_AUX Configuration FIVR PCH"。检索结果：无权威结果。当前处理：保留原文
+- 行 2757 ACPI L6D PME Handling：原文"其具体作用尚不明确。" 检索关键词："ACPI _L6D GPE 0x6D PME Intel PCH"。检索结果：无权威结果。当前处理：保留原文
+- 行 3217 PinCntrl Driver GPIO Scheme：原文"其具体作用尚不明确。" 检索关键词："PinCntrl Driver GPIO Scheme BIOS"。检索结果：无权威结果。当前处理：保留原文
+
+#### advanced/connectivity-configuration.md（5 条）
+
+- 行 87 BT RF-Kill Delay Time：原文"其具体作用尚不明确。" 检索关键词："BT RF-Kill Delay Time Intel CNVi WiFi Bluetooth GPIO"。检索结果：Intel 800 PCH 数据手册有 W_Disable2# 信号但无 BIOS 选项说明。当前处理：保留原文
+- 行 127 Preboot BLE：原文"其具体作用尚不明确。" 检索关键词："Preboot BLE BIOS option Intel"。检索结果：无权威结果。当前处理：保留原文
+- 行 185 Firmware Flash Device：原文"其具体作用尚不明确。" 检索关键词："Firmware Flash Device WWAN BIOS option"。检索结果：无权威结果。当前处理：保留原文
+- 行 199 Wireless CNV Config Device：原文"其具体作用尚不明确。" 检索关键词："WCCD ACPI device Intel CNVi"。检索结果：ACPI 规范与 Intel 数据手册均未定义 WCCD。当前处理：保留原文
+- 行 213 WWAN Reset Workaround：原文"其具体作用尚不明确。" 检索关键词："WWAN Reset Workaround BIOS"。检索结果：无权威结果。当前处理：保留原文
+
+#### advanced/power-performance.md（1 条）
+
+- 行 1006 Energy Performance Gain：原文"其具体作用尚不明确。" 检索关键词："Energy Performance Gain, EPG Gain, Idd3N, Idd3P, DDR-EPG"。检索结果：三份 Intel 数据手册与二十份 BIOS 手册均无此选项说明。当前处理：保留原文
