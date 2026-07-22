@@ -2169,7 +2169,7 @@ Disabled（禁用）
 
 为外部电压轨配置 TARGET_VOLT_LEVEL。
 
-其具体作用尚不明确。
+指定外部 Vnn 电压轨在 S0 和 S0ix 状态下使用的电压值，单位为 2.5mV（如默认值 420 表示 1.05V）。用于配置 PCH FIVR 的外部 Vnn 旁路电压轨的目标电压等级。
 
 ### External Rails Voltage and Current Settings（外部电压轨的电压与电流设置）
 
@@ -2291,7 +2291,7 @@ Disabled（禁用）
 
 说明：
 
-该功能的具体作用尚不明确。
+控制是否在发生 Host 分区复位时触发 ADR（异步内存刷新）。Platform-PDR 为平台默认，Enabled 为强制启用，Disabled 为强制禁用。
 
 #### ADR timer 1 expire time（ADR 定时器 1 到期时间）
 
@@ -2312,7 +2312,7 @@ Disabled（禁用）
 
 说明：
 
-其具体作用尚不明确。
+指定 ADR 定时器 2 递增的滴答频率（时间单位），定时器 2 将按此频率递增。
 
 ## PCH Lan controller（PCH 局域网控制器）
 
@@ -2476,7 +2476,7 @@ Disabled（禁用）
 
 说明：
 
-只有 UTL 支持此功能。UTL 的含义尚不明确。
+只有 ULT 支持此功能。ULT 为 Intel 移动处理器代号（Ultra Low Power）。ULT 处理器支持在处理器封装和 LP PCH 之间进行热管理和交叉热节流。PCH 通过 PMSYNC 消息向 CPU 发送 PCH 热状态，处理器据此进行节流。
 
 为了防止过热，对 PCH 功率进行节流管理。
 
@@ -2574,7 +2574,7 @@ Disabled（禁用）
 
 PCIe PLL 扩频百分比。AUTO —— 保持硬件默认值，不由 BIOS 覆盖。
 
-该功能的具体作用尚不明确。
+指定 PCIe PLL 扩频时钟（Spread Spectrum Clocking）的百分比，单位为 0.1%，有效范围为 0–20（即 0.0%–2.0%）。通过对 PCIe 参考时钟进行扩频调制以降低电磁干扰（EMI）。
 
 ## IOAPIC 24-119 Entries（IOAPIC 24-119 条目）
 
@@ -2712,7 +2712,7 @@ Disabled（禁用）
 
 在退出 C10 状态时锁存事件。
 
-该功能的具体作用尚不明确。
+当此位设置为 1 时，SLP_S0# 进入事件在 `SLP_S0_DEBUG_REGx` 寄存器中于 C10 退出时捕获（而非默认的 C10 进入时捕获）。用于调试 S0ix 低功耗状态的电源管理事件。
 
 ## Extend BIOS Range Decode（扩展 BIOS 解码范围）
 
@@ -2726,7 +2726,7 @@ Disabled（禁用）
 
 启用此项后，落入特定内存区域的内存周期（memory cycles）将被重定向到 SPI 闪存控制器。
 
-其具体作用尚不明确。
+启用/禁用通过直接内存读取访问大于 16MB 的 BIOS 区域。当 BIOS 闪存容量超过 16MB 时，需要启用此项以扩展 SPI 闪存控制器的解码范围。
 
 ## ACPI L6D PME Handling（ACPI 中 L6D（_L6D）PME 事件处理）
 
