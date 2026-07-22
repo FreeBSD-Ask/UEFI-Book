@@ -296,7 +296,7 @@ Enable（启用）
 
 说明：
 
-这是一个调试选项。
+这是调试选项。
 
 MCE，Machine Check Exception，机器检查
 

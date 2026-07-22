@@ -14,7 +14,7 @@ Enable（启用）
 
 开启或关闭 Intel 管理引擎。
 
-ME：Intel Management Engine，Intel 管理引擎状态。英特尔® 管理引擎是一个嵌入式微控制器（集成在某些英特尔芯片组上），运行一个轻量级微内核操作系统，为基于英特尔® 处理器的计算机系统提供各种功能和服务。
+ME：Intel Management Engine，Intel 管理引擎状态。英特尔® 管理引擎是嵌入式微控制器（集成在某些英特尔芯片组上），运行轻量级微内核操作系统，为基于英特尔® 处理器的计算机系统提供各种功能和服务。
 
 参见：英特尔公司. 什么是英特尔®管理引擎？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000008927/software/chipset-software.html>.
 
