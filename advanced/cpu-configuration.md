@@ -560,7 +560,7 @@ Enable（启用）
 
 允许配置电流过载保护功能。可手动设置 IA CEP（核心域电流漂移保护）、GT CEP（图形域电流漂移保护）和 SA CEP（系统代理域电流漂移保护）。
 
-### Core Ratio Extension Mode（核心倍频扩展模式）
+## Core Ratio Extension Mode（核心倍频扩展模式）
 
 选项：
 
