@@ -126,7 +126,7 @@ CKEMin：Clock Enable Minimum，时钟使能最小值
 
 #### Throttler CKEMin Timer（节流器 CKEMin 计时器）
 
-CKEMin 的计时器数值，范围 [255；0]。要求最小值为 SC_ROUND_T（系统时钟周期的数量）+ BYTE_LENGTH（4）（字节长度，一般是 4）。
+CKEMin 的计时器数值，范围 0-255。要求最小值为 SC_ROUND_T（系统时钟周期的数量）+ BYTE_LENGTH（4）（字节长度，一般是 4）。
 
 #### Allow Opp Ref Below Write Threshold（允许在写入阈值以下的机会刷新）
 
@@ -391,7 +391,7 @@ Disabled（禁用）
 
 其具体作用尚不明确。
 
-#### Dimm ODT Training\*（内存模块终端电阻训练）
+#### Dimm ODT Training*（内存模块终端电阻训练）
 
 选项：
 
@@ -407,7 +407,7 @@ ODT（On-Die Termination，片内端接技术）是在内存芯片内部集成�
 
 #### Max RTT_WR（最大 RTT_WR）
 
-此项依赖 Dimm ODT Training\*（Dimm ODT 训练）。
+此项依赖 Dimm ODT Training*（Dimm ODT 训练）。
 
 选项：
 
@@ -419,7 +419,7 @@ ODT Off（禁用 ODT）
 
 设定内存芯片内部终端电阻的 WR（写入端接电阻）。
 
-#### DIMM RON Training\*（内存模块 RON 训练）
+#### DIMM RON Training*（内存模块 RON 训练）
 
 选项：
 
@@ -433,7 +433,7 @@ Disabled（禁用）
 
 其具体作用尚不明确。
 
-#### Write Drive Strength/Equalization 2D\*（写入驱动强度/均衡 2D\*）
+#### Write Drive Strength/Equalization 2D*（写入驱动强度/均衡 2D*）
 
 选项：
 
@@ -445,7 +445,7 @@ Disabled（禁用）
 
 其具体作用尚不明确。
 
-#### Write Slew Rate Training\*（写入上升/下降斜率训练\*）
+#### Write Slew Rate Training*（写入上升/下降斜率训练*）
 
 选项：
 
@@ -457,7 +457,7 @@ Disabled（禁用）
 
 优化写入信号的上沿与下沿。
 
-#### Read ODT Training\*（读取终端电阻训练\*）
+#### Read ODT Training*（读取终端电阻训练*）
 
 选项：
 
@@ -469,7 +469,7 @@ Disabled（禁用）
 
 其具体作用尚不明确。
 
-#### Read Equalization Training\*（读取均衡训练\*）
+#### Read Equalization Training*（读取均衡训练*）
 
 选项：
 
@@ -481,7 +481,7 @@ Disabled（禁用）
 
 其具体作用尚不明确。
 
-#### Read Amplifier Training\*（读取放大器训练）
+#### Read Amplifier Training*（读取放大器训练）
 
 选项：
 
@@ -625,7 +625,7 @@ Disabled（禁用）
 
 减少时序误差并提升读取可靠性。
 
-#### TxDqTCO Comp Training\*（TxDqTCO Comp 训练\*）
+#### TxDqTCO Comp Training*（TxDqTCO Comp 训练*）
 
 选项：
 
@@ -637,7 +637,7 @@ Disabled（禁用）
 
 优化命令信号到数据总线传播延迟。
 
-#### ClkTCO Comp Training\*（ClkTCO Comp 训练\*）
+#### ClkTCO Comp Training*（ClkTCO Comp 训练*）
 
 选项：
 
@@ -661,7 +661,7 @@ Disabled（禁用）
 
 内存控制器到数据总线信号的传输延迟。
 
-#### VccDLL Bypass Training\*（VccDLL 旁路训练\*）
+#### VccDLL Bypass Training*（VccDLL 旁路训练*）
 
 选项：
 
@@ -985,12 +985,13 @@ Disabled（禁用）
 
 Auto（自动）
 
-1067, 1333, 1400, 1600, 1800, 1867, 2000, 2133, 2200, 2400, 2600, 2667, 2800, 2933, 3000, 3200, 3467, 3600, 3733, 4000, 4200, 4267, 4400, 4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6400,
-10000, 12800
+1067, 1333, 1400, 1600, 1800, 1867, 2000, 2133, 2200, 2400, 2600, 2667, 2800, 2933, 3000, 3200, 3467, 3600, 3733, 4000, 4200, 4267, 4400, 4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6400, 10000, 12800
 
 说明：
 
 最大内存频率，单位 MHz。
+
+注：10000 和 12800 超出当前 JEDEC JESD79-5C DDR5 标准最高速率（8800 MT/s），属于超频范畴，保留原值。
 
 ### LP5 Bank Mode（LPDDR5 Bank 模式）
 
@@ -1016,7 +1017,7 @@ LP5 BG Mode
 
 0-65535
 
-0 \= Auto（自动）
+`0 = Auto`（自动）
 
 说明：
 
@@ -1032,7 +1033,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 0-65535
 
-0 \= Auto（自动）
+`0 = Auto`（自动）
 
 说明：
 
@@ -1044,7 +1045,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 0-65535
 
-0 \= Auto（自动）
+`0 = Auto`（自动）
 
 说明：
 
@@ -1056,7 +1057,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 0-65535
 
-0 \= Auto（自动）
+`0 = Auto`（自动）
 
 说明：
 
@@ -1068,7 +1069,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 0-65535
 
-0 \= Auto（自动）
+`0 = Auto`（自动）
 
 说明：
 
@@ -1082,7 +1083,7 @@ Mixed 2DPC：指每个内存通道插入两根不同规格（如品牌、容量�
 
 0-65535
 
-0 \= Auto（自动）
+`0 = Auto`（自动）
 
 说明：
 
@@ -1120,7 +1121,7 @@ Dynamic（动态），1 GB, 1.25 GB, 1.5 GB, 1.75 GB, 2 GB, 2.25 GB, 2.5 GB, 2.7
 
 Top of Low Usable DRAM (TOLUD)，低地址段内存顶端，表示 4 GB 以下的可用 DRAM 最大地址边界。其描述的是可设定地址的物理内存总量。TOLUD 寄存器会始终在 4 GB 内存地址以下工作。
 
-### SA GV（SAVG）
+### SA GV（SAGV）
 
 Disabled —— 禁用
 
@@ -1305,7 +1306,7 @@ pTRR（pseudo Target Row Refresh，伪目标行刷新）
 
 ### RH LFSR0 Mask（行敲击 pTRR 的 LFSR0 掩码）
 
-1/2\^1, 1/2\^2, 1/2\^3, 1/2\^4, 1/2\^5, 1/2\^6, 1/2\^7, 1/2\^8, 1/2\^9, 1/2\^10, 1/2\^11, 1/2\^12, 1/2\^13, 1/2\^14, 1/2\^15
+`1/2^1`, `1/2^2`, `1/2^3`, `1/2^4`, `1/2^5`, `1/2^6`, `1/2^7`, `1/2^8`, `1/2^9`, `1/2^10`, `1/2^11`, `1/2^12`, `1/2^13`, `1/2^14`, `1/2^15`
 
 控制行敲击防护机制中 pTRR 的触发频率。
 
@@ -1935,7 +1936,7 @@ GTT：Graphics Translation Table，图形转换表，又称 GART（Graphics Addr
 
 应用程序通过访问 BAR，与专用于集成显卡的系统内存或用于 de-swizzle 的常规系统内存交互。较大的 IGD Aperture Size 并不总是最佳选择，因为它会增加系统地址空间中 BAR 的占用。
 
-核显显存孔径（默认）\=256 MB（适用于第 10 代及更早 Intel® 处理器）。
+核显显存孔径（默认）`= 256 MB`（适用于第 10 代及更早 Intel® 处理器）。
 
 注意，核显的总显存大小取决于操作系统，而不等同于此项。
 
@@ -2493,7 +2494,7 @@ DMI Gen4 通道发射器前游标和后游标系数值。
 
 同上。
 
-DMI Gen3 TRC0 Cpre Lan0（DMI Gen3 通道 0 发射器前/后游标系数值）\*
+#### DMI Gen3 TRC0 Cpre Lan0（DMI Gen3 通道 0 发射器前/后游标系数值）`*`
 
 DMI Gen3 通道发射器前游标和后游标系数值。
 
