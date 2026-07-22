@@ -1,4 +1,4 @@
-# Intel(R) Ethernet Controller I226-V - 10:02:B5:86:0E:F9（Intel 以太网控制器）
+# Intel(R) Ethernet Controller I226-V（Intel 以太网控制器）
 
 显示以太网卡相关信息。
 

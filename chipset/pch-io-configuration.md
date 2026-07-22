@@ -1759,6 +1759,8 @@ Disabled（禁用）
 
 ISH，Integrated Sensor Hub，整合传感器中枢。ISH 内置于 PCH 中，且依赖 PCI 总线。
 
+Intel 800 系列芯片组搭载 ISH 5.6 版本，ISH 接口新增 I3C 支持（ISH IO：1 SPI、3 I2C、1 I3C、2 UART、12 GPIO）。
+
 参见：Intel Integrated Sensor Hub[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/products/platforms/processor-and-core-i3-n-series-datasheet-volume-1-of-2/002/ish-micro-controller/>.
 
 ISH（集成传感器 Hub）由一个微控制器驱动运行。

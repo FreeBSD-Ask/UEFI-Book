@@ -90,3 +90,17 @@
 - Low Latency（低延迟模式）
 
 注：原拟新增的 Intel(R) Speed Shift Technology、CPU Thermal Monitor、CPU EIST Function、Race To Halt (RTH)/Energy Efficient Turbo、Intel(R) Turbo Boost Technology、Active Turbo Ratios、Turbo Power Limits 经复核均为 CPU - Power Management Control 节中既有选项（如 Intel(R) SpeedStep(tm)、Race To Halt (RTH)、Intel(R) Speed Shift Technology、Turbo mode、View/Configure Turbo Options、Thermal Monitor、Platform PL1/PL2 等）的简写重复版本，已删除，保留原文更详细的描述。
+
+### chipset/pch-io-configuration.md
+
+以下为依据 Intel 800 系列芯片组 PCH 数据手册（Vol 1，rev 003，2025-02）对既有选项的补充说明，已合并至原文相应位置：
+
+- PCIe Speed（PCIe 速率）：补充 Gen4: PCIe 4.0 (16.0 GT/s) 选项，并标注 Intel 800 系列芯片组 PCH-S 控制器最大传输速率为 16 GT/s（Gen4），支持 14 个根端口、24 条通道
+- DMI Link ASPM Control（DMI 链路 ASPM 控制）：补充 Intel 800 系列芯片组 PCH-S PCIe 控制器不支持 L0s 链路状态，仅支持 L1 子状态（L1.0/L1.1/L1.2）
+- DPC（下行端口控制）：补充 Intel 800 系列芯片组 PCH-S 控制器不支持 DPC
+- EDPC（增强型下行端口控制）：补充 Intel 800 系列芯片组 PCH-S 控制器不支持 eDPC
+- Transmitter Half Swing（发送器半摆幅模式）：补充 Intel 800 系列芯片组 PCH-S 控制器不支持半摆幅模式
+- SATA Mode Selection（SATA 模式选择）：补充 Intel 800 系列芯片组 SATA 控制器不支持 IDE 传统模式，仅支持 AHCI 与 RAID 模式
+- THC Configuration（触控主机控制器配置）：补充 THC-SPI 不适用于 Intel Core Ultra 200S 系列桌面处理器平台
+- SerialIo Configuration（串行 IO 配置）：补充 Intel 800 系列芯片组在 Serial I/O 子系统中新增 I3C 控制器（符合 MIPI I3C HCI 规范），ISH 升级至 5.6 版本且 ISH 接口新增 I3C 支持
+- ISH Configuration（整合传感器中枢配置）：补充 Intel 800 系列芯片组搭载 ISH 5.6 版本，ISH 接口新增 I3C 支持
