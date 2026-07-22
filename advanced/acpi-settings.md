@@ -102,3 +102,57 @@ RTC 是 BIOS 的实时时钟，用于存储时间数据。定时开机。
 - RTC Alarm Time (seconds) 秒
 
 如设置 Everyday、13、14、15，那么设备则会在每日 13 时 14 分 15 秒开机。
+
+### Platform Power Management（平台电源管理）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用或禁用 ASPM（Active State Power Management，活动状态电源管理）功能。ASPM 通过控制 PCIe 链路的活动状态电源管理，在设备空闲时降低链路功耗。
+
+### PEG ASPM（PEG 活动状态电源管理）
+
+说明：
+
+允许配置连接到 CPU PEG（PCI Express Graphics）总线的设备的 ASPM 模式。此项仅在 Platform Power Management 设置为 Enabled 时可配置。
+
+### PCH ASPM（PCH 活动状态电源管理）
+
+说明：
+
+允许配置连接到芯片组 PCIe 总线的设备的 ASPM 模式。此项仅在 Platform Power Management 设置为 Enabled 时可配置。
+
+### DMI ASPM（DMI 活动状态电源管理）
+
+说明：
+
+允许配置 DMI（Direct Media Interface，直接媒体接口）链路 CPU 侧和芯片组侧的 ASPM 模式。此项仅在 Platform Power Management 设置为 Enabled 时可配置。DMI 是 CPU 与 PCH 之间的专用链路。
+
+### S3 Save Mode（S3 节能模式）
+
+说明：
+
+决定是否让系统在 S3 状态下进入节能模式。该选项仅特定型号支持。
+
+### ErP（ErP 指令）
+
+说明：
+
+决定是否让系统在 S5（关机）状态下消耗最少功率。ErP 是欧盟“能源相关产品”指令，启用后系统待机功耗将符合 ErP 要求。注意：启用此项后，Resume by Alarm（定时唤醒）功能将不可用。
+
+### RC6（Render Standby，渲染待机）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+决定是否让集成图形进入待机模式以降低功耗。RC6 即 Intel 集成图形的渲染待机状态。
