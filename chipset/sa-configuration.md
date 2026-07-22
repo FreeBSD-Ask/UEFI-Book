@@ -2257,7 +2257,7 @@ PWM Normal（正常）
 
 No LVDS: VBIOS 不启用 LVDS
 
-Int‑LVDS: VBIOS 通过集成编码器启用 LVDS 驱动
+Int-LVDS: VBIOS 通过集成编码器启用 LVDS 驱动
 
 SDV0 LVDS: VBIOS 通过 SDV0 编码器启用 LVDS 驱动
 
