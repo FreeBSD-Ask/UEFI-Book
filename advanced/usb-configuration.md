@@ -140,11 +140,7 @@ Enable（启用）
 
 显示已连接的 USB 大容量存储设备列表。仅当安装了 USB 存储设备时此项才会出现。
 
-## USB4 与 Thunderbolt™ 配置（最新平台新增，截至 2026 年 7 月）
-
-以下选项为 Intel 800 系列芯片组平台 AMI Aptio V BIOS 中新增的 USB4/Thunderbolt™ 配置项，依据技嘉 Intel 800 系列 BIOS Setup Guide 记载。参见：Gigabyte. BIOS Setup (Intel® 800 Series)[EB/OL]. (2024-10)[2026-07-22]. <https://download.gigabyte.cn/FileList/Manual/mb_manual_intel800-bios_e_v2.pdf>，存档于 `en/arrow-lake-s/gigabyte-intel800-bios-setup-guide-en-20241010.pdf`。
-
-### PCIE Tunneling over USB4（USB4 上的 PCIe 隧道）
+## PCIE Tunneling over USB4（USB4 上的 PCIe 隧道）
 
 选项：
 
@@ -156,7 +152,7 @@ Enable（启用）
 
 启用或禁用 USB4 上的 PCIe 隧道功能。USB4 支持 PCIe 协议隧道，允许通过 USB4/Thunderbolt™ 接口连接外部 PCIe 设备（如外置显卡、外置 NVMe 存储等）。该选项为 USB4 规范引入的新功能。
 
-### USB4 CM Mode（USB4 连接管理器模式）
+## USB4 CM Mode（USB4 连接管理器模式）
 
 选项：
 
