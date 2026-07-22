@@ -30,7 +30,7 @@ Enable（启用）
 
 PXE（预启动执行环境）是一项由 Intel 开发的网络启动协议，它能让计算机通过网络从远程服务器获取操作系统并进行引导安装。这是 PXE 协议，是传统的网络启动方法。
 
-### Ipv4 HTTP Support（Ipv4 HTTP 启动支持）
+### IPv4 HTTP Support（IPv4 HTTP 启动支持）
 
 选项：
 

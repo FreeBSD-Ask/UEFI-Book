@@ -80,18 +80,13 @@
 
 ### advanced/power-performance.md
 
-以下选项为 Intel 800 系列芯片组平台 AMI Aptio V BIOS Tweaker 菜单中的电源与性能配置项，已合并至原文相应位置：
+以下内存相关选项为 Intel 800 系列芯片组平台 AMI Aptio V BIOS Tweaker 菜单中的配置项，已合并至原文 GT - Power Management Control 节末尾（待后续 chipset 章节对照补充时进一步调整位置）：
 
-- Intel(R) Speed Shift Technology（英特尔极速变频技术）
-- CPU Thermal Monitor（CPU 热量监控）
-- CPU EIST Function（CPU EIST 功能）
-- Race To Halt (RTH)/Energy Efficient Turbo（快速休眠/睿频节能）
-- Intel(R) Turbo Boost Technology（英特尔睿频加速技术）
-- Active Turbo Ratios（活动睿频倍率）
-- Turbo Power Limits（睿频功耗限制）
 - DDR5 XMP Booster（DDR5 XMP 增强器）
 - A.I. XMP Booster Profile（A.I. XMP 增强器配置文件）
 - Extreme Memory Profile (X.M.P.)（极速内存配置文件）
 - System Memory Multiplier（系统内存倍频）
 - High Bandwidth（高带宽模式）
 - Low Latency（低延迟模式）
+
+注：原拟新增的 Intel(R) Speed Shift Technology、CPU Thermal Monitor、CPU EIST Function、Race To Halt (RTH)/Energy Efficient Turbo、Intel(R) Turbo Boost Technology、Active Turbo Ratios、Turbo Power Limits 经复核均为 CPU - Power Management Control 节中既有选项（如 Intel(R) SpeedStep(tm)、Race To Halt (RTH)、Intel(R) Speed Shift Technology、Turbo mode、View/Configure Turbo Options、Thermal Monitor、Platform PL1/PL2 等）的简写重复版本，已删除，保留原文更详细的描述。
