@@ -6,7 +6,7 @@
 
 TLS，Transport Layer Security，传输层安全性协议是一种广泛采用的安全性协议，旨在促进互联网通信的私密性和数据安全性。
 
-![TLS，Transp...](../.gitbook/assets/image-20250721173359-yxnumh1.png)
+![TLS 认证配置](../.gitbook/assets/image-20250721173359-yxnumh1.png)
 
 ## Server CA Configuration（服务器端 CA 设置）
 
