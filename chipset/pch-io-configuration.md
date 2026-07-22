@@ -72,7 +72,7 @@ Disabled（禁用）
 
 打开或关闭 PCIe 8xh 端口解码。
 
-PCIe\* 根端口在设置了 MPC.P8XDE 后，会专门解码并响应地址范围为 80h 到 8Fh 的 I/O 周期。这些 I/O 周期的响应不受标准 PCI 的 I/O 基址/限制寄存器以及 I/O 空间使能字段的限制。这使得 POST 卡可以直接作为 PCI Express 设备连接到根端口，或者通过 PCI Express\* 到 PCI 桥接器以 PCI 卡的形式连接。
+PCIe`*` 根端口在设置了 MPC.P8XDE 后，会专门解码并响应地址范围为 80h 到 8Fh 的 I/O 周期。这些 I/O 周期的响应不受标准 PCI 的 I/O 基址/限制寄存器以及 I/O 空间使能字段的限制。这使得 POST 卡可以直接作为 PCI Express 设备连接到根端口，或者通过 PCI Express`*` 到 PCI 桥接器以 PCI 卡的形式连接。
 
 所有对该地址范围的 I/O 读写操作都会被原封不动地转发到链路上。连接的设备必须能在 I/O 读操作时返回之前写入的值。BIOS 需要确保同一时刻最多只有一个根端口被启用以响应端口 8xh 范围内的 I/O 周期。
 
@@ -325,7 +325,7 @@ Disabled（禁用）
 
 PTM，Precision Time Measurement，精确时间测量
 
-参见：F-Tile Avalon® Streaming Intel® FPGA IP for PCI Express\* User Guide[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683140/25-1/precision-time-measurement-ptm-58323.html>.
+参见：F-Tile Avalon® Streaming Intel® FPGA IP for PCI Express`*` User Guide[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683140/25-1/precision-time-measurement-ptm-58323.html>.
 
 精确时间测量（PTM）使得多个具有独立本地时钟的组件之间能够实现精确的事件协调。通常，由于各自时钟对时间的值和变化速率的认知不同，实现这种精确协调是非常困难的。为了解决这一限制，PTM 允许组件计算其本地时间与共享的 PTM 主时间之间的关系：PTM 主时间是与 PTM 根节点相关联的独立时间域。每个 PTM 根节点为一个 PTM 层级提供 PTM 主时间。
 
@@ -505,7 +505,7 @@ Advanced Error Reporting 即 AER，
 
 每个符合 PCI Express 标准的设备都必须实现基本级别的错误管理，并且可以选择性地实现高级错误管理。PCI Express 高级错误报告功能（Advanced Error Reporting Capability，AER）是一种可选的扩展能力，可由支持高级错误控制与报告的 PCI Express 设备功能实现。
 
-参见：P-Tile Avalon® Memory-mapped Intel® FPGA IP for PCI Express\* User Guide[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683268/21-1-4-0-0/advanced-error-reporting-aer.html>.
+参见：P-Tile Avalon® Memory-mapped Intel® FPGA IP for PCI Express`*` User Guide[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683268/21-1-4-0-0/advanced-error-reporting-aer.html>.
 
 #### PCIe Speed（PCIe 速率）
 
@@ -541,7 +541,7 @@ PCIe 物理层的发送器。如何选取输出摆幅模式的方法是特定于
 
 0000-FFFF
 
-步长 \= 0001
+`步长 = 0001`
 
 单位为毫秒
 
@@ -695,9 +695,9 @@ Disabled（禁用）
 
 说明：
 
-Platform-POR \= 会根据主板布局，将 CLKREQ 信号分配给 CLKSRC。
+Platform-POR `=` 会根据主板布局，将 CLKREQ 信号分配给 CLKSRC。
 
-Disabled \= 不使用 CLKREQ 信号。
+Disabled `=` 不使用 CLKREQ 信号。
 
 PCIe 中的 CLKREQ# 管脚（Clock Request Pin，时钟请求引脚）用于管理 PCIe 链路中的时钟信号，以实现电源管理。
 
@@ -927,7 +927,7 @@ xDCI，Extensible Device Controller Interface，可扩展设备控制器接口�
 
 xDCI 控制器支持的最大链路速率为 USB 3.2 Gen 1x1（5 Gbps）。
 
-注意：这些控制器作为独立的 PCI 功能集成在处理器芯片内部，用于支持具备 USB-C\* 功能的端口。
+注意：这些控制器作为独立的 PCI 功能集成在处理器芯片内部，用于支持具备 USB-C`*` 功能的端口。
 
 参见：12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/extensible-device-controller-interface-xdci/>.
 
@@ -1477,9 +1477,9 @@ Disabled（禁用）
 
 以下设备相互依赖：UART0、UART1 和 SPI0-1
 
-当以下情况出现时，UART0（00:30:00）无法被禁用：子设备被启用，例如 CNVi 蓝牙（\_SB.PC00.UA00.BTH0）
+当以下情况出现时，UART0（00:30:00）无法被禁用：子设备被启用，例如 CNVi 蓝牙（`_SB.PC00.UA00.BTH0`）
 
-当以下情况出现时，UART0（00:30:00）无法被启用：启用了 I²S 音频编解码器（\_SB.PC00.I2C0.HDAC）
+当以下情况出现时，UART0（00:30:00）无法被启用：启用了 I²S 音频编解码器（`_SB.PC00.I2C0.HDAC`）
 
 ### UART1 Controller（串口 1 控制器）
 
@@ -1565,11 +1565,11 @@ Auto（自动）
 
 说明：
 
-禁用（Disabled）：不支持 \_PS0 / \_PS3，设备在初始化后会停留在 D0 状态。
+禁用（Disabled）：不支持 `_PS0` / `_PS3`，设备在初始化后会停留在 D0 状态。
 
-启用（Enabled）：启用 \_PS0 和 \_PS3，用于支持将设备从复位状态中恢复。
+启用（Enabled）：启用 `_PS0` 和 `_PS3`，用于支持将设备从复位状态中恢复。
 
-自动（Auto）：如果设备在第一次电源门控（PG）之前就已初始化，通过 ACPI 自动检测 \_PS0 和 \_PS3。
+自动（Auto）：如果设备在第一次电源门控（PG）之前就已初始化，通过 ACPI 自动检测 `_PS0` 和 `_PS3`。
 
 如果设备已经被使用（通过 DBG2），则禁用电源门控（PG）。
 
@@ -1777,7 +1777,7 @@ Disabled（禁用）
 
 说明：
 
-启用 \= 向 ISH 发送 PDT 解锁消息。
+启用 `=` 向 ISH 发送 PDT 解锁消息。
 
 消息发送后，该字段会自动恢复为禁用状态。
 
@@ -2390,7 +2390,7 @@ Disabled（禁用）
 
 说明：
 
-在退出 DeepSx 或 G3 状态时，禁用 PCH 内部的 ACPRESENT 下拉电阻。这意味着在系统从深度睡眠（DeepSx）或完全关机（G3）状态恢复时，PCH 不会主动拉低 ACPRESENT 信号线（桥的适配器检测信号）。
+在退出 DeepSx 或 G3 状态时，禁用 PCH 内部的 ACPRESENT 下拉电阻。这意味着在系统从深度睡眠（DeepSx）或完全关机（G3）状态恢复时，PCH 不会主动拉低 ACPRESENT 信号线（交流适配器检测信号）。
 
 启用此选项可能会导致某些功能（例如 Wake on LAN）在系统处于低功耗状态时无法正常工作。
 
@@ -2456,7 +2456,7 @@ Disabled（禁用）
 
 说明：
 
-只有 UTL 支持此功能。UTL 是什么未知。
+只有 UTL 支持此功能。UTL 的含义尚不明确。
 
 为了防止过热，对 PCH 功率进行节流管理。
 
@@ -2538,7 +2538,7 @@ Disabled（禁用）
 
 说明：
 
-启用或禁用 TCO 计时器。禁用时，将关闭 PCH ACPI 计时器，停止 TCO 计时器，并且不会发布 ACPI MDAT 表。
+启用或禁用 TCO 计时器。禁用时，将关闭 PCH ACPI 计时器，停止 TCO 计时器，并且不会发布 ACPI MADT 表。
 
 ## Pcie PLL SSC（PCIe PLL 扩频时钟）
 
@@ -2640,7 +2640,7 @@ Disabled（禁用）
 
 LGMR，LPC Memory Range Decode，LPC 内存范围解码
 
-用于 LPC 内存范围解码的 64 KB 内存块。允许系统将 64KB 的内存块映射到 LPC 接口。用于调试。低针数总线（LPC）是一种传统总线，是为取代工业标准架构（ISA）总线而开发的。嵌入式控制器（EC）、基板管理控制器（BMC）和超级 I/O（SIO）是通过低针数总线（LPC）连接到芯片组的。
+用于 LPC 内存范围解码的 64 KB 内存块。允许系统将 64 KB 的内存块映射到 LPC 接口。用于调试。低针数总线（LPC）是一种传统总线，是为取代工业标准架构（ISA）总线而开发的。嵌入式控制器（EC）、基板管理控制器（BMC）和超级 I/O（SIO）是通过低针数总线（LPC）连接到芯片组的。
 
 ## HOST_C10 reporting to Target（向目标设备报告 HOST_C10）
 
@@ -2718,7 +2718,7 @@ Disabled（禁用）
 
 说明：
 
-BIOS 可以通过 ACPI 代码将特定方法关联到某个特定的 GPE。在本例中，\_L6D 是一个电平触发事件的方法。BIOS-ACPI 可以检查每个需要通过 GPE 唤醒的设备的 PMEENABLE 和 PMESTATUS。
+BIOS 可以通过 ACPI 代码将特定方法关联到某个特定的 GPE。在本例中，`_L6D` 是一个电平触发事件的方法。BIOS-ACPI 可以检查每个需要通过 GPE 唤醒的设备的 PMEENABLE 和 PMESTATUS。
 
 其具体作用尚不明确。
 
@@ -3004,7 +3004,7 @@ TGPIO：Time-Aware GPIO，时间感知 GPIO。
 
 Lower：TGPIO(0-19),GPIO(20-29)
 
-Mid: TGPIO(0-9,20-29),GPIO(10-19)
+Mid：TGPIO(0-9,20-29),GPIO(10-19)
 
 Top：TGPIO(10-29) GPIO(0-9)
 
@@ -3028,13 +3028,13 @@ All GPIO（所有 GPIO）
 
 说明：
 
-Lower: TGPIO(30-49) GPIO(50-59)
+Lower：TGPIO(30-49) GPIO(50-59)
 
-Mid: TGPIO(30-39, 50-59) GPIO(40-49)
+Mid：TGPIO(30-39, 50-59) GPIO(40-49)
 
-Top: TGPIO(40-59) GPIO(30-39)
+Top：TGPIO(40-59) GPIO(30-39)
 
-All:GPIO(30-59)
+All：GPIO(30-59)
 
 #### GPIO/TGPIO 1 Pin Selection（GPIO/TGPIO 1 引脚选择）
 
