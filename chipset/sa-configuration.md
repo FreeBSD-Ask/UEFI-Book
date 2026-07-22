@@ -2394,9 +2394,7 @@ DMI Gen3 链路的主动状态电源管理。
 
 ### DMI Gen3 L1 Exit Latency（DMI Gen3 链路 L1 状态退出延迟）
 
-具体数值未知。
-
-设置 DMI Gen3 在退出 L1 状态时的延迟参数
+设置 DMI Gen3 在退出 L1 状态时的延迟参数。L1 退出延迟是 PCIe ASPM 规范定义的标准参数，DMI（Direct Media Interface）基于 PCIe 物理层。该项用于设置 DMI 链路从 L1 低功耗状态恢复到 L0 全速工作状态所需的最大延迟时间。该参数影响 ASPM 进入 L1 状态的决策——如果设备要求的 L1 退出延迟大于链路允许的最大值，则不会进入 L1 状态。具体数值因平台而异。
 
 ### New FOM for CPU DMI（为 CPU DMI 链路设置新的 FOM）
 
@@ -2860,7 +2858,7 @@ Disabled（禁用）
 
 说明：
 
-该功能的具体作用尚不明确。
+Control Logic 1/2/3/4 分别对应不同的 MIPI 摄像头 GPIO 控制逻辑预设配置，用于控制摄像头模组的电源上下电、复位引脚时序等。具体每个 Control Logic 对应的 GPIO 时序由平台参考设计决定。该功能的具体作用暂无公开技术文档说明。
 
 ### Control Logic 2（控制逻辑 2）
 

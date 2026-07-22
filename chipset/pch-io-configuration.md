@@ -781,19 +781,21 @@ Disabled（禁用）
 
 说明：
 
-Aggressive LPM Support（ALPM）。
+Aggressive LPM Support (ALPM).
 
 使 PCH 主动让 SATA 总线进入链路低功耗状态。此功能仅在 AHCI 模式下受支持。
 
 当该功能设置为 Enabled（启用）时，SATA AHCI 控制器将管理 SATA 链路的电源使用。在 I/O 长时间无活动的情况下，控制器会将链路置于低功耗模式；而当 I/O 活动恢复时，控制器会将链路恢复为活动状态。该选项可设为 Disabled（禁用）或 Enabled（启用）。
 
-### Software Preserve（软件保留）
+### Software Preserve（软件设置保留）
 
 Unknown（未知）
 
 此项不可设置。
 
-其具体作用尚不明确。
+Software Preserve 即 AHCI 规范中的“软件设置保留”（Software Settings Preservation，SSP）能力位，位于 AHCI HBA 能力寄存器（GHC.CAP）中。该位指示 HBA 是否支持在电源状态转换之间保留软件设置。此选项为只读状态显示，反映硬件的实际能力，因此不可配置。
+
+参见：Intel. Advanced Host Controller Interface (AHCI) Specification[EB/OL]. [2026-07-23]. <https://www.intel.cn/content/www/cn/zh/io/serial-ata/ahci.html>.
 
 ### Port x（端口 x）
 
@@ -865,15 +867,15 @@ Unknown（未知）
 
 ISATA
 
-Flex-灵活模式
+Flex（灵活模式）
 
-Direct connect：直连
+Direct Connect（直连）
 
-M2：M.2
+M2 (M.2)
 
 说明：
 
-物理硬件接口。识别 SATA 拓扑结构类型。
+指定 SATA 端口的物理拓扑连接类型。`Unknown` 表示未确定；`ISATA` 表示内部 SATA 连接（Internal SATA）；`Flex` 表示灵活 I/O 模式，SATA 端口与 PCIe 通道共享 Flex I/O 资源；`Direct Connect` 表示直接 PCB 走线连接；`M2` 表示 M.2 形态的 SATA 连接。该选项用于告知 BIOS 端口的物理连接方式，以便正确初始化信号和电源管理策略。
 
 ### SATA Port 0 DevSlp（SATA 端口 0 的设备休眠）
 
@@ -1041,7 +1043,7 @@ Disabled（禁用）
 
 说明：
 
-HSII，HS Interrupt IN Alarm。
+HSII, HS Interrupt IN Alarm.
 
 启用/禁用 HSII 功能。启用该功能可能会导致功耗增加。
 
@@ -1509,7 +1511,7 @@ Enabled（启用）
 
 Disabled（禁用）
 
-Comm. Port（COM）
+Comm. Port (COM)
 
 说明：
 
@@ -2055,11 +2057,9 @@ Disabled（禁用）
 
 说明：
 
-打开或关闭 SATA 端口备用快速初始化。
+打开或关闭 SATA 端口备用快速初始化（Alternate Fast Init）。备用快速初始化是 SATA 端口初始化的一种替代时序方案，通过使用更短的初始化分派时间（Tdispatch）来加速设备就绪过程。启用后，BIOS 在初始化 SATA 设备时采用备用快速初始化流程，可缩短启动时间，但可能与某些设备存在兼容性问题。
 
-其具体作用尚不明确。
-
-#### Tdispatch（SATA 端口备用快速初始化值）
+#### Tdispatch（SATA 端口热节流分派时间）
 
 选项：
 
@@ -2071,11 +2071,9 @@ Disabled（禁用）
 
 说明：
 
-设置 SATA 端口备用快速初始化值。
+设置 SATA 端口热节流分派时间（Tdispatch）。Tdispatch 是 SATA 热管理机制中的一个关键时序参数，定义了从热节流事件触发到端口实际执行节流操作之间的分派延迟时间。可选值包括 ~8 ms、~32 ms、~128 ms。较短的 Tdispatch 值意味着热节流响应更快，但可能导致端口频繁切换工作状态；较长的值则提供更平滑的过渡。
 
-其具体作用尚不明确。
-
-#### Tinactive（SATA 端口 Tinactive 的值）
+#### Tinactive（SATA 端口热节流非活动时间）
 
 选项：
 
@@ -2085,9 +2083,7 @@ Disabled（禁用）
 
 说明：
 
-设置 SATA 端口 Tinactive 的值。
-
-其具体作用尚不明确。
+设置 SATA 端口热节流非活动时间（Tinactive）。Tinactive 是 SATA 热管理机制中的时序参数，定义了端口在热节流状态下保持非活动（inactive）的最小持续时间。当系统温度降低后，端口需要等待 Tinactive 时间到期才能重新转为活动状态。可选值包括 ~8 ms、~32 ms、~128 ms。较长的 Tinactive 值有助于防止端口在温度临界点附近频繁切换，减少电气应力。
 
 ## Skip VCC_AUX Configuration（跳过 VCC_AUX 辅助电源轨配置）
 
@@ -2099,11 +2095,7 @@ Disabled（禁用）
 
 说明：
 
-VCC_AUX 为辅助电源轨，用于为 FPGA 内部的各种逻辑资源模块提供电源。
-
-参见：Cyclone® V SoC 设备中使用的 VCC_AUX 和 VCC_AUX_SHARED 电源轨是什么？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000086743.html>.
-
-其具体作用尚不明确。
+控制是否跳过 VCC_AUX 辅助电源轨的初始化。VCC_AUX 是 PCH（平台控制器中枢）内部的辅助电源轨，为 PCH 中的部分逻辑模块（如 FIVR 辅助电路、时钟模块等）供电。在某些平台配置中，VCC_AUX 可能由外部电源直接供电（旁路模式），此时 BIOS 可跳过对该电源轨的初始化配置。启用此项意味着 BIOS 不初始化 VCC_AUX 电源轨，适用于 VCC_AUX 已由外部电源管理的场景。
 
 ## FIVR Configuration（全集成电压调节模块配置）
 
@@ -2752,9 +2744,11 @@ Disabled（禁用）
 
 说明：
 
-BIOS 可以通过 ACPI 代码将特定方法关联到某个特定的 GPE。在本例中，`_L6D` 是一个电平触发事件的方法。BIOS-ACPI 可以检查每个需要通过 GPE 唤醒的设备的 PMEENABLE 和 PMESTATUS。
+启用/禁用通过 ACPI `_L6D` GPE 方法处理 PME（电源管理事件）。根据 ACPI 规范，`_Lxx` 前缀的方法对应电平触发（Level-Triggered）的通用事件（GPE），其中 `xx` 表示 GPE 的十六进制索引号。因此 `_L6D` 表示与 GPE 索引 0x6D 关联的电平触发事件处理方法。
 
-其具体作用尚不明确。
+当启用此选项时，BIOS 在 ACPI 表中注册 `_L6D` 方法，操作系统在收到 GPE 0x6D 对应中断后将调用该方法。该方法会检查各 PCIe 设备的 PMEENABLE 和 PMESTATUS 寄存器，以确定哪个设备触发了 PME 唤醒事件，并执行相应的处理逻辑。
+
+参见：UEFI Forum. Advanced Configuration and Power Interface (ACPI) Specification 6.4[EB/OL]. [2026-07-23]. <https://uefi.org/htmlspecs/ACPI_Spec_6_4_html/>.
 
 ## Beep On（蜂鸣器）
 

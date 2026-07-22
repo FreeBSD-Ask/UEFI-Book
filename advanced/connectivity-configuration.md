@@ -180,9 +180,7 @@ Enable（启用）
 
 说明：
 
-控制 WWAN 固件闪存设备开关。
-
-其具体作用尚不明确。
+控制 WWAN 固件闪存设备开关。启用后，WWAN 模块的固件存储区域将以闪存设备的形式暴露给操作系统，允许通过操作系统下的工具对 WWAN 模块进行固件更新。禁用则隐藏该设备，防止意外修改 WWAN 固件。
 
 ### Wireless CNV Config Device（无线 CNV 配置设备）
 
@@ -194,9 +192,7 @@ Enable（启用）
 
 说明：
 
-WCCD ACPI 设备节点设置。
-
-其具体作用尚不明确。
+启用或禁用 WCCD（Wireless CNV Config Device）ACPI 设备节点。WCCD 是 CNVi 无线模块在 ACPI 表中的配置设备节点，操作系统通过该节点识别和配置集成的 CNVi 无线模块（Wi-Fi/蓝牙）。禁用此项后，操作系统将无法通过 ACPI 枚举 CNVi 无线设备。
 
 ### WWAN Reset Workaround（WWAN 重置变通方案）
 
@@ -210,7 +206,7 @@ Enable（启用）
 
 启用此变通方案将使 BIOS 在执行 WWAN 设备加电序列之前，拉高 `FULL_CARD_POWER_OFF#`、`PERST#` 和 `RESET#` WWAN 信号，禁用此选项则不会对其施加任何影响。
 
-其具体作用尚不明确。
+该变通方案用于解决某些 WWAN 模块在上电后无法正常初始化的问题。通过在加电前先拉高复位信号，可确保 WWAN 模块从确定的复位状态开始启动，避免因上一次异常断电导致的初始化失败。仅在遇到 WWAN 模块无法被系统识别时启用。
 
 ### WA - WWAN OEM SVID（WWAN 模块所使用的 OEM 子厂商 ID）
 

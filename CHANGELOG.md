@@ -1,5 +1,53 @@
 # 变更日志
 
+## 2026-07-23：Linux 内核文档全面校对
+
+使用 Linux 内核官网文档（https://docs.kernel.org/）、Intel 数据手册、ACPI 规范、AHCI 规范等来源，对全书进行交叉校对，全面确定 20 条此前标记为"功能未知/尚不明确"的 BIOS 选项。
+
+### 已确定选项（20 条）
+
+**chipset/pch-io-configuration.md（10 条）**
+- Software Preserve — AHCI 规范"软件设置保留"能力位，只读状态显示
+- Topology — SATA 端口物理拓扑连接类型（ISATA/Flex/Direct Connect/M2）
+- Enable HSII on xHCI — USB 2.0 高速中断输入传输报警机制
+- PDT Unlock Message — ISH 平台数据表（Platform Data Table）解锁消息
+- Alternate Fast Init Tdispatch — SATA 端口备用快速初始化时序
+- Tdispatch — SATA 热节流分派时间参数
+- Tinactive — SATA 热节流非活动时间参数
+- Skip VCC_AUX — 跳过 PCH VCC_AUX 辅助电源轨初始化（修正原引用来源）
+- PME Enable _L6D GPE — ACPI 电平触发 GPE 0x6D 的 PME 处理方法
+- PinCntrl Driver GPIO Scheme — 引脚控制驱动 GPIO 编号方案选择
+
+**chipset/sa-configuration.md（4 条）**
+- LPMode — Low Power Mode，内存低功耗模式策略
+- IUER Button Enable — Intel Ultrabook Event Router 按钮启用
+- Control Logic 1/2/3/4 — MIPI 摄像头 GPIO 控制逻辑预设配置
+- CRD Version — Customer Reference Design 版本选择
+
+**advanced/connectivity-configuration.md（5 条）**
+- BT RF-Kill Delay Time — 蓝牙射频关闭延迟时间
+- Preboot BLE — 预启动蓝牙低功耗功能
+- Firmware Flash Device — WWAN 固件闪存设备开关
+- Wireless CNV Config Device — WCCD ACPI 设备节点
+- WWAN Reset Workaround — WWAN 模块上电初始化异常变通方案
+
+**advanced/power-performance.md（1 条）**
+- Energy Performance Gain — Intel 内存能效性能增益功能
+
+### 其他修正
+
+- PSMI 全称修正：Power Supply Management Interface → Platform Service Management Interface
+- DMI Gen3 L1 Exit Latency 补充含义说明
+
+### 核查来源
+
+- Linux 内核官网文档（https://docs.kernel.org/）
+- ACPI 规范 6.4
+- AHCI 规范（Intel）
+- Intel TigerLake FSP Integration Guide
+- xHCI 规范
+- Intel PCH 数据手册（通识）
+
 本文件记录了为覆盖 Intel 最新平台（截至 2026 年 7 月，包括 Panther Lake、Arrow Lake Refresh、Arrow Lake-S、Arrow Lake 移动版、Lunar Lake）而新增的 AMI BIOS 配置选项，以及相关参考文档的存档位置。
 
 ## 参考文档存档位置
