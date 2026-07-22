@@ -47,3 +47,43 @@ Not Available：不可用，即未测试过。
 ### Extended Device Selftest Result（扩展自我测试）
 
 Not Available：不可用，即未测试过。
+
+## VMD Setup（VMD 卷管理设备设置）
+
+VMD（Volume Management Device，卷管理设备）是 Intel 平台引入的硬件技术，提供对 NVMe SSD 的统一管理，并支持从 NVMe RAID 卷启动。该子菜单允许配置 VMD 控制器。
+
+### Enable VMD Controller（启用 VMD 控制器）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用或禁用 VMD 控制器。创建 RAID 配置时，需将此项设置为 Enabled。
+
+### Enable VMD Global Mapping（启用 VMD 全局映射）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用或禁用 VMD 全局映射。创建 RAID 配置时，需将此项设置为 Disabled，然后将对应的 SATA/M.2 接口下“Map this Root Port under VMD”项设置为 Enabled。
+
+### Map this Root Port under VMD（在 VMD 下映射此根端口）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+根据所使用的 SATA/M.2 接口，将对应根端口映射到 VMD 下。此项仅在 Enable VMD Controller 设置为 Enabled 且 Enable VMD Global Mapping 设置为 Disabled 时可配置。
