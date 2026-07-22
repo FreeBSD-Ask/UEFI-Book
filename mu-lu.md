@@ -1,4 +1,4 @@
-# Table of contents
+# 目录
 
 * [UEFI/BIOS 注解（AMI BIOS）](README.md)
 * [目录](mu-lu.md)
