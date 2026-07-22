@@ -80,7 +80,7 @@ BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见英特尔
 
 该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，并通过 A2DP 格式以高能效方式将音频输出至蓝牙设备。
 
-此功能仅支持 Intel® Wireless-AX 22560 网卡。
+此功能仅支持特定 Intel® AX 系列无线网卡（具体型号待确认，Intel 官方产品线中未见 Wireless-AX 22560 这一型号）。
 
 ### BT RF-Kill Delay Time（蓝牙射频关闭延迟时间）
 

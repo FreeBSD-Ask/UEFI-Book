@@ -7,6 +7,6 @@
 | 英文 | 中文 | 值 |
 | ---- | ---- | -- |
 | UEFI Driver | UEFI 驱动 | Intel(R) 2.5 G Ethernet Controller 0.10.04 |
-| Device Name | 设备名称 | Intel(R) Ethernet Controller I226‑V |
+| Device Name | 设备名称 | Intel(R) Ethernet Controller I226-V |
 | Link Status | 链路状态 | [Disconnected]（未连接） |
 | MAC Address | MAC 地址 | 10:02:B5:86:0E:F9 |

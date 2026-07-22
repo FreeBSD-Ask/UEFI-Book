@@ -230,7 +230,7 @@ Enable（启用）
 
 MBP：Memory Based Protection Hand-Off Blocks，基于内存的保护交接块
 
-启用后，BIOS 在启动过程中会跳过 Intel 管理引擎的 Memory‑Based Protection（MBP）的 HOB 区域（主要用于描述内存保护区域的信息），即不创建或不处理该区域内的 HOB（Hand‑Off Blocks）。
+启用后，BIOS 在启动过程中会跳过 Intel 管理引擎的 Memory-Based Protection（MBP）的 HOB 区域（主要用于描述内存保护区域的信息），即不创建或不处理该区域内的 HOB（Hand-Off Blocks）。
 
 用于调试 Intel 管理引擎。
 

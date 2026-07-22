@@ -418,7 +418,7 @@ Enable（启用）
 
 用美式英语表达或说明 SMM 指示的用法。
 
-## AC Split Lock（AC 对 Split‑Lock 的处理）
+## AC Split Lock（AC 对 Split-Lock 的处理）
 
 选项：
 
@@ -430,7 +430,7 @@ Enable（启用）
 
 Split Lock 指跨越两个 cache line 的原子操作（如 lock add，xchg 等），在传统机制下会锁住整个总线，导致性能显著下降。
 
-启用后，当检测到 split‑lock 操作时，会触发对齐异常，而不是锁总线。这对实时性能或云平台尤为重要。
+启用后，当检测到 split-lock 操作时，会触发对齐异常，而不是锁总线。这对实时性能或云平台尤为重要。
 
 ## Total Memory Encryption（英特尔总内存加密技术）
 
